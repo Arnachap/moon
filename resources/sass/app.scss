@@ -1,6 +1,9 @@
 // Variables
 @import 'variables';
 
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
 // Icons
 @import '~typicons.font/src/font/typicons.css';
 
@@ -9,3 +12,6 @@
 
 // Nav
 @import 'mainNav';
+
+// Home
+@import 'home';

@@ -1,8 +1,9 @@
 #main-nav {
+    z-index: 10;
     position: fixed;
-    padding: 0.25rem;
+    padding: .25rem;
     width: 100vw;
-    border-bottom: 1px solid $black;
+    border-bottom: .5px solid $black;
     background: $white;
 
     .nav {
@@ -24,6 +25,7 @@
 
                 i {
                     font-size: 18px;
+                    font-weight: 900;
                 }
             }
 
@@ -47,13 +49,12 @@
                     display: none;
                     position: absolute;
                     top: 40px;
-                    left: -25px;
                     list-style: none;
-                    width: 150px;
+                    width: auto;
                     background: $white;
                     border-top: none;
-                    text-align: center;
-                    border-radius: 0 0 3px 3px;
+                    text-align: left;
+                    border-radius: 0 0 5px 5px;
                     
                     .dropdown-item {
                         padding: 10px;

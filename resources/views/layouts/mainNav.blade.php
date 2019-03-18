@@ -41,7 +41,13 @@
         </li>
         
         <li class="nav-item">
-            <a href="/about" class="nav-link">Contact</a>
+            <a href="/contact" class="nav-link">Contact</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/cart" class="nav-link">
+                <i class="typcn icon-default typcn-shopping-cart"></i>
+            </a>
         </li>
     </ul>
 </nav>

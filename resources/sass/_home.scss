@@ -1,0 +1,166 @@
+#mainSlider {
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin: 0 10px;
+    }
+
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+        &:nth-child(1) {
+            background-image: url('/img/banner.jpg');
+        }
+
+        &:nth-child(2) {
+            background-image: url('/img/shirt.jpg');
+        }
+    }
+
+    .carousel-caption {
+        bottom: 60px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .slider-btn {
+            font-size: 20px;
+            color: $white;
+            margin: 20px 0;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 2px solid $white;
+            border-radius: 1px;
+            text-transform: uppercase;
+
+            &:hover {
+                @include easeOut;
+
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+}
+
+#createBanner {
+    overflow: hidden;
+    background-color: #F6F6F6;
+    padding-top: 40px;
+
+    img {
+        display: block;
+        margin: auto;
+        max-width: 80vw;
+    }
+}
+
+#links {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+
+    .main-links {
+        background-color: #000;
+        display: inline-block;
+        font-size: 16px;
+        margin: 30px;
+        max-width: 315px;
+        min-width: 230px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.35s ease;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.35s ease;
+            background-color: #000000;
+            border-left: 3px solid #fff;
+            border-right: 3px solid #fff;
+            content: '';
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        &:before {
+            transform: skew(45deg) translateX(-155%);
+        }
+
+        &:after {
+            transform: skew(45deg) translateX(155%);
+        }
+
+        img {
+            backface-visibility: hidden;
+            max-width: 100%;
+            vertical-align: top;
+        }
+
+        figcaption {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            z-index: 2;
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+            box-shadow: 0 0 10px #000000;
+        }
+
+        h3 {
+            background-color: #000000;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 5px 10px;
+            text-transform: uppercase;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        &:hover,
+        &.hover {
+            & > img {
+                opacity: 0.5;
+            }
+
+            &:before {
+                transform: skew(45deg) translateX(-55%);
+            }
+
+            &:after {
+                transform: skew(45deg) translateX(55%);
+            }
+
+            figcaption {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            }
+        }
+    }
+}
