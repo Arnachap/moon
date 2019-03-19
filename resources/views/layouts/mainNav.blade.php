@@ -10,7 +10,7 @@
             <span class="nav-link dropdown-toggle">Nos Noeuds</span>
             <ul class="dropdown">
                 <li class="dropdown-item">
-                    <a href="/collections" class="nav-link">Nos collections</a>
+                    <a href="/collection" class="nav-link">Notre collection</a>
                 </li>
 
                 <li class="dropdown-item">

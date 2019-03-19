@@ -1,0 +1,52 @@
+#collection {
+    padding-bottom: 40px;
+
+    .bowtie {
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        width: 100%;
+        color: $white;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover img {
+            transform: scale(1.2);
+            opacity: .8;
+        }
+
+        * {
+            @include easeOut;
+        }
+
+        figcaption {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            padding: 0 30px;
+            transform: translateY(-50%);
+        }
+
+        img {
+            max-width: 100%;
+            opacity: 1;
+        }
+
+        h2,
+        span {
+            margin: 0;
+            width: 100%;
+        }
+
+        h2 {
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Le noeud papillon en bois sur-mesure
+@endsection
+
 @section('content')
 
 <div id="mainSlider" class="carousel slide" data-ride="carousel">
@@ -48,7 +52,7 @@
 <div id="bowBanner">
     <img src="/img/bow-banner.jpg" alt="Collection noeud papillon en bois Moon">
 
-    <a href="/collections" class="button">Découvrir nos collections</a>
+    <a href="/collection" class="button">Découvrir notre collection</a>
 </div>
 
 <div id="links">

@@ -1,6 +1,7 @@
 // Variables
 $black: #333;
 $white: #F6F6F6;
+$grey: #868e96;
 
 // Mixins
 @mixin easeOut {
@@ -19,6 +20,20 @@ $white: #F6F6F6;
         @include easeOut;
         background-color: $white;
         color: $black;
+    }
+}
+
+.page-title {
+    text-align: center;
+    padding: 80px 0 40px 0;
+
+    h2 {
+        font-size: 40px;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: $grey;
     }
 }
 

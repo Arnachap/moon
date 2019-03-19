@@ -9,4 +9,8 @@ class PagesController extends Controller
     public function index() {
         return view('pages.index');
     }
+
+    public function collection() {
+        return view('pages.collection');
+    }
 }
