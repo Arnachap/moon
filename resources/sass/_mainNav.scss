@@ -1,10 +1,14 @@
 #main-nav {
     z-index: 10;
     position: fixed;
-    padding: .25rem;
     width: 100vw;
     border-bottom: .5px solid $black;
-    background: $white;
+    background-color: rgba(#fff, .5);
+    @include easeOut;
+
+    &.scrolled {
+        background-color: #fff;
+    }
 
     .nav {
         max-width: 960px;
@@ -16,12 +20,13 @@
         padding: 0 15px;
 
         .nav-item {
-            padding: .5rem 0;
+            padding: .25rem 0;
             position: relative;
 
             .nav-link {
                 text-decoration: none;
                 color: $black;
+                text-transform: uppercase;
 
                 i {
                     font-size: 18px;
@@ -51,13 +56,13 @@
                     top: 40px;
                     list-style: none;
                     width: auto;
-                    background: $white;
+                    background: #fff;
                     border-top: none;
                     text-align: left;
                     border-radius: 0 0 5px 5px;
                     
                     .dropdown-item {
-                        padding: 10px;
+                        padding: .25rem;
                     }
                 }
             }
