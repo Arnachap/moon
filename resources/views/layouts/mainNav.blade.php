@@ -2,7 +2,7 @@
     <ul class="nav">
         <li class="nav-item">
             <a href="/" class="nav-link">
-                <i class="typcn icon-default typcn-home"></i>
+                <i class="fa fa-home"></i>
             </a>
         </li>
 
@@ -46,7 +46,7 @@
 
         <li class="nav-item">
             <a href="/cart" class="nav-link">
-                <i class="typcn icon-default typcn-shopping-cart"></i>
+                <i class="fa fa-shopping-cart"></i>
             </a>
         </li>
     </ul>

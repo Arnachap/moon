@@ -1,0 +1,17 @@
+footer {
+    background: $black;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    #social i {
+        margin: 0 10px;
+        font-size: 20px;
+    }
+
+    #arnaudchapeleur i {
+        font-size: 12px;
+        color: red;
+    }
+}

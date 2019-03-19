@@ -12,3 +12,13 @@ body {
     color: $black;
     background: $white;
 }
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        text-decoration: none;
+        color: $white;
+    }
+}
