@@ -13767,12 +13767,20 @@ a:hover {
   color: #F6F6F6;
 }
 
+a:active {
+  background-color: #F6F6F6;
+}
+
+a:focus {
+  outline: none !important;
+}
+
 #main-nav {
   z-index: 10;
   position: fixed;
   width: 100vw;
   border-bottom: 0.5px solid #333;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease-out;
 }
 
@@ -14070,6 +14078,61 @@ a:hover {
 
 #collection .bowtie span {
   text-transform: uppercase;
+}
+
+#create {
+  height: 300vh;
+  margin-bottom: 100px;
+}
+
+#create #createImg img {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#create #createMenu {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  height: 50px;
+}
+
+#create #createMenu .shapes {
+  background-color: #333;
+  height: 100px;
+  border-radius: 5px 5px 5px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+#create #createMenu .shapes.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#create #createMenu .shapes .shape img {
+  height: 50px;
+}
+
+#create #createMenu .sub-menu {
+  text-align: center;
+  cursor: pointer;
+}
+
+#create #createMenu .sub-menu h3 {
+  color: #F6F6F6;
+  line-height: 50px;
+  background: #333;
+  border-radius: 5px 5px 0 0;
+}
+
+#create #createMenu .sub-menu h3.opened {
+  border-radius: 0;
 }
 
 footer {

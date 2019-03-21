@@ -36581,6 +36581,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./create */ "./resources/js/create.js");
+
 $(window).scroll(function () {
   var sc = $(window).scrollTop();
 
@@ -36651,6 +36653,21 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/create.js":
+/*!********************************!*\
+  !*** ./resources/js/create.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Menu control
+$('.shape-btn').on('click', function () {
+  $('.shapes').toggleClass('show');
+  $('.shape-btn').toggleClass('opened');
+});
 
 /***/ }),
 

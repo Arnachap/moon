@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./create');
 
 $(window).scroll(function () {
     var sc = $(window).scrollTop();

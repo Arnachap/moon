@@ -13,4 +13,8 @@ class PagesController extends Controller
     public function collection() {
         return view('pages.collection');
     }
+
+    public function create() {
+        return view('pages.create');
+    }
 }

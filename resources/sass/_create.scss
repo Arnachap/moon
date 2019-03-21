@@ -1,0 +1,59 @@
+#create {
+    height: 300vh;
+    margin-bottom: 100px;
+
+    #createImg {
+
+        img {
+            width: 80%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    #createMenu {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        height: 50px;
+
+        .shapes {
+            background-color: $black;
+            height: 100px;
+            border-radius: 5px 5px 5px 0;
+            visibility: hidden;
+            opacity: 0;
+            @include easeOut;
+
+            &.show {
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            .shape {
+
+                img {
+                    height: 50px;
+                }
+            }
+        }
+
+        .sub-menu {
+            text-align: center;
+            cursor: pointer;
+
+            h3 {
+                color: $white;
+                line-height: 50px;
+                background: $black;
+                border-radius: 5px 5px 0 0;
+
+                &.opened {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

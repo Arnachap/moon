@@ -3,7 +3,7 @@
     position: fixed;
     width: 100vw;
     border-bottom: .5px solid $black;
-    background-color: rgba(#fff, .4);
+    background-color: rgba(#fff, .2);
     @include easeOut;
 
     &.scrolled,
