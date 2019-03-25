@@ -14096,27 +14096,35 @@ a:focus {
 
 #create #createMenu {
   position: absolute;
-  bottom: 100px;
+  bottom: 0;
   left: 0;
-  height: 50px;
 }
 
-#create #createMenu .shapes {
-  background-color: #333;
+#create #createMenu .upper-menu {
+  background: #333;
   height: 100px;
-  border-radius: 5px 5px 5px 0;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-out;
 }
 
-#create #createMenu .shapes.show {
+#create #createMenu .upper-menu.show {
   visibility: visible;
   opacity: 1;
 }
 
-#create #createMenu .shapes .shape img {
-  height: 50px;
+#create #createMenu .upper-menu .upper-menu-category {
+  display: none;
+  justify-content: center;
+}
+
+#create #createMenu .upper-menu .upper-menu-category.show {
+  display: flex;
+}
+
+#create #createMenu .upper-menu .upper-menu-category img {
+  height: 100px;
+  cursor: pointer;
 }
 
 #create #createMenu .sub-menu {
@@ -14125,14 +14133,26 @@ a:focus {
 }
 
 #create #createMenu .sub-menu h3 {
-  color: #F6F6F6;
+  color: #333;
   line-height: 50px;
-  background: #333;
+  margin: 0;
+  border: 1px solid #333;
   border-radius: 5px 5px 0 0;
+  transition: all 0.3s ease-out;
+}
+
+#create #createMenu .sub-menu h3::-moz-selection {
+  background-color: transparent;
+}
+
+#create #createMenu .sub-menu h3::selection {
+  background-color: transparent;
 }
 
 #create #createMenu .sub-menu h3.opened {
   border-radius: 0;
+  color: #F6F6F6;
+  background: #333;
 }
 
 footer {

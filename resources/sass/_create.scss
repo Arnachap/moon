@@ -15,14 +15,12 @@
 
     #createMenu {
         position: absolute;
-        bottom: 100px;
+        bottom: 0;
         left: 0;
-        height: 50px;
 
-        .shapes {
-            background-color: $black;
+        .upper-menu {
+            background: $black;
             height: 100px;
-            border-radius: 5px 5px 5px 0;
             visibility: hidden;
             opacity: 0;
             @include easeOut;
@@ -31,11 +29,18 @@
                 visibility: visible;
                 opacity: 1;
             }
-            
-            .shape {
+
+            .upper-menu-category {
+                display: none;
+                justify-content: center;
+
+                &.show {
+                    display: flex;
+                }
 
                 img {
-                    height: 50px;
+                    height: 100px;
+                    cursor: pointer;
                 }
             }
         }
@@ -45,13 +50,21 @@
             cursor: pointer;
 
             h3 {
-                color: $white;
+                color: $black;
                 line-height: 50px;
-                background: $black;
+                margin: 0;
+                border: 1px solid $black;
                 border-radius: 5px 5px 0 0;
+                @include easeOut;
+
+                &::selection {
+                    background-color: transparent;
+                }
 
                 &.opened {
                     border-radius: 0;
+                    color: $white;
+                    background: $black;
                 }
             }
         }

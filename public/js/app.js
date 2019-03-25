@@ -36664,9 +36664,25 @@ if (token) {
 /***/ (function(module, exports) {
 
 // Menu control
-$('.shape-btn').on('click', function () {
-  $('.shapes').toggleClass('show');
-  $('.shape-btn').toggleClass('opened');
+$('.sub-menu-btn').click(function () {
+  // Change class of the button
+  if ($(this).hasClass('opened')) {
+    $(this).removeClass('opened');
+    $('.upper-menu').removeClass('show');
+  } else {
+    $('.sub-menu-btn').removeClass('opened');
+    $(this).addClass('opened');
+    $('.upper-menu').addClass('show');
+  }
+
+  var menuClassToShow = '.' + $(this).attr('id').replace('Btn', '');
+
+  if ($(menuClassToShow).hasClass('show')) {
+    $(menuClassToShow).removeClass('show');
+  } else {
+    $('.upper-menu-category').removeClass('show');
+    $(menuClassToShow).addClass('show');
+  }
 });
 
 /***/ }),
@@ -36689,8 +36705,8 @@ $('.shape-btn').on('click', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\moon\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\moon\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Nono\Documents\code\moon\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Nono\Documents\code\moon\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
