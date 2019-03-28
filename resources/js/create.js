@@ -1,20 +1,55 @@
 // Menu control
 $('.sub-menu-btn').click(function () {
+    let menuClassToShow = '.' + $(this).attr('id').replace('Btn', '');
+
     // Change class of the button
     if ($(this).hasClass('opened')) {
         $(this).removeClass('opened');
         $('.upper-menu').removeClass('show');
+        $(menuClassToShow).removeClass('show');
     } else {
         $('.sub-menu-btn').removeClass('opened');
         $(this).addClass('opened');
         $('.upper-menu').addClass('show');
-    }
-
-    let menuClassToShow = '.' + $(this).attr('id').replace('Btn', '');
-    if ($(menuClassToShow).hasClass('show')) {
-        $(menuClassToShow).removeClass('show');
-    } else {
         $('.upper-menu-category').removeClass('show');
         $(menuClassToShow).addClass('show');
     }
+});
+
+// Img change
+const bowtieImg = $('#bowtie');
+const tissuImg = $('#tissu');
+let bowtieShape = 'classic';
+let bowtieWood = 'bois1';
+
+const changeBowtieImg = () => {
+    let newImgSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${bowtieWood}.png`;
+    bowtieImg.attr('src', newImgSrc);
+}
+
+$('.shape').click(function () {
+    bowtieShape = $(this).attr('id');
+    changeBowtieImg();
+
+    $('.wood').each(function () {
+        let woodId = $(this).attr('id');
+        let newWoodSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${woodId}.png`
+        $(this).attr('src', newWoodSrc);
+    });
+});
+
+$('.wood').click(function () {
+    bowtieWood = $(this).attr('id');
+    changeBowtieImg();
+
+    $('.shape').each(function () {
+        let shapeId = $(this).attr('id');
+        let newShapeSrc = `/img/create/noeuds-pap/${shapeId}/${shapeId}-${bowtieWood}.png`
+        $(this).attr('src', newShapeSrc);
+    });
+});
+
+$('.tissu').click(function () {
+    let newTissu = $(this).attr('src');
+    tissuImg.attr('src', newTissu);
 });

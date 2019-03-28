@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-    @include('layouts.mainNav')
+    @include('inc.mainNav')
 
     @yield('content')
     
-    @include('layouts.footer')
+    @include('inc.footer')
 
     <script src="./js/app.js"></script>
 </body>

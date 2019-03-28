@@ -13,8 +13,8 @@ Crée ton Noeud Pap'
 
 <div id="create">
     <div id="createImg">
-        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" alt="">
-        <img src="/img/create/tissus/tissus1.png" alt="">
+        <img id="bowtie" src="/img/create/noeuds-pap/classic/classic-bois1.png" alt="">
+        <img id="tissu" src="/img/create/tissus/tissus1.png" alt="">
     </div>
 
     <div id="createMenu" class="container-fluid">
@@ -22,22 +22,22 @@ Crée ton Noeud Pap'
             <div class="col-12">
                 <div class="upper-menu">
                     <div class="shapes upper-menu-category">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/electric/electric-bois1.png" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/heavy/heavy-bois1.png" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/roadster/roadster-bois1.png" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="classic" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/electric/electric-bois1.png" id="electric" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/heavy/heavy-bois1.png" id="heavy" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/roadster/roadster-bois1.png" id="roadster" class="shape" alt="">
                     </div>
                     
                     <div class="woods upper-menu-category">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" class="woods" alt="">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois2.png" class="woods" alt="">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois3.png" class="woods" alt="">
+                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="bois1" class="wood" alt="">
+                        <img src="/img/create/noeuds-pap/classic/classic-bois2.png" id="bois2" class="wood" alt="">
+                        <img src="/img/create/noeuds-pap/classic/classic-bois3.png" id="bois3" class="wood" alt="">
                     </div>
                     
                     <div class="tissus upper-menu-category">
-                        <img src="/img/create/tissus/tissus1.png" class="tissus" alt="">
-                        <img src="/img/create/tissus/tissus2.png" class="tissus" alt="">
-                        <img src="/img/create/tissus/tissus3.png" class="tissus" alt="">
+                        <img src="/img/create/tissus/tissus1.png" class="tissu" alt="">
+                        <img src="/img/create/tissus/tissus2.png" class="tissu" alt="">
+                        <img src="/img/create/tissus/tissus3.png" class="tissu" alt="">
                     </div>
                 </div>
             </div>

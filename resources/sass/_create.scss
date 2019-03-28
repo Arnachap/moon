@@ -19,15 +19,12 @@
         left: 0;
 
         .upper-menu {
-            background: $black;
+            background: $white;
             height: 100px;
             visibility: hidden;
-            opacity: 0;
-            @include easeOut;
 
             &.show {
                 visibility: visible;
-                opacity: 1;
             }
 
             .upper-menu-category {
@@ -50,10 +47,11 @@
             cursor: pointer;
 
             h3 {
-                color: $black;
+                color: $white;
+                background: $black;
                 line-height: 50px;
                 margin: 0;
-                border: 1px solid $black;
+                border: 1px solid $grey;
                 border-radius: 5px 5px 0 0;
                 @include easeOut;
 
@@ -62,9 +60,8 @@
                 }
 
                 &.opened {
-                    border-radius: 0;
-                    color: $white;
-                    background: $black;
+                    color: $black;
+                    background: $white;
                 }
             }
         }

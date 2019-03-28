@@ -36665,24 +36665,52 @@ if (token) {
 
 // Menu control
 $('.sub-menu-btn').click(function () {
-  // Change class of the button
+  var menuClassToShow = '.' + $(this).attr('id').replace('Btn', ''); // Change class of the button
+
   if ($(this).hasClass('opened')) {
     $(this).removeClass('opened');
     $('.upper-menu').removeClass('show');
+    $(menuClassToShow).removeClass('show');
   } else {
     $('.sub-menu-btn').removeClass('opened');
     $(this).addClass('opened');
     $('.upper-menu').addClass('show');
-  }
-
-  var menuClassToShow = '.' + $(this).attr('id').replace('Btn', '');
-
-  if ($(menuClassToShow).hasClass('show')) {
-    $(menuClassToShow).removeClass('show');
-  } else {
     $('.upper-menu-category').removeClass('show');
     $(menuClassToShow).addClass('show');
   }
+}); // Img change
+
+var bowtieImg = $('#bowtie');
+var tissuImg = $('#tissu');
+var bowtieShape = 'classic';
+var bowtieWood = 'bois1';
+
+var changeBowtieImg = function changeBowtieImg() {
+  var newImgSrc = "/img/create/noeuds-pap/".concat(bowtieShape, "/").concat(bowtieShape, "-").concat(bowtieWood, ".png");
+  bowtieImg.attr('src', newImgSrc);
+};
+
+$('.shape').click(function () {
+  bowtieShape = $(this).attr('id');
+  changeBowtieImg();
+  $('.wood').each(function () {
+    var woodId = $(this).attr('id');
+    var newWoodSrc = "/img/create/noeuds-pap/".concat(bowtieShape, "/").concat(bowtieShape, "-").concat(woodId, ".png");
+    $(this).attr('src', newWoodSrc);
+  });
+});
+$('.wood').click(function () {
+  bowtieWood = $(this).attr('id');
+  changeBowtieImg();
+  $('.shape').each(function () {
+    var shapeId = $(this).attr('id');
+    var newShapeSrc = "/img/create/noeuds-pap/".concat(shapeId, "/").concat(shapeId, "-").concat(bowtieWood, ".png");
+    $(this).attr('src', newShapeSrc);
+  });
+});
+$('.tissu').click(function () {
+  var newTissu = $(this).attr('src');
+  tissuImg.attr('src', newTissu);
 });
 
 /***/ }),

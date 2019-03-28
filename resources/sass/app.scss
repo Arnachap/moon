@@ -7,8 +7,14 @@
 // Font Awesome
 @import "~font-awesome/scss/font-awesome";
 
-// config
+// Config
 @import 'config';
+
+// Mixins
+@import 'mixins';
+
+// Classes
+@import 'classes';
 
 // Nav
 @import 'mainNav';

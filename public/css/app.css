@@ -1,40 +1,5 @@
 @charset "UTF-8";
 
-.button {
-  padding: 10px 20px;
-  border: 2px solid #F6F6F6;
-  border-radius: 1px;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-.button:hover {
-  transition: all 0.3s ease-out;
-  background-color: #F6F6F6;
-  color: #333;
-}
-
-.page-title {
-  text-align: center;
-  padding: 80px 0 40px 0;
-}
-
-.page-title h2 {
-  font-size: 40px;
-  text-transform: capitalize;
-}
-
-.page-title p {
-  color: #868e96;
-}
-
-.section-title {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 40px;
-  padding: 20px 0;
-}
-
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -13775,6 +13740,41 @@ a:focus {
   outline: none !important;
 }
 
+.button {
+  padding: 10px 20px;
+  border: 2px solid #F6F6F6;
+  border-radius: 1px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.button:hover {
+  transition: all 0.3s ease-out;
+  background-color: #F6F6F6;
+  color: #333;
+}
+
+.page-title {
+  text-align: center;
+  padding: 80px 0 40px 0;
+}
+
+.page-title h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.page-title p {
+  color: #868e96;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
 #main-nav {
   z-index: 10;
   position: fixed;
@@ -14101,16 +14101,13 @@ a:focus {
 }
 
 #create #createMenu .upper-menu {
-  background: #333;
+  background: #F6F6F6;
   height: 100px;
   visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-out;
 }
 
 #create #createMenu .upper-menu.show {
   visibility: visible;
-  opacity: 1;
 }
 
 #create #createMenu .upper-menu .upper-menu-category {
@@ -14133,10 +14130,11 @@ a:focus {
 }
 
 #create #createMenu .sub-menu h3 {
-  color: #333;
+  color: #F6F6F6;
+  background: #333;
   line-height: 50px;
   margin: 0;
-  border: 1px solid #333;
+  border: 1px solid #868e96;
   border-radius: 5px 5px 0 0;
   transition: all 0.3s ease-out;
 }
@@ -14150,9 +14148,8 @@ a:focus {
 }
 
 #create #createMenu .sub-menu h3.opened {
-  border-radius: 0;
-  color: #F6F6F6;
-  background: #333;
+  color: #333;
+  background: #F6F6F6;
 }
 
 footer {
