@@ -60,5 +60,61 @@ Crée ton Noeud Pap'
     </div>
 </div>
 
+<div id="options">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form action="#">
+                    <input type="hidden" name="shape">
+                    <input type="hidden" name="wood">
+                    <input type="hidden" name="tissu">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Taille</h3>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="size-select">
+                                <input id="male" class="radio-btn" type="radio" name="size" value="male" checked>
+
+                                <div class="radio-tile">
+                                    <i class="fa fa-male"></i>
+                                    <label for="male">Homme</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="size-select">
+                                <input id="female" class="radio-btn" type="radio" name="size" value="female">
+                                
+                                <div class="radio-tile">
+                                    <i class="fa fa-female"></i>
+                                    <label for="female">Femme</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="size-select">
+                                <input id="child" class="radio-btn" type="radio" name="size" value="child">
+
+                                <div class="radio-tile">
+                                    <i class="fa fa-child"></i>
+                                    <label for="child">Enfant</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-4">
+                prix
+            </div>
+        </div> 
+    </div>
+</div>
 
 @endsection
