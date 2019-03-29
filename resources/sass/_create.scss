@@ -1,6 +1,5 @@
 #create {
-    height: 300vh;
-    margin-bottom: 100px;
+    height: calc(100vh - 216px);
 
     #createImg {
 
@@ -10,6 +9,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
+            @include easeOut;
         }
     }
 

@@ -14081,8 +14081,7 @@ a:focus {
 }
 
 #create {
-  height: 300vh;
-  margin-bottom: 100px;
+  height: calc(100vh - 216px);
 }
 
 #create #createImg img {
@@ -14092,6 +14091,7 @@ a:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  transition: all 0.3s ease-out;
 }
 
 #create #createMenu {

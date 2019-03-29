@@ -14,7 +14,7 @@ Crée ton Noeud Pap'
 <div id="create">
     <div id="createImg">
         <img id="bowtie" src="/img/create/noeuds-pap/classic/classic-bois1.png" alt="">
-        <img id="tissu" src="/img/create/tissus/tissus1.png" alt="">
+        <img id="tissu" src="/img/create/tissus/image/tissus1.png" alt="">
     </div>
 
     <div id="createMenu" class="container-fluid">
@@ -35,9 +35,10 @@ Crée ton Noeud Pap'
                     </div>
                     
                     <div class="tissus upper-menu-category">
-                        <img src="/img/create/tissus/tissus1.png" class="tissu" alt="">
-                        <img src="/img/create/tissus/tissus2.png" class="tissu" alt="">
-                        <img src="/img/create/tissus/tissus3.png" class="tissu" alt="">
+                        <img src="/img/create/tissus/menu/tissus1.png" id="tissus1" class="tissu" alt="">
+                        <img src="/img/create/tissus/menu/tissus2.png" id="tissus2" class="tissu" alt="">
+                        <img src="/img/create/tissus/menu/tissus3.png" id="tissus3" class="tissu" alt="">
+                        <img src="/img/create/tissus/menu/tissus4.png" id="tissus4" class="tissu" alt="">
                     </div>
                 </div>
             </div>
@@ -58,5 +59,6 @@ Crée ton Noeud Pap'
         </div>
     </div>
 </div>
+
 
 @endsection

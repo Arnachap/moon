@@ -21,6 +21,7 @@ const bowtieImg = $('#bowtie');
 const tissuImg = $('#tissu');
 let bowtieShape = 'classic';
 let bowtieWood = 'bois1';
+let bowtieTissu = 'tissu1';
 
 const changeBowtieImg = () => {
     let newImgSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${bowtieWood}.png`;
@@ -50,6 +51,7 @@ $('.wood').click(function () {
 });
 
 $('.tissu').click(function () {
-    let newTissu = $(this).attr('src');
-    tissuImg.attr('src', newTissu);
+    bowtieTissu = $(this).attr('id');
+    let newTissuSrc = `img/create/tissus/image/${bowtieTissu}.png`;
+    tissuImg.attr('src', newTissuSrc);
 });
