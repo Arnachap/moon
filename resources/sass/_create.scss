@@ -60,8 +60,7 @@
                 }
 
                 &.opened {
-                    color: $black;
-                    background: $white;
+                    background: $dark-grey;
                 }
             }
         }
@@ -70,10 +69,51 @@
 
 #options {
     padding: 50px 0 50px 0;
+    height: 200vh;
 
     h3 {
         text-align: center;
         padding: 10px;
+    }
+
+    #priceSection {
+        background-color: $black;
+        width: 100%;
+        border-radius: 5px;
+        color: $white;
+        position: relative;
+        top: 60px;
+        text-align: center;
+
+        .price-title {
+            background-color: $dark-grey;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .price {
+            padding: 20px 0;
+            font-size: 40px;
+        }
+
+        .delivery-time {
+            background-color: $dark-grey;
+            padding: 20px 0;
+            margin: 0;
+
+            i {
+                color: $grey;
+            }
+        }
+
+        .add-basket {
+            width: 100%;
+            padding: 20px 0;
+            border: none;
+            outline: none;
+            color: $white;
+            background-color: $red;
+            border-radius: 0 0 5px 5px;
+        }
     }
 
     .size-select {

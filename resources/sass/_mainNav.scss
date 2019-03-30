@@ -62,6 +62,11 @@
                     
                     .dropdown-item {
                         padding: .25rem;
+
+                        &:active,
+                        &.active {
+                            background-color: none;
+                        }
                     }
                 }
             }

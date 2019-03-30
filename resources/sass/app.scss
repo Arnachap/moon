@@ -1,17 +1,17 @@
-// Variables
-@import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 // Font Awesome
 @import "~font-awesome/scss/font-awesome";
 
-// Config
-@import 'config';
+// Variables
+@import 'variables';
 
 // Mixins
 @import 'mixins';
+
+// Config
+@import 'config';
 
 // Classes
 @import 'classes';

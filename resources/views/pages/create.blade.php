@@ -62,7 +62,7 @@ Crée ton Noeud Pap'
 
 <div id="options">
     <div class="container">
-        <div class="row">
+        <div class="row" style="height: 200vh">
             <div class="col-8">
                 <form action="#">
                     <input type="hidden" name="shape">
@@ -111,7 +111,15 @@ Crée ton Noeud Pap'
             </div>
 
             <div class="col-4">
-                prix
+                <div id="priceSection">
+                    <h3 class="price-title">Prix</h3>
+
+                    <h3 class="price">40 €</h3>
+
+                    <p class="delivery-time"><i class="fa fa-calendar"></i>  Livraison: 2-4 jours</p>
+
+                    <button class="add-basket">Ajouter au panier</button>
+                </div>
             </div>
         </div> 
     </div>

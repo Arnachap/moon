@@ -55,3 +55,17 @@ $('.tissu').click(function () {
     let newTissuSrc = `img/create/tissus/image/${bowtieTissu}.png`;
     tissuImg.attr('src', newTissuSrc);
 });
+
+// Price fixed on scroll
+$(window).scroll(function () {
+    const scrollPosition = $(window).scrollTop();
+    const optionsTop = $('#options').position().top + 60;
+    const priceWidth = $('#priceSection').css('width');
+
+    if (scrollPosition > optionsTop) {
+        $('#priceSection').css('position', 'fixed');
+        $('#priceSection').css('width', priceWidth);
+    } else {
+        $('#priceSection').css('position', 'relative');
+    }
+})

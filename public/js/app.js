@@ -36584,16 +36584,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./create */ "./resources/js/create.js");
 
 $(window).scroll(function () {
-  var sc = $(window).scrollTop();
+  var scrollPosition = $(window).scrollTop();
 
-  if (sc > 1) {
+  if (scrollPosition > 1) {
     $('#main-nav').addClass('scrolled');
   } else {
     $('#main-nav').removeClass('scrolled');
   }
-});
-$(".hover").mouseleave(function () {
-  $(this).removeClass("hover");
 });
 
 /***/ }),
@@ -36713,6 +36710,19 @@ $('.tissu').click(function () {
   bowtieTissu = $(this).attr('id');
   var newTissuSrc = "img/create/tissus/image/".concat(bowtieTissu, ".png");
   tissuImg.attr('src', newTissuSrc);
+}); // Price fixed on scroll
+
+$(window).scroll(function () {
+  var scrollPosition = $(window).scrollTop();
+  var optionsTop = $('#options').position().top + 60;
+  var priceWidth = $('#priceSection').css('width');
+
+  if (scrollPosition > optionsTop) {
+    $('#priceSection').css('position', 'fixed');
+    $('#priceSection').css('width', priceWidth);
+  } else {
+    $('#priceSection').css('position', 'relative');
+  }
 });
 
 /***/ }),
