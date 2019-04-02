@@ -57,15 +57,17 @@ $('.tissu').click(function () {
 });
 
 // Price fixed on scroll
-$(window).scroll(function () {
-    const scrollPosition = $(window).scrollTop();
-    const optionsTop = $('#options').position().top + 60;
-    const priceWidth = $('#priceSection').css('width');
+if (window.location.pathname === '/create') {
+    $(window).scroll(function () {
+        const scrollPosition = $(window).scrollTop();
+        const optionsTop = $('#options').position().top + 60;
+        const priceWidth = $('#priceSection').css('width');
 
-    if (scrollPosition > optionsTop) {
-        $('#priceSection').css('position', 'fixed');
-        $('#priceSection').css('width', priceWidth);
-    } else {
-        $('#priceSection').css('position', 'relative');
-    }
-})
+        if (scrollPosition > optionsTop) {
+            $('#priceSection').css('position', 'fixed');
+            $('#priceSection').css('width', priceWidth);
+        } else {
+            $('#priceSection').css('position', 'relative');
+        }
+    });
+}

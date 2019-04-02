@@ -36712,18 +36712,20 @@ $('.tissu').click(function () {
   tissuImg.attr('src', newTissuSrc);
 }); // Price fixed on scroll
 
-$(window).scroll(function () {
-  var scrollPosition = $(window).scrollTop();
-  var optionsTop = $('#options').position().top + 60;
-  var priceWidth = $('#priceSection').css('width');
+if (window.location.pathname === '/create') {
+  $(window).scroll(function () {
+    var scrollPosition = $(window).scrollTop();
+    var optionsTop = $('#options').position().top + 60;
+    var priceWidth = $('#priceSection').css('width');
 
-  if (scrollPosition > optionsTop) {
-    $('#priceSection').css('position', 'fixed');
-    $('#priceSection').css('width', priceWidth);
-  } else {
-    $('#priceSection').css('position', 'relative');
-  }
-});
+    if (scrollPosition > optionsTop) {
+      $('#priceSection').css('position', 'fixed');
+      $('#priceSection').css('width', priceWidth);
+    } else {
+      $('#priceSection').css('position', 'relative');
+    }
+  });
+}
 
 /***/ }),
 
