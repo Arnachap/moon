@@ -21,4 +21,8 @@ class PagesController extends Controller
     public function tshirts() {
         return view('pages.tshirts');
     }
+
+    public function about() {
+        return view('pages.about');
+    }
 }

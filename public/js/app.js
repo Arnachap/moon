@@ -36583,15 +36583,19 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./create */ "./resources/js/create.js");
 
-$(window).scroll(function () {
-  var scrollPosition = $(window).scrollTop();
+if (window.location.pathname === '/' || window.location.pathname === '/about') {
+  $(window).scroll(function () {
+    var scrollPosition = $(window).scrollTop();
 
-  if (scrollPosition > 1) {
-    $('#main-nav').addClass('scrolled');
-  } else {
-    $('#main-nav').removeClass('scrolled');
-  }
-});
+    if (scrollPosition > 1) {
+      $('#main-nav').addClass('scrolled');
+    } else {
+      $('#main-nav').removeClass('scrolled');
+    }
+  });
+} else {
+  $('#main-nav').addClass('scrolled');
+}
 
 /***/ }),
 

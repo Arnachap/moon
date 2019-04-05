@@ -1,9 +1,7 @@
 <nav id="main-nav">
     <ul class="nav">
         <li class="nav-item">
-            <a href="/" class="nav-link">
-                <i class="fa fa-home"></i>
-            </a>
+            <a href="/" class="nav-link logo"></a>
         </li>
 
         <li class="nav-item nav-dropdown">

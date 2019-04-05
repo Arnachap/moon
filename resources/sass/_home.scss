@@ -11,6 +11,7 @@
         background-size: cover;
         background-position: center;
         height: 100vh;
+        filter: brightness(90%);
 
         &:nth-child(1) {
             background-image: url('/img/banner.jpg');

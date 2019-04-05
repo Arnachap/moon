@@ -13761,7 +13761,6 @@ a:focus {
 
 .page-title h2 {
   font-size: 40px;
-  text-transform: capitalize;
 }
 
 .page-title p {
@@ -13779,14 +13778,22 @@ a:focus {
   z-index: 10;
   position: fixed;
   width: 100vw;
-  border-bottom: 0.5px solid #333;
-  background-color: rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease-out;
 }
 
 #main-nav.scrolled,
 #main-nav:hover {
-  background-color: #fff;
+  background-color: #f6f6f6;
+}
+
+#main-nav.scrolled .nav .nav-item .nav-link,
+#main-nav:hover .nav .nav-item .nav-link {
+  color: #333;
+}
+
+#main-nav.scrolled .nav .nav-item .logo,
+#main-nav:hover .nav .nav-item .logo {
+  background-image: url("/img/logo/moon.png");
 }
 
 #main-nav .nav {
@@ -13804,8 +13811,18 @@ a:focus {
   position: relative;
 }
 
+#main-nav .nav .nav-item .logo {
+  margin-top: 3px;
+  height: 34px;
+  width: 100px;
+  background-image: url("/img/logo/moon-blanc.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-out;
+}
+
 #main-nav .nav .nav-item .nav-link {
-  color: #333;
+  color: #f6f6f6;
   text-transform: uppercase;
 }
 
@@ -13836,7 +13853,7 @@ a:focus {
   top: 40px;
   list-style: none;
   width: auto;
-  background: #fff;
+  background: #f6f6f6;
   border-top: none;
   text-align: left;
   border-radius: 0 0 5px 5px;
@@ -13862,6 +13879,8 @@ a:focus {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
 #mainSlider .carousel-item:nth-child(1) {
@@ -14424,6 +14443,40 @@ a:focus {
 
 #productModal .modal-content .modal-body .cart .cart-submit:hover {
   background-color: rgba(204, 0, 0, 0.8);
+}
+
+#about {
+  position: relative;
+  height: 100vh;
+  background-image: url("/img/about/hands.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  color: #f6f6f6;
+}
+
+#about .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#about .intro img {
+  max-height: 250px;
+}
+
+#about .intro h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+#about .intro p {
+  font-size: 20px;
 }
 
 footer {
