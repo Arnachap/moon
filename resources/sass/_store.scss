@@ -61,6 +61,7 @@
     .product-info {
         margin-top: 20px;
         text-align: center;
+        @include heading-font;
 
         .price {
             font-weight: 400;
@@ -72,7 +73,7 @@
 
         .add-to-cart {
             margin: 20px auto;
-            width: 150px;
+            width: 200px;
             background-color: $red;
             border: medium none;
             color: $white;
@@ -107,21 +108,25 @@
                 padding: 30px 0;
 
                 .title {
-                    text-transform: capitalize;
+                    font-size: 30px;
+                    @include script-font;
                 }
 
                 .price {
                     color: $grey;
+                    @include heading-font;
                 }
 
                 p {
                     font-size: 16px;
                     text-align: justify;
+                    @include body-font;
                 }
             }
 
             .cart {
                 display: flex;
+                @include heading-font;
 
                 .quantity {
                     align-items: center;
@@ -168,7 +173,7 @@
                     cursor: pointer;
                     height: 35px;
                     margin-left: 15px;
-                    width: 150px;
+                    width: 200px;
                     @include easeOut;
 
                     &:hover {

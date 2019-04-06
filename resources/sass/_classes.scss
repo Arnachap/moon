@@ -5,11 +5,12 @@
     border-radius: 1px;
     text-transform: uppercase;
     font-size: 20px;
+    @include heading-font;
 
     &:hover {
-        @include easeOut;
         background-color: $white;
         color: $black;
+        @include easeOut;
     }
 }
 
@@ -18,17 +19,22 @@
     padding: 80px 0 40px 0;
 
     h2 {
-        font-size: 40px;
+        font-size: 50px;
+        color: $black;
+        @include script-font;
     }
 
     p {
         color: $grey;
+        @include heading-font;
     }
 }
 
 .section-title {
+    color: $black;
     text-align: center;
     text-transform: capitalize;
-    font-size: 40px;
+    font-size: 50px;
     padding: 20px 0;
+    @include script-font;
 }

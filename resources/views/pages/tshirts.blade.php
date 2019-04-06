@@ -24,7 +24,7 @@ T-shirts
             
             <div class="product-info">
                 <div class="price">30€</div>
-                <div class="desc">"Tête à noeud" - blanc</div>
+                <div class="desc">"Tete à noeud" - blanc</div>
                 <div class="add-to-cart">Ajouter au panier</div>
             </div>
         </div>
@@ -80,7 +80,7 @@ T-shirts
 
                         <div class="col-7">
                             <div class="modal-desc">
-                                <h4 class="title">Tête à Noeud</h4>
+                                <h4 class="title">Tete a Noeud</h4>
 
                                 <h5 class="price">30€</h5>
                                 

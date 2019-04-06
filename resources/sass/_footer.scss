@@ -6,6 +6,7 @@ footer {
     padding: 20px 40px;
     font-size: 12px;
     text-align: center;
+    @include body-font;
 
     #social i {
         margin: 0 10px;

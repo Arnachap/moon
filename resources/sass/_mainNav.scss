@@ -43,6 +43,7 @@
             .nav-link {
                 color: $white;
                 text-transform: uppercase;
+                @include body-font;
 
                 i {
                     font-size: 18px;

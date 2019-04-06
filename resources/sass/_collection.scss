@@ -38,6 +38,7 @@
         span {
             margin: 0;
             width: 100%;
+            @include body-font;
         }
 
         h2 {
