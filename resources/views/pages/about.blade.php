@@ -16,43 +16,76 @@ L'entreprise
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+<div id="concept" class="container-fluid">
+    <h2 class="section-title">Notre Concept</h2>
 
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-5">
-                            <img src="/img/store/tshirt1.jpg" class="img-fluid" alt="">
-                        </div>
+    <div class="row">
+        <div class="col-6">
+            <img src="/img/about/concept.jpg" class="img-fluid" alt="">
+        </div>
 
-                        <div class="col-7">
-                            <div class="modal-desc">
-                                <h4 class="title">Tête à Noeud</h4>
+        <div class="col-6">
+            <ul>
+                <li>
+                    <i class="fa fa-hand-peace-o"></i>
+                    <h3>Fabrication à la main</h3>
+                </li>
 
-                                <h5 class="price">30€</h5>
-                                
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia expedita quibusdam aspernatur, sapiente consectetur accusantium perspiciatis praesentium eligendi, in fugiat?</p>
-                            </div>
+                <li>
+                    <i class="fa fa-map-marker"></i>
+                    <h3>Fabriqué en Lorraine</h3>
+                </li>
 
-                            <form class="cart" method="post">
-                                <div class="quantity">
-                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                <li>  
+                    <i class="fa fa-recycle"></i>
+                    <h3>Matériaux recyclés</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
+<div id="recycle">
+    <div class="container">
+        <h2 class="section-title">Moon recycle</h2>
 
-                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                </div>
-                                <button type="submit" name="addtocart" value="5" class="cart-submit">Ajouter au panier</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Tu veux participer au projet Moon?<br>Recyclons ensemble !</h3>
+
+                <p>Nous collectons bois et tissus pour leur donner une seconde vie. Le surplus de matériaux est ensuite reversé à des associations qui les revaloriseront à leur tour.</p>
+
+                <p>N’hésites pas à nous contacter, pour qu’on récupère le meuble qui traîne dans ton grenier, tes anciens skates stockés au fond du garage, les palettes dont tu ne sais pas quoi faire, les chemises et pantalons qui restent dans un carton, mais aussi tout autres objets pouvant prendre la forme d’un nœud pap’. Engageons-nous ! Soyons Moon !</p>
+
+                <p class="text-center">Tu veux recycler avec nous ?</p>
+                
+                <p class="text-center">
+                    <a href="/contact" class="button">Contacte-nous !</a>
+                </p>
+            </div>
+
+            <div class="col-6">
+                <img src="/img/about/recycle.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="banner"></div>
+
+<div id="moonExpo">
+    <img src="/img/about/expo.png" class="d-block mx-auto title" alt="">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <img src="/img/about/van.png" class="img-fluid m-auto" alt="">
+            </div>
+
+            <div class="col-7">
+                <h3>De l'art au travers de Nœuds Papillon</h3>
+
+                <p>Moon Expo : un projet qui complète l’univers Moon et qui propose une nouvelle façon de sublimer les nœuds papillon. Ainsi chaque mois, au minimum un artiste pourra proposer son art sur un Moon Pap’. L’artiste a carte blanche et il est seul maître du destin de ce bout de bois.</p>
             </div>
         </div>
     </div>

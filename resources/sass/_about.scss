@@ -31,3 +31,95 @@
         }
     }
 }
+
+#concept {
+    text-align: center;
+
+    img {
+        border-radius: 3px;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        margin-top: 10px;
+
+        li {
+            margin: 10px 0;
+
+            i {
+                font-size: 50px;
+                color: $brown;
+            }
+        
+            h3 {
+                padding: 20px 0;
+                color: $black;
+                @include body-font;
+            }
+        }
+
+        
+    }
+}
+
+#recycle {
+    background-color: $black;
+    padding: 40px 0;
+
+    h2 {
+        color: $white;
+    }
+
+    h3 {
+        color: $white;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.6;
+        padding: 20px 0;
+        @include heading-font;
+    }
+
+    p {
+        color: $white;
+        text-indent: 1rem;
+        text-align: justify;
+        padding: 10px 20px;
+        @include body-font;
+
+        &:nth-child(4) {
+            font-weight: 700;
+        }
+    }
+}
+
+#banner {
+    height: 500px;
+    background-image: url('/img/about/skate.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#moonExpo {
+    padding: 40px 0;
+
+    .title {
+        height: 150px;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        text-align: center;
+        color: $black;
+        @include heading-font;
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 1rem;
+        color: $grey;
+        padding: 20px 40px;
+        @include body-font;
+    }
+}

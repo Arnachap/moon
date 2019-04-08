@@ -49,7 +49,7 @@ Le noeud papillon en bois sur-mesure
     <div class="container">
         <div class="row">
             <div class="col-8 m-auto">
-                <img src="/img/index/create.jpg" class="img-fluid mx-auto create-img" alt="">
+                <img src="/img/index/create.png" class="img-fluid mx-auto create-img" alt="">
             </div>
         </div>
         

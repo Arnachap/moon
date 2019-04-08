@@ -13938,7 +13938,7 @@ a:focus {
 
 #createBanner .create-img {
   display: block;
-  height: 280px;
+  height: 300px;
 }
 
 #createBanner .paw {
@@ -14538,6 +14538,96 @@ a:focus {
 
 #about .intro p {
   font-size: 20px;
+  font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#concept {
+  text-align: center;
+}
+
+#concept img {
+  border-radius: 3px;
+}
+
+#concept ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  margin-top: 10px;
+}
+
+#concept ul li {
+  margin: 10px 0;
+}
+
+#concept ul li i {
+  font-size: 50px;
+  color: #966527;
+}
+
+#concept ul li h3 {
+  padding: 20px 0;
+  color: #333;
+  font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#recycle {
+  background-color: #333;
+  padding: 40px 0;
+}
+
+#recycle h2 {
+  color: #fff;
+}
+
+#recycle h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.6;
+  padding: 20px 0;
+  font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#recycle p {
+  color: #fff;
+  text-indent: 1rem;
+  text-align: justify;
+  padding: 10px 20px;
+  font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#recycle p:nth-child(4) {
+  font-weight: 700;
+}
+
+#banner {
+  height: 500px;
+  background-image: url("/img/about/skate.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#moonExpo {
+  padding: 40px 0;
+}
+
+#moonExpo .title {
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+#moonExpo h3 {
+  text-align: center;
+  color: #333;
+  font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#moonExpo p {
+  text-align: justify;
+  text-indent: 1rem;
+  color: #868e96;
+  padding: 20px 40px;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
