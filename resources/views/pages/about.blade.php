@@ -11,7 +11,7 @@ L'entreprise
         <div class="intro">
             <img src="/img/logo/logo-full-blanc.png" alt="">
             <h2>Qu'est-ce que Moon?</h2>
-            <p>Moon c’est l’intégration de l’environnement avec le recyclage de matériaux pour fabriquer et créer des accessoires de modes originaux et uniques : des Moon pap’ (nœuds papillon créés par Moon). Ce projet vient compléter une complicité avec les nœuds papillons et avec le plaisir du développement et de la création.</p>
+            <p>Moon, c’est la création de nœuds papillon, sous toutes leurs formes et matières, notamment en bois (meubles, palettes...) et tissus recyclés.</p>
         </div>
     </div>
 </div>

@@ -44,9 +44,39 @@ Le noeud papillon en bois sur-mesure
 </div>
 
 <div id="createBanner">
-    <a href="/create">
-        <img src="img/create.png" alt="Créer son noeud papillon en bois sur-mesure">
-    </a>
+    <h2 class="section-title">Cree ton Noeud</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8 m-auto">
+                <img src="/img/index/create.jpg" class="img-fluid mx-auto create-img" alt="">
+            </div>
+        </div>
+        
+        <div class="row pt-5">
+            <div class="col-3">
+                <img src="/img/index/1.png" class="img-fluid mx-auto paw" alt="">
+                <p>Choisis<br>ta forme</p>
+            </div>
+
+            <div class="col-3">
+                <img src="/img/index/2.png" class="img-fluid mx-auto d-block paw" alt="">
+                <p>Choisis<br>ta matière</p>
+            </div>
+
+            <div class="col-3">
+                <img src="/img/index/3.png" class="img-fluid mx-auto d-block paw" alt="">
+                <p>Choisis<br>ton tissu</p>
+            </div>
+
+            <div class="col-3">
+                <img src="/img/index/4.png" class="img-fluid mx-auto d-block paw" alt="">
+                <p>Porte ton<br>Noued Pap' Moon</p>
+            </div>
+            
+            <a href="/create" class="button mx-auto">Crée ton Noud Pap'</a>
+        </div>
+    </div>
 </div>
 
 <div id="bowBanner">
@@ -66,7 +96,7 @@ Le noeud papillon en bois sur-mesure
                 <h3>T-shirt</h3>
             </figcaption>
     
-            <a href="/shirts"></a>
+            <a href="/t-shirts"></a>
         </figure>
     
         <figure class="main-links"><img src="/img/earings-mini.jpg" alt="Boucles d'oreille Moon">

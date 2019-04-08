@@ -13734,21 +13734,21 @@ body {
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #333;
-  background: #f6f6f6;
+  background: #fff;
 }
 
 a {
   text-decoration: none;
-  color: #f6f6f6;
+  color: #fff;
 }
 
 a:hover {
   text-decoration: none;
-  color: #f6f6f6;
+  color: #fff;
 }
 
 a:active {
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 a:focus {
@@ -13757,7 +13757,7 @@ a:focus {
 
 .button {
   padding: 10px 20px;
-  border: 2px solid #f6f6f6;
+  border: 2px solid #fff;
   border-radius: 1px;
   text-transform: uppercase;
   font-size: 20px;
@@ -13765,8 +13765,8 @@ a:focus {
 }
 
 .button:hover {
-  background-color: #f6f6f6;
-  color: #333;
+  background-color: #966527;
+  border: 2px solid #966527;
   transition: all 0.3s ease-out;
 }
 
@@ -13777,7 +13777,7 @@ a:focus {
 
 .page-title h2 {
   font-size: 50px;
-  color: #333;
+  color: #966527;
   font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -13787,7 +13787,7 @@ a:focus {
 }
 
 .section-title {
-  color: #333;
+  color: #966527;
   text-align: center;
   text-transform: capitalize;
   font-size: 50px;
@@ -13804,7 +13804,7 @@ a:focus {
 
 #main-nav.scrolled,
 #main-nav:hover {
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 #main-nav.scrolled .nav .nav-item .nav-link,
@@ -13843,7 +13843,7 @@ a:focus {
 }
 
 #main-nav .nav .nav-item .nav-link {
-  color: #f6f6f6;
+  color: #fff;
   text-transform: uppercase;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -13875,7 +13875,7 @@ a:focus {
   top: 40px;
   list-style: none;
   width: auto;
-  background: #f6f6f6;
+  background: #fff;
   border-top: none;
   text-align: left;
   border-radius: 0 0 5px 5px;
@@ -13932,15 +13932,36 @@ a:focus {
 }
 
 #createBanner {
-  overflow: hidden;
-  background-color: #f6f6f6;
-  padding: 50px 0;
+  padding: 40px 0;
+  background-color: #fff;
 }
 
-#createBanner img {
+#createBanner .create-img {
   display: block;
-  margin: auto;
-  max-width: 80vw;
+  height: 280px;
+}
+
+#createBanner .paw {
+  display: block;
+  height: 120px;
+}
+
+#createBanner p {
+  padding-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#createBanner a {
+  margin: 20px 0;
+  color: #966527;
+  border: 2px solid #966527;
+}
+
+#createBanner a:hover {
+  color: #fff;
+  border: 2px solid #966527;
 }
 
 #bowBanner {
@@ -13953,8 +13974,10 @@ a:focus {
 
 #bowBanner a {
   position: absolute;
-  top: calc(50% - 20px);
-  left: calc(50% - 160px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #links {
@@ -13992,8 +14015,8 @@ a:focus {
   left: 0;
   right: 0;
   background-color: rgba(51, 51, 51, 0.7);
-  border-left: 3px solid #f6f6f6;
-  border-right: 3px solid #f6f6f6;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
   content: "";
   opacity: 0.9;
   z-index: 1;
@@ -14030,8 +14053,8 @@ a:focus {
 
 #links #accesories .main-links h3 {
   background-color: #333;
-  border: 2px solid #f6f6f6;
-  color: #f6f6f6;
+  border: 2px solid #fff;
+  color: #fff;
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 1px;
@@ -14083,7 +14106,7 @@ a:focus {
   overflow: hidden;
   margin: 10px;
   width: 100%;
-  color: #f6f6f6;
+  color: #fff;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
@@ -14151,7 +14174,7 @@ a:focus {
 }
 
 #create #createMenu .upper-menu {
-  background: #f6f6f6;
+  background: #fff;
   height: 100px;
   visibility: hidden;
 }
@@ -14180,7 +14203,7 @@ a:focus {
 }
 
 #create #createMenu .sub-menu h3 {
-  color: #f6f6f6;
+  color: #fff;
   background: #333;
   line-height: 50px;
   margin: 0;
@@ -14217,7 +14240,7 @@ a:focus {
   background-color: #333;
   width: 100%;
   border-radius: 5px;
-  color: #f6f6f6;
+  color: #fff;
   position: relative;
   top: 60px;
   text-align: center;
@@ -14249,7 +14272,7 @@ a:focus {
   padding: 20px 0;
   border: none;
   outline: none;
-  color: #f6f6f6;
+  color: #fff;
   background-color: #cc0000;
   border-radius: 0 0 5px 5px;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -14342,18 +14365,18 @@ a:focus {
 .product .product-img .product-quickview a {
   width: 72px;
   height: 72px;
-  border: 2px solid rgba(246, 246, 246, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   text-align: center;
-  color: rgba(246, 246, 246, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 28px;
   line-height: 72px;
   transition: all 0.3s ease-out;
 }
 
 .product .product-img .product-quickview a:hover {
-  border: 2px solid #f6f6f6;
-  color: #f6f6f6;
+  border: 2px solid white;
+  color: white;
 }
 
 .product .product-info {
@@ -14375,7 +14398,7 @@ a:focus {
   width: 200px;
   background-color: #cc0000;
   border: medium none;
-  color: #f6f6f6;
+  color: #fff;
   cursor: pointer;
   height: 35px;
   line-height: 35px;
@@ -14408,6 +14431,7 @@ a:focus {
 
 #productModal .modal-content .modal-body .modal-desc .title {
   font-size: 30px;
+  color: #966527;
   font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -14433,7 +14457,7 @@ a:focus {
 }
 
 #productModal .modal-content .modal-body .cart .quantity input {
-  border: 1px solid #f6f6f6;
+  border: 1px solid #fff;
   height: 35px;
   text-align: center;
   width: 40px;
@@ -14443,7 +14467,7 @@ a:focus {
 #productModal .modal-content .modal-body .cart .quantity .qty-plus,
 #productModal .modal-content .modal-body .cart .quantity .qty-minus {
   background-color: transparent;
-  border: 1px solid #f6f6f6;
+  border: 1px solid #fff;
   color: #333;
   cursor: pointer;
   height: 35px;
@@ -14469,7 +14493,7 @@ a:focus {
 #productModal .modal-content .modal-body .cart .cart-submit {
   background-color: #cc0000;
   border: medium none;
-  color: #f6f6f6;
+  color: #fff;
   cursor: pointer;
   height: 35px;
   margin-left: 15px;
@@ -14490,7 +14514,7 @@ a:focus {
   background-size: cover;
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
-  color: #f6f6f6;
+  color: #fff;
 }
 
 #about .intro {
@@ -14519,7 +14543,7 @@ a:focus {
 
 footer {
   background: #333;
-  color: #f6f6f6;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;

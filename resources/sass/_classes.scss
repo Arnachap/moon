@@ -8,8 +8,8 @@
     @include heading-font;
 
     &:hover {
-        background-color: $white;
-        color: $black;
+        background-color: $brown;
+        border: 2px solid $brown;
         @include easeOut;
     }
 }
@@ -20,7 +20,7 @@
 
     h2 {
         font-size: 50px;
-        color: $black;
+        color: $brown;
         @include script-font;
     }
 
@@ -31,7 +31,7 @@
 }
 
 .section-title {
-    color: $black;
+    color: $brown;
     text-align: center;
     text-transform: capitalize;
     font-size: 50px;
