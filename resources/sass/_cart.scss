@@ -1,0 +1,19 @@
+.table {
+    tr {
+        position: relative;
+
+        td {
+            padding-top: 50px;
+            @include body-font;
+
+            &:first-child {
+                padding-top: 12px !important;
+            }
+
+            img {
+                border-radius: 3px;
+                height: 100px;
+            }
+        }
+    }
+}

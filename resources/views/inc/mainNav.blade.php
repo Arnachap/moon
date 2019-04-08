@@ -1,8 +1,7 @@
-<nav id="main-nav">
-    <ul class="nav">
-        <li class="nav-item">
-            <a href="/" class="nav-link logo"></a>
-        </li>
+<nav class="navbar" id="main-nav">
+    <a href="/" class="navbar-brand"></a>
+
+    <ul class="navbar-nav">
 
         <li class="nav-item nav-dropdown">
             <span class="nav-link dropdown-toggle">Nos Noeuds</span>
@@ -40,6 +39,14 @@
         
         <li class="nav-item">
             <a href="/contact" class="nav-link">Contact</a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav right">
+        <li class="nav-item">
+            <a href="/login" class="nav-link">
+                <i class="fa fa-user"></i>
+            </a>
         </li>
 
         <li class="nav-item">

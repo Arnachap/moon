@@ -16,3 +16,5 @@ Route::get('/collection', 'PagesController@collection');
 Route::get('/create', 'PagesController@create');
 Route::get('/t-shirts', 'PagesController@tshirts');
 Route::get('/about', 'PagesController@about');
+Route::get('/login', 'PagesController@login');
+Route::get('/cart', 'PagesController@cart');

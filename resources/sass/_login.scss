@@ -1,0 +1,38 @@
+#login {
+    height: calc(100vh - 61.6px);
+
+    .container {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+
+        img {
+            height: 150px;
+        }
+
+        h2 {
+            color: $black;
+            margin: 20px 0;
+            @include heading-font;
+        }
+    
+        label,
+        input {
+            @include body-font;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: $white;
+            border: 2px solid $black;
+
+            &:hover {
+                color: $white;
+                background-color: $brown;
+                border: 2px solid $brown;
+            }
+        }
+    }
+}
