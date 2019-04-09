@@ -25,8 +25,7 @@ Le noeud papillon en bois sur-mesure
         <div class="carousel-item">
 
         <div class="carousel-caption d-none d-md-block">
-            <h2>Moon, c'est aussi des t-shirts, des casquettes,
-                <br>et pleins d'autres accessoires !</h2>
+            <h2>Moon, c'est aussi des accessoires !</h2>
 
             <a class="button slider-btn" href="/create">Nos accessoires</a>
         </div>

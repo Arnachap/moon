@@ -7,11 +7,11 @@
             <span class="nav-link dropdown-toggle">Nos Noeuds</span>
             <ul class="dropdown">
                 <li class="dropdown-item">
-                    <a href="/collection" class="nav-link">Notre collection</a>
+                    <a href="/create" class="nav-link">Crée ton Noeud</a>
                 </li>
 
                 <li class="dropdown-item">
-                    <a href="/create" class="nav-link">Crée ton Noeud</a>
+                    <a href="/collection" class="nav-link">Notre collection</a>
                 </li>
             </ul>
         </li>
