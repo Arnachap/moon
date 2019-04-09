@@ -98,7 +98,7 @@ Le noeud papillon en bois sur-mesure
             <a href="/t-shirts"></a>
         </figure>
     
-        <figure class="main-links"><img src="/img/earings-mini.jpg" alt="Boucles d'oreille Moon">
+        <figure class="main-links"><img src="/img/earing-mini.jpg" alt="Boucles d'oreille Moon">
     
             <figcaption>
                 <h3>Boucles d'oreille</h3>
