@@ -44,9 +44,33 @@
 
     <ul class="navbar-nav right">
         <li class="nav-item">
-            <a href="/login" class="nav-link">
-                <i class="fa fa-user"></i>
-            </a>
+            @guest
+                <a href="{{ route('login') }}" class="nav-link">
+                    <i class="fa fa-user"></i>
+                </a>
+            @else
+                <li class="nav-item nav-dropdown">
+                    <span class="nav-link dropdown-toggle">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/orders" class="nav-link">Mes commandes</a>
+                        </li>
+        
+                        <li class="dropdown-item">
+                            
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Se déconnecter
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            @endguest
         </li>
 
         <li class="nav-item">
