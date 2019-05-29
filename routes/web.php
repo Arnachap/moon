@@ -18,3 +18,15 @@ Route::get('/t-shirts', 'PagesController@tshirts');
 Route::get('/about', 'PagesController@about');
 Route::get('/login', 'PagesController@login');
 Route::get('/cart', 'PagesController@cart');
+
+// Auth Routes
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+// Admin Routes
+Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
