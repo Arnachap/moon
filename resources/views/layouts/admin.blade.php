@@ -10,12 +10,14 @@
     
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
-    @include('inc.mainNav')
+<body id="admin">
+    <div class="container-fluid">
+        <div class="row">
+            @include('inc.adminNav')
 
-    @yield('content')
-    
-    @include('inc.footer')
+            @yield('content')
+        </div>
+    </div>
 
     <script src="/js/app.js"></script>
 </body>

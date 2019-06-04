@@ -1,0 +1,19 @@
+#admin {
+    .nav {
+        height: 100vh;
+
+        .nav-item a {
+            color: $dark-grey !important;
+        }
+    }
+
+    table {
+        th:first-child {
+            width: 40px;
+        }
+
+        td {
+            padding: 12px !important;
+        }
+    }
+}

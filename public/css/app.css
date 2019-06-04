@@ -14706,3 +14706,19 @@ footer #arnaudchapeleur i {
   height: 100px;
 }
 
+#admin .nav {
+  height: 100vh;
+}
+
+#admin .nav .nav-item a {
+  color: #464646 !important;
+}
+
+#admin table th:first-child {
+  width: 40px;
+}
+
+#admin table td {
+  padding: 12px !important;
+}
+
