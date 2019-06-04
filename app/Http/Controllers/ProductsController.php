@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -51,14 +52,23 @@ class ProductsController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'image' => 'required'
+            'image' => 'image|max:1999'
         ]);
 
+        // Handle File Upload
+        $filenameWithExt = $request->file('image')->getClientOriginalName();
+        var_dump($filenameWithExt);
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('image')->getClientOriginalExtension();
+        $filenameToStore = $filename . '_' . time() . '.' . $extension;
+        $path = $request->file('image')->storeAs('public/products', $filenameToStore);
+
+        // Create Product
         $product = new Product;
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->image = $request->image;
+        $product->image = $filenameToStore;
         $product->available = $request->available;
         $product->save();
 
@@ -104,14 +114,31 @@ class ProductsController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'image' => 'required'
+            'image' => 'image|nullable|max:1999'
         ]);
 
+        
+
+        // Edit Product
         $product = Product::find($id);
+
+        if($request->hasFile('image')) {
+            // Delete old image
+            Storage::delete('public/products/' . $product->image);
+
+            // Handle File Upload
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            var_dump($filenameWithExt);
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $filenameToStore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('image')->storeAs('public/products', $filenameToStore);
+            $product->image = $filenameToStore;
+        }
+
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->image = $request->image;
         $product->available = $request->available;
         $product->save();
 
@@ -127,6 +154,8 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+
+        Storage::delete('public/products/' . $product->image);
 
         $product->delete();
 

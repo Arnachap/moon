@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="col-8 mx-auto">
-                {{ Form::open(['action' => ['ProductsController@update', $product->id], 'method' => 'POST']) }}
+                {{ Form::open(['action' => ['ProductsController@update', $product->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                     <div class="form-group">
                         {{ Form::label('name', 'Nom de l\'article') }}
                         {{ Form::text('name', $product->name, ['class' => 'form-control', 'placeholder' => 'Nom de l\'article']) }}
@@ -28,7 +28,11 @@
                         {{ Form::number('price', $product->price, ['class' => 'form-control', 'placeholder' => 'Prix']) }}
                     </div>
 
-                    {{ Form::hidden('image', '123') }}
+                    <div class="form-group">
+                        {{ Form::label('image', 'Photo de l\'article') }}
+                        {{ Form::file('image', ['class' => 'form-control-file']) }}
+                    </div>
+                    
                     {{ Form::hidden('available', true) }}
                     {{ Form::hidden('_method', 'PUT') }}
 

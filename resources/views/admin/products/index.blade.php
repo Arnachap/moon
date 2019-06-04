@@ -22,17 +22,19 @@
             </thead>
 
             <tbody>
-                @foreach($products as $product)
-                    <tr>
-                        <th scope="row">{{ $product->id }}</th>
-                        
-                        <td>
-                            <a href="/admin/products/{{ $product->id }}" class="text-muted">
-                                {{ $product->name }}
-                            </a>
-                        </td>
-                    </tr>
-                @endforeach
+                @if(!empty($products))
+                    @foreach($products as $product)
+                        <tr>
+                            <th scope="row">{{ $product->id }}</th>
+                            
+                            <td>
+                                <a href="/admin/products/{{ $product->id }}" class="text-muted">
+                                    {{ $product->name }}
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
             </tbody>
         </table>
     </main>

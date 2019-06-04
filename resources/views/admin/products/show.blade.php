@@ -17,6 +17,12 @@
                 </button>
             </div>
         </div>
+
+        <div class="col-6 mx-auto">
+            <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+            <p>{{ $product->description }}</p>
+            <p>Prix : {{ $product->price }}</p>
+        </div>
     </main>
 
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
