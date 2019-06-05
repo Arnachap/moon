@@ -24,6 +24,11 @@
                     </div>
 
                     <div class="form-group">
+                        {{ Form::label('category', 'Catégorie') }}
+                        {{ Form::select('category', ['t-shirts' => 'T-shirts', 'earrings' => 'Boucles d\'oreilles', 'caps' => 'Casquettes'], $product->category, ['placeholder' => 'Catégorie', 'class' => 'form-control']) }}
+                    </div>
+
+                    <div class="form-group">
                         {{ Form::label('price', 'Prix') }}
                         {{ Form::number('price', $product->price, ['class' => 'form-control', 'placeholder' => 'Prix']) }}
                     </div>

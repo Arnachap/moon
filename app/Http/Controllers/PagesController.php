@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PagesController extends Controller
 {
@@ -19,7 +20,25 @@ class PagesController extends Controller
     }
 
     public function tshirts() {
-        return view('pages.tshirts');
+        $category = 'T-shirts';
+        $intro = 'Des t-shirts uniques, à la marque au Chat.';
+        $products = Product::where('category', 't-shirts')->get();
+
+        return view('pages.store')
+            ->with('products', $products)
+            ->with('category', $category)
+            ->with('intro', $intro);
+    }
+
+    public function earrings() {
+        $category = 'Boucles d\'oreilles';
+        $intro = 'Un accessoire original, en bois recyclé !';
+        $products = Product::where('category', 'earrings')->get();
+
+        return view('pages.store')
+            ->with('products', $products)
+            ->with('category', $category)
+            ->with('intro', $intro);
     }
 
     public function about() {

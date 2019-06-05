@@ -14,10 +14,16 @@
 Route::get('/', 'PagesController@index');
 Route::get('/collection', 'PagesController@collection');
 Route::get('/create', 'PagesController@create');
-Route::get('/t-shirts', 'PagesController@tshirts');
 Route::get('/about', 'PagesController@about');
 Route::get('/login', 'PagesController@login');
 Route::get('/cart', 'PagesController@cart');
+
+// Store Routes
+Route::prefix('products')->group(function() {
+    Route::get('/t-shirts', 'PagesController@tshirts');
+    Route::get('/earrings', 'PagesController@earrings');
+    Route::get('/caps', 'PagesController@caps');
+});
 
 // Auth Routes
 Auth::routes();

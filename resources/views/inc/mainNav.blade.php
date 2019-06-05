@@ -20,15 +20,15 @@
             <span class="nav-link dropdown-toggle">Nos accessoires</span>
             <ul class="dropdown">
                 <li class="dropdown-item">
-                    <a href="/t-shirts" class="nav-link">T-shirts</a>
+                    <a href="/products/t-shirts" class="nav-link">T-shirts</a>
                 </li>
 
                 <li class="dropdown-item">
-                    <a href="/earrings" class="nav-link">Boucles d'oreille</a>
+                    <a href="/products/earrings" class="nav-link">Boucles d'oreille</a>
                 </li>
                 
                 <li class="dropdown-item">
-                    <a href="/caps" class="nav-link">Casquettes</a>
+                    <a href="/products/caps" class="nav-link">Casquettes</a>
                 </li>
             </ul>
         </li>

@@ -95,7 +95,7 @@ Le noeud papillon en bois sur-mesure
                 <h3>T-shirt</h3>
             </figcaption>
     
-            <a href="/t-shirts"></a>
+            <a href="/products/t-shirts"></a>
         </figure>
     
         <figure class="main-links"><img src="/img/earing-mini.jpg" alt="Boucles d'oreille Moon">
@@ -104,7 +104,7 @@ Le noeud papillon en bois sur-mesure
                 <h3>Boucles d'oreille</h3>
             </figcaption>
     
-            <a href="/earings"></a>
+            <a href="/products/earrings"></a>
         </figure>
         <figure class="main-links"><img src="/img/cap-mini.jpg" alt="Casquettes Moon">
     
@@ -112,7 +112,7 @@ Le noeud papillon en bois sur-mesure
                 <h3>Casquette</h3>
             </figcaption>
     
-            <a href="/caps"></a>
+            <a href="/products/caps"></a>
         </figure>
     </div>
 </div>

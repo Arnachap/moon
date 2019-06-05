@@ -2,27 +2,23 @@
     margin-bottom: 100px;
     overflow: hidden;
 
-    &:hover {
-        .product-img img {
-            transform: scale(1.2);
-        }
-    }
-
     .product-img {
-        position: relative;
         z-index: 1;
         overflow: hidden;
         border-radius: 3px;
+        position: relative;
+        margin: auto;
+        width: auto;
+        height: 400px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include easeOut;
 
         &:hover {
             .product-quickview {
                 opacity: 1;
             }
-        }
-
-        img {
-            width: 100%;
-            @include easeOut;
         }
 
         .product-quickview {
@@ -89,10 +85,10 @@
     }
 }
 
-#productModal {
+.modal {
     .modal-content {
         border-radius: 3px;
-        
+
         .close {
             margin-right: 10px;
         }

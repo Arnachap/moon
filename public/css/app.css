@@ -14332,25 +14332,22 @@ a:focus {
   overflow: hidden;
 }
 
-.product:hover .product-img img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .product .product-img {
-  position: relative;
   z-index: 1;
   overflow: hidden;
   border-radius: 3px;
+  position: relative;
+  margin: auto;
+  width: auto;
+  height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s ease-out;
 }
 
 .product .product-img:hover .product-quickview {
   opacity: 1;
-}
-
-.product .product-img img {
-  width: 100%;
-  transition: all 0.3s ease-out;
 }
 
 .product .product-img .product-quickview {
@@ -14415,54 +14412,54 @@ a:focus {
   background-color: rgba(204, 0, 0, 0.8);
 }
 
-#productModal .modal-content {
+.modal .modal-content {
   border-radius: 3px;
 }
 
-#productModal .modal-content .close {
+.modal .modal-content .close {
   margin-right: 10px;
 }
 
-#productModal .modal-content .modal-body {
+.modal .modal-content .modal-body {
   padding-top: 0;
 }
 
-#productModal .modal-content .modal-body img {
+.modal .modal-content .modal-body img {
   border-radius: 3px;
 }
 
-#productModal .modal-content .modal-body .modal-desc {
+.modal .modal-content .modal-body .modal-desc {
   padding: 30px 0;
 }
 
-#productModal .modal-content .modal-body .modal-desc .title {
+.modal .modal-content .modal-body .modal-desc .title {
   font-size: 30px;
   color: #966527;
   font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#productModal .modal-content .modal-body .modal-desc .price {
+.modal .modal-content .modal-body .modal-desc .price {
   color: #868e96;
   font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#productModal .modal-content .modal-body .modal-desc p {
+.modal .modal-content .modal-body .modal-desc p {
   font-size: 16px;
   text-align: justify;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#productModal .modal-content .modal-body .cart {
+.modal .modal-content .modal-body .cart {
   display: flex;
   font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#productModal .modal-content .modal-body .cart .quantity {
+.modal .modal-content .modal-body .cart .quantity {
   align-items: center;
   display: flex;
 }
 
-#productModal .modal-content .modal-body .cart .quantity input {
+.modal .modal-content .modal-body .cart .quantity input {
   border: 1px solid #fff;
   height: 35px;
   text-align: center;
@@ -14470,8 +14467,8 @@ a:focus {
   font-size: 14px;
 }
 
-#productModal .modal-content .modal-body .cart .quantity .qty-plus,
-#productModal .modal-content .modal-body .cart .quantity .qty-minus {
+.modal .modal-content .modal-body .cart .quantity .qty-plus,
+.modal .modal-content .modal-body .cart .quantity .qty-minus {
   background-color: transparent;
   border: 1px solid #fff;
   color: #333;
@@ -14481,22 +14478,22 @@ a:focus {
   width: 22px;
 }
 
-#productModal .modal-content .modal-body .cart .quantity .qty-plus i,
-#productModal .modal-content .modal-body .cart .quantity .qty-minus i {
+.modal .modal-content .modal-body .cart .quantity .qty-plus i,
+.modal .modal-content .modal-body .cart .quantity .qty-minus i {
   color: #868e96;
   font-size: 10px;
   line-height: 34px;
 }
 
-#productModal .modal-content .modal-body .cart .quantity .qty-plus {
+.modal .modal-content .modal-body .cart .quantity .qty-plus {
   border-left: 0 solid transparent;
 }
 
-#productModal .modal-content .modal-body .cart .quantity .qty-minus {
+.modal .modal-content .modal-body .cart .quantity .qty-minus {
   border-right: 0 solid transparent;
 }
 
-#productModal .modal-content .modal-body .cart .cart-submit {
+.modal .modal-content .modal-body .cart .cart-submit {
   background-color: #cc0000;
   border: medium none;
   color: #fff;
@@ -14507,7 +14504,7 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 
-#productModal .modal-content .modal-body .cart .cart-submit:hover {
+.modal .modal-content .modal-body .cart .cart-submit:hover {
   background-color: rgba(204, 0, 0, 0.8);
 }
 

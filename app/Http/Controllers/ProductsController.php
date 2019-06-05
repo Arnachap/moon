@@ -52,6 +52,7 @@ class ProductsController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'category' => 'required',
             'image' => 'image|max:1999'
         ]);
 
@@ -67,6 +68,7 @@ class ProductsController extends Controller
         $product = new Product;
         $product->name = $request->name;
         $product->description = $request->description;
+        $product->category = $request->category;
         $product->price = $request->price;
         $product->image = $filenameToStore;
         $product->available = $request->available;
@@ -114,6 +116,7 @@ class ProductsController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'category' => 'required',
             'image' => 'image|nullable|max:1999'
         ]);
 
@@ -138,6 +141,7 @@ class ProductsController extends Controller
 
         $product->name = $request->name;
         $product->description = $request->description;
+        $product->category = $request->category;
         $product->price = $request->price;
         $product->available = $request->available;
         $product->save();

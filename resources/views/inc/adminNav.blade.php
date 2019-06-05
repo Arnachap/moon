@@ -12,6 +12,12 @@
                     Articles
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    Retour au site
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
