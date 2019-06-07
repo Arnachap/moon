@@ -13806,6 +13806,7 @@ a:focus {
 #main-nav.scrolled,
 #main-nav:hover {
   background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 #main-nav.scrolled .navbar-nav .nav-item .nav-link,
