@@ -25,9 +25,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $tshirts = Product::where('category', 't-shirts')->get();
+        $earrings = Product::where('category', 'earrings')->get();
+        $caps = Product::where('category', 'caps')->get();
 
-        return view('admin.products.index')->with('products', $products);
+        return view('admin.products.index')
+            ->with('tshirts', $tshirts)
+            ->with('earrings', $earrings)
+            ->with('caps', $caps);
     }
 
     /**

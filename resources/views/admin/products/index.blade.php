@@ -12,29 +12,63 @@
             <a href="/admin/products/create" class="btn btn-primary">Créer un article</a>
         </div>
 
-        <table class="table table-hover">
-            <thead>
+        <table class="table table-hover table-sm">
+            <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
-
-                    <th scope="col">Nom</th>
+                    <th scope="col">T-shirts</th>
                 </tr>
             </thead>
 
             <tbody>
-                @if(!empty($products))
-                    @foreach($products as $product)
-                        <tr>
-                            <th scope="row">{{ $product->id }}</th>
-                            
-                            <td>
-                                <a href="/admin/products/{{ $product->id }}" class="text-muted">
-                                    {{ $product->name }}
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                @endif
+                @foreach($tshirts as $tshirt)
+                    <tr>
+                        <td>
+                            <a href="/admin/products/{{ $tshirt->id }}" class="text-muted">
+                                {{ $tshirt->name }}
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        <table class="table table-hover table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Boucles d'oreilles</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach($earrings as $earring)
+                    <tr>
+                        <td>
+                            <a href="/admin/products/{{ $earring->id }}" class="text-muted">
+                                {{ $earring->name }}
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        <table class="table table-hover table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Casquettes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach($caps as $cap)
+                    <tr>
+                        <td>
+                            <a href="/admin/products/{{ $cap->id }}" class="text-muted">
+                                {{ $cap->name }}
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </main>
