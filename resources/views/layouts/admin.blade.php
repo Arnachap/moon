@@ -15,7 +15,11 @@
         <div class="row">
             @include('inc.adminNav')
 
-            @yield('content')
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                @include('inc.messages')
+
+                @yield('content')
+            </main>
         </div>
     </div>
 

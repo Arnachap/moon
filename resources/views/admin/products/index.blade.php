@@ -5,71 +5,69 @@
 @endsection
 
 @section('content')
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Articles</h1>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Articles</h1>
 
-            <a href="/admin/products/create" class="btn btn-primary">Créer un article</a>
-        </div>
+        <a href="/admin/products/create" class="btn btn-primary">Créer un article</a>
+    </div>
 
-        <table class="table table-hover table-sm">
-            <thead class="thead-dark">
+    <table class="table table-hover table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">T-shirts</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach($tshirts as $tshirt)
                 <tr>
-                    <th scope="col">T-shirts</th>
+                    <td>
+                        <a href="/admin/products/{{ $tshirt->id }}" class="text-muted">
+                            {{ $tshirt->name }}
+                        </a>
+                    </td>
                 </tr>
-            </thead>
+            @endforeach
+        </tbody>
+    </table>
 
-            <tbody>
-                @foreach($tshirts as $tshirt)
-                    <tr>
-                        <td>
-                            <a href="/admin/products/{{ $tshirt->id }}" class="text-muted">
-                                {{ $tshirt->name }}
-                            </a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <table class="table table-hover table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Boucles d'oreilles</th>
+            </tr>
+        </thead>
 
-        <table class="table table-hover table-sm">
-            <thead class="thead-dark">
+        <tbody>
+            @foreach($earrings as $earring)
                 <tr>
-                    <th scope="col">Boucles d'oreilles</th>
+                    <td>
+                        <a href="/admin/products/{{ $earring->id }}" class="text-muted">
+                            {{ $earring->name }}
+                        </a>
+                    </td>
                 </tr>
-            </thead>
+            @endforeach
+        </tbody>
+    </table>
 
-            <tbody>
-                @foreach($earrings as $earring)
-                    <tr>
-                        <td>
-                            <a href="/admin/products/{{ $earring->id }}" class="text-muted">
-                                {{ $earring->name }}
-                            </a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <table class="table table-hover table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Casquettes</th>
+            </tr>
+        </thead>
 
-        <table class="table table-hover table-sm">
-            <thead class="thead-dark">
+        <tbody>
+            @foreach($caps as $cap)
                 <tr>
-                    <th scope="col">Casquettes</th>
+                    <td>
+                        <a href="/admin/products/{{ $cap->id }}" class="text-muted">
+                            {{ $cap->name }}
+                        </a>
+                    </td>
                 </tr>
-            </thead>
-
-            <tbody>
-                @foreach($caps as $cap)
-                    <tr>
-                        <td>
-                            <a href="/admin/products/{{ $cap->id }}" class="text-muted">
-                                {{ $cap->name }}
-                            </a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </main>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

@@ -5,25 +5,23 @@
 @endsection
 
 @section('content')
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">{{ $product->name }}</h1>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">{{ $product->name }}</h1>
 
-            <div class="float-right">
-                <a href="/admin/products/{{ $product->id }}/edit" class="btn btn-primary">Modifier</a>
-    
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal">
-                    Supprimer
-                </button>
-            </div>
-        </div>
+        <div class="float-right">
+            <a href="/admin/products/{{ $product->id }}/edit" class="btn btn-primary">Modifier</a>
 
-        <div class="col-6 mx-auto">
-            <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
-            <p>{{ $product->description }}</p>
-            <p>Prix : {{ $product->price }}</p>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal">
+                Supprimer
+            </button>
         </div>
-    </main>
+    </div>
+
+    <div class="col-6 mx-auto">
+        <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+        <p>{{ $product->description }}</p>
+        <p>Prix : {{ $product->price }}</p>
+    </div>
 
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

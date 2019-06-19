@@ -41,6 +41,17 @@ class PagesController extends Controller
             ->with('intro', $intro);
     }
 
+    public function caps() {
+        $category = 'Casquettes';
+        $intro = 'Moon fait de l\'ombre';
+        $products = Product::where('category', 'caps')->get();
+
+        return view('pages.store')
+            ->with('products', $products)
+            ->with('category', $category)
+            ->with('intro', $intro);
+    }
+
     public function about() {
         return view('pages.about');
     }

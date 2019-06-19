@@ -168,6 +168,6 @@ class ProductsController extends Controller
 
         $product->delete();
 
-        return view('admin.products.index')->with('success', 'Article supprimé !');
+        return redirect('/admin/products')->with('success', 'Article supprimé !');
     }
 }
