@@ -17,19 +17,37 @@
                 {{ $collection->title }}
 
                 <div class="float-right">
+                    <a href="/admin/bowties/create" class="pr-2 mr-1">
+                        <i class="fas fa-plus text-success" data-toggle="tooltip" data-placement="left" title="Ajouter un nœud pap'"></i>
+                    </a>
+
                     <a href="/admin/collections/{{ $collection->id }}/edit">
-                        <i class="far fa-edit text-primary"></i>
+                        <i class="far fa-edit text-primary" data-toggle="tooltip" data-placement="left" title="Modifier la collection"></i>
                     </a>
                     
                     <button type="button" class="btn py-0 border-0" data-toggle="modal" data-target="#modal{{ $collection->id }}">
-                        <i class="far fa-trash-alt text-danger pb-2"></i>
+                        <i class="far fa-trash-alt text-danger pb-2" data-toggle="tooltip" data-placement="left" title="Supprimer la collection"></i>
                     </button>
                 </div>
             </div>
         
             <div id="collapse{{ $collection->id }}" class="collapse" aria-labelledby="heading{{ $collection->id }}">
                 <div class="card-body">
-                    {{ $collection->intro }}
+                    <p>
+                        {{ $collection->intro }}
+                    </p>
+
+                    <table class="table table-hover">
+                        @foreach ($bowties as $bowtie)
+                            @if ($bowtie->collection_id === $collection->id)
+                                <tr>
+                                    <th scope="row">
+                                        <a href="/admin/bowties/{{ $bowtie->id }}" class="text-primary">{{ $bowtie->name }}</a>
+                                    </th>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>

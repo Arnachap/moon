@@ -37,4 +37,5 @@ Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::resource('/products', 'ProductsController');
     Route::resource('/collections', 'CollectionsController')->except('show');
+    Route::resource('/bowties', 'BowtiesController')->except('index');
 });

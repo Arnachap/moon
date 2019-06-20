@@ -2,7 +2,7 @@ require('./bootstrap');
 require('./create');
 
 if (window.location.pathname === '/' || window.location.pathname === '/about') {
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         const scrollPosition = $(window).scrollTop();
         if (scrollPosition > 1) {
             $('#main-nav').addClass('scrolled');
@@ -14,3 +14,6 @@ if (window.location.pathname === '/' || window.location.pathname === '/about') {
     $('#main-nav').addClass('scrolled');
 }
 
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});

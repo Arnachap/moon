@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Collection;
+use App\Bowtie;
 
 class CollectionsController extends Controller
 {
@@ -25,8 +26,11 @@ class CollectionsController extends Controller
     public function index()
     {
         $collections = Collection::all();
+        $bowties = Bowtie::all();
 
-        return view('admin.collections.index')->with('collections', $collections);
+        return view('admin.collections.index')
+            ->with('collections', $collections)
+            ->with('bowties', $bowties);
     }
 
     /**
@@ -102,6 +106,11 @@ class CollectionsController extends Controller
     public function destroy($id)
     {
         $collection = Collection::find($id);
+        $bowties = Bowtie::where('collection_id', $collection->id)->get();
+
+        foreach ($bowties as $bowtie) {
+            $bowtie->delete();
+        }
 
         $collection->delete();
 

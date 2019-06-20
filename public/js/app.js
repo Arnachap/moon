@@ -36597,6 +36597,10 @@ if (window.location.pathname === '/' || window.location.pathname === '/about') {
   $('#main-nav').addClass('scrolled');
 }
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
