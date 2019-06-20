@@ -3,11 +3,11 @@
 
     <div id="social">
         <a href="https://www.facebook.com/moon.noeudpap/" target="_blank">
-            <i class="fa fa-facebook"></i>
+            <i class="fab fa-facebook-square"></i>
         </a>
         
         <a href="https://www.instagram.com/moon.noeudpap/" target="_blank">
-            <i class="fa fa-instagram"></i>
+            <i class="fab fa-instagram"></i>
         </a>
     </div>
 

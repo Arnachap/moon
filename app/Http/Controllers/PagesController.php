@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Collection;
 
 class PagesController extends Controller
 {
@@ -12,7 +13,10 @@ class PagesController extends Controller
     }
 
     public function collection() {
-        return view('pages.collection');
+        $collections = Collection::all();
+
+        return view('pages.collection')
+            ->with('collections', $collections);
     }
 
     public function create() {
