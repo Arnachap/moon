@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Bowtie;
 use App\Collection;
 
@@ -41,13 +42,18 @@ class BowtiesController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'photo' => 'required'
+            'photo' => 'image'
         ]);
+
+        // Handle file upload
+        $filename = $request->file('photo')->getClientOriginalName();
+        $filenameToStore = time() . '_' . $filename;
+        $path = $request->file('photo')->storeAs('public/bowties', $filenameToStore);
 
         $bowtie = new Bowtie;
         $bowtie->name = $request->name;
         $bowtie->description = $request->description;
-        $bowtie->photo = $request->photo;
+        $bowtie->photo = $filenameToStore;
         $bowtie->price = $request->price;
         $bowtie->available = $request->available;
         $bowtie->collection_id = $request->collection_id;
@@ -65,8 +71,11 @@ class BowtiesController extends Controller
     public function show($id)
     {
         $bowtie = Bowtie::find($id);
+        $collection = Collection::find($bowtie->collection_id);
 
-        return view('admin.bowties.show')->with('bowtie', $bowtie);
+        return view('admin.bowties.show')
+            ->with('bowtie', $bowtie)
+            ->with('collection', $collection);
     }
 
     /**
@@ -96,14 +105,26 @@ class BowtiesController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'description' => 'required',
-            'photo' => 'required'
+            'description' => 'required'
         ]);
 
         $bowtie = Bowtie::find($id);
+
+        // Handle file upload
+        if ($request->hasFile('photo')) {
+            // Delete old file
+            Storage::delete('public/bowties/' . $bowtie->photo);
+
+            // Save new image
+            $filename = $request->file('photo')->getClientOriginalName();
+            $filenameToStore = time() . '_' . $filename;
+            $path = $request->file('photo')->storeAs('public/bowties', $filenameToStore);
+
+            $bowtie->photo = $filenameToStore;
+        }
+
         $bowtie->name = $request->name;
         $bowtie->description = $request->description;
-        $bowtie->photo = $request->photo;
         $bowtie->price = $request->price;
         $bowtie->available = $request->available;
         $bowtie->collection_id = $request->collection_id;
@@ -121,6 +142,8 @@ class BowtiesController extends Controller
     public function destroy($id)
     {
         $bowtie = Bowtie::find($id);
+
+        Storage::delete('public/bowties/' . $bowtie->photo);
 
         $bowtie->delete();
 

@@ -11,7 +11,7 @@
 
     <div class="row">
         <div class="col-8 mx-auto">
-            {{ Form::open(['action' => 'BowtiesController@store', 'method' => 'POST']) }}
+            {{ Form::open(['action' => 'BowtiesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                 <div class="form-group">
                     {{ Form::label('name', 'Nom du nœd pap\'') }}
                     {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nom du nœd pap\'']) }}
@@ -22,13 +22,24 @@
                     {{ Form::textarea('description', '', ['class' => 'form-control', 'placeholder' => 'Description', 'rows' => '5']) }}
                 </div>
                 
-                <div class="form-group row">
-                    {{ Form::label('price', 'Prix du nœd pap\'', ['class' => 'col-3 col-form-label']) }}
-                    {{ Form::number('price', '', ['class' => 'form-control col-3']) }}
+                <div class="form-group">
+                    {{ Form::label('photo', 'Photo du noeud pap\' :') }}
+                    <br>
+                    {{ Form::file('photo') }}
                 </div>
 
+                <br>
+                
                 <div class="form-group">
-                    {{ Form::label('collection_id', 'Collection') }}
+                    {{ Form::label('price', 'Prix du nœd pap\' :') }}
+                    <br>
+                    {{ Form::number('price', '') }}
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    {{ Form::label('collection_id', 'Collection :') }}
                     {{ Form::select('collection_id', $collections) }}
                 </div>
                 
@@ -37,7 +48,6 @@
                     {{ Form::label('available', 'Disponible') }}
                 </div>
 
-                {{ Form::hidden('photo', 123) }}
                 {{ Form::submit('Ajouter le nœd pap\'', ['class' => 'btn btn-primary d-block mx-auto']) }}
             {{ Form::close() }}
         </div>

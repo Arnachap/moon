@@ -18,8 +18,11 @@
     </div>
 
     <div class="col-6 mx-auto">
+        <img src="/storage/bowties/{{ $bowtie->photo }}" alt="" class="img-fluid">
         <p>{{ $bowtie->description }}</p>
+        <p>Collection : {{ $collection->title }}</p>
         <p>Prix : {{ $bowtie->price }}</p>
+        <p>Disponible : {{ $bowtie->available ? 'Oui' : 'non' }}</p>
     </div>
 
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
