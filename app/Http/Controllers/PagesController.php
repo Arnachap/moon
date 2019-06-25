@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Collection;
+use App\Bowtie;
 
 class PagesController extends Controller
 {
@@ -15,8 +16,12 @@ class PagesController extends Controller
     public function collection() {
         $collections = Collection::all();
 
-        return view('pages.collection')
-            ->with('collections', $collections);
+        foreach ($collections as $collection) {
+            $bowties = Bowtie::where('collection_id', $collection->id)->get();
+            $collection->bowties = $bowties;
+        }
+
+        return view('pages.collection')->with('collections', $collections);
     }
 
     public function create() {

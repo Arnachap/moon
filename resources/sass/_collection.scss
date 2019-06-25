@@ -1,4 +1,4 @@
-#collection {
+.collection {
     padding-bottom: 40px;
 
     .bowtie {
@@ -13,7 +13,7 @@
 
         &:hover img {
             transform: scale(1.2);
-            opacity: .8;
+            opacity: 0.8;
         }
 
         * {
@@ -34,8 +34,7 @@
             opacity: 1;
         }
 
-        h2,
-        span {
+        h2 {
             margin: 0;
             width: 100%;
             @include body-font;
@@ -43,10 +42,6 @@
 
         h2 {
             font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        span {
             text-transform: uppercase;
         }
     }

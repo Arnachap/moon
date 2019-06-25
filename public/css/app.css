@@ -15443,11 +15443,11 @@ a:focus {
   opacity: 1;
 }
 
-#collection {
+.collection {
   padding-bottom: 40px;
 }
 
-#collection .bowtie {
+.collection .bowtie {
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -15458,17 +15458,17 @@ a:focus {
   border-radius: 5px;
 }
 
-#collection .bowtie:hover img {
+.collection .bowtie:hover img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.8;
 }
 
-#collection .bowtie * {
+.collection .bowtie * {
   transition: all 0.3s ease-out;
 }
 
-#collection .bowtie figcaption {
+.collection .bowtie figcaption {
   position: absolute;
   top: 50%;
   left: 0;
@@ -15478,24 +15478,19 @@ a:focus {
           transform: translateY(-50%);
 }
 
-#collection .bowtie img {
+.collection .bowtie img {
   max-width: 100%;
   opacity: 1;
 }
 
-#collection .bowtie h2,
-#collection .bowtie span {
+.collection .bowtie h2 {
   margin: 0;
   width: 100%;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#collection .bowtie h2 {
+.collection .bowtie h2 {
   font-weight: 400;
-  text-transform: uppercase;
-}
-
-#collection .bowtie span {
   text-transform: uppercase;
 }
 
