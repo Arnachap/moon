@@ -40399,12 +40399,22 @@ if (window.location.pathname === '/create') {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sortablejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sortablejs */ "./node_modules/sortablejs/modular/sortable.esm.js");
 
-var el = document.getElementById('sortable');
+var collectionSort = document.getElementById('collectionSort');
 
-if (el) {
-  var sortable = sortablejs__WEBPACK_IMPORTED_MODULE_0__["default"].create(el, {
+if (collectionSort) {
+  var collectionSortable = sortablejs__WEBPACK_IMPORTED_MODULE_0__["default"].create(collectionSort, {
     animation: 300,
-    handle: '.handle',
+    handle: '.collectionHandle',
+    easing: 'ease-out'
+  });
+}
+
+var bowtieSort = document.getElementById('bowtieSort');
+
+if (bowtieSort) {
+  var bowtieSortable = sortablejs__WEBPACK_IMPORTED_MODULE_0__["default"].create(bowtieSort, {
+    animation: 300,
+    handle: '.bowtieHandle',
     easing: 'ease-out'
   });
 }

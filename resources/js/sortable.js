@@ -1,11 +1,21 @@
 import Sortable from 'sortablejs';
 
-const el = document.getElementById('sortable');
+const collectionSort = document.getElementById('collectionSort');
 
-if (el) {
-    const sortable = Sortable.create(el, {
+if (collectionSort) {
+    const collectionSortable = Sortable.create(collectionSort, {
         animation: 300,
-        handle: '.handle',
+        handle: '.collectionHandle',
+        easing: 'ease-out'
+    });
+}
+
+const bowtieSort = document.getElementById('bowtieSort');
+
+if (bowtieSort) {
+    const bowtieSortable = Sortable.create(bowtieSort, {
+        animation: 300,
+        handle: '.bowtieHandle',
         easing: 'ease-out'
     });
 }

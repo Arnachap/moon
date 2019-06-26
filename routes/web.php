@@ -39,4 +39,6 @@ Route::prefix('admin')->group(function() {
     Route::resource('/collections', 'CollectionsController')->except('show');
     Route::post('/collections/sort', 'CollectionsController@sort');
     Route::resource('/bowties', 'BowtiesController')->except('index');
+    Route::get('/bowties/sort/{id}', 'BowtiesController@sortable');
+    Route::post('/bowties/sort', 'BowtiesController@sort');
 });

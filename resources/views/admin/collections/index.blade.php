@@ -11,17 +11,22 @@
         <a href="/admin/collections/create" class="btn btn-primary ml-1">Créer une collection</a>
     </div>
 
+    {{-- Open sorting form --}}
     {{ Form::open(['action' => 'CollectionsController@sort', 'method' => 'POST']) }}
-        <div id="sortable">
+        <div id="collectionSort">
             @foreach ($collections as $collection)
                 <div class="card mb-3">
                     <div class="card-header" id="heading{{ $collection->id }}" data-toggle="collapse" data-target="#collapse{{ $collection->id }}" aria-expanded="true" aria-controls="collapse{{ $collection->id }}">
-                        <i class="fas fa-arrows-alt-v handle" style="cursor: grabbing;"></i>
+                        <i class="fas fa-arrows-alt-v collectionHandle" style="cursor: grabbing;"></i>
                         {{-- Collection ID to sort --}}
                         {{ Form::hidden('id[]', $collection->id) }}
                         {{ $collection->title }}
 
                         <div class="float-right">
+                            <a href="/admin/bowties/sort/{{ $collection->id }}" class="pr-2 mr-1">
+                                <i class="fas fa-sync text-info" data-toggle="tooltip" data-placement="left" title="Modifier l'ordre des nœuds pap'"></i>
+                            </a>
+
                             <a href="/admin/bowties/create" class="pr-2 mr-1">
                                 <i class="fas fa-plus text-success" data-toggle="tooltip" data-placement="left" title="Ajouter un nœud pap'"></i>
                             </a>
@@ -42,23 +47,22 @@
                                 {{ $collection->intro }}
                             </p>
 
-                            <table class="table table-hover">
+                            <ul class="list-group">
                                 @foreach ($bowties as $bowtie)
                                     @if ($bowtie->collection_id === $collection->id)
-                                        <tr>
-                                            <th scope="row">
-                                                <a href="/admin/bowties/{{ $bowtie->id }}" class="text-primary">{{ $bowtie->name }}</a>
-                                            </th>
-                                        </tr>
+                                        <li class="list-group-item">
+                                            <a href="/admin/bowties/{{ $bowtie->id }}" class="text-primary">{{ $bowtie->name }}</a>
+                                        </li>
                                     @endif
                                 @endforeach
-                            </table>
+                            </ul>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
     
+        {{-- Close sorting form --}}
         {{ Form::submit('Sauvegarder l\'ordre des collections', ['class' => 'btn btn-success d-block mx-auto']) }}
     {{ Form::close() }}
 

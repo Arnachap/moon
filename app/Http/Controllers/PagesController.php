@@ -17,7 +17,7 @@ class PagesController extends Controller
         $collections = Collection::orderBy('position', 'asc')->get();
 
         foreach ($collections as $collection) {
-            $bowties = Bowtie::where('collection_id', $collection->id)->get();
+            $bowties = Bowtie::where('collection_id', $collection->id)->orderBy('position', 'asc')->get();
             $collection->bowties = $bowties;
         }
 

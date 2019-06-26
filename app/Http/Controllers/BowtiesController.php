@@ -149,4 +149,20 @@ class BowtiesController extends Controller
 
         return redirect('/admin/collections')->with('success', 'Nœd pap\' supprimé');
     }
+
+    public function sortable($id) {
+        $bowties = Bowtie::where('collection_id', $id)->orderBy('position', 'asc')->get();
+
+        return view('admin.bowties.sort')->with('bowties', $bowties);
+    }
+
+    public function sort(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $bowtie = Bowtie::find($id);
+            $bowtie->position = $index;
+            $bowtie->save();
+        }
+
+        return redirect('/admin/collections')->with('success', 'Ordre des nœds pap\' sauvegardé');
+    }
 }
