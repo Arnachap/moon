@@ -25,7 +25,7 @@ class CollectionsController extends Controller
      */
     public function index()
     {
-        $collections = Collection::all();
+        $collections = Collection::orderBy('position', 'asc')->get();
         $bowties = Bowtie::all();
 
         return view('admin.collections.index')
@@ -115,5 +115,15 @@ class CollectionsController extends Controller
         $collection->delete();
 
         return redirect('/admin/collections')->with('success', 'Collection supprimée');
+    }
+
+    public function sort(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $collection = Collection::find($id);
+            $collection->position = $index;
+            $collection->save();
+        }
+
+        return redirect('/admin/collections')->with('success', 'Ordre des collections sauvegardé');
     }
 }

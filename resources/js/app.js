@@ -1,5 +1,6 @@
 require('./bootstrap');
 require('./create');
+require('./sortable');
 
 if (window.location.pathname === '/' || window.location.pathname === '/about') {
     $(window).scroll(function() {
