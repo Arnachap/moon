@@ -50,7 +50,7 @@ Notre collection
                                         </div>
 
                                         <div class="col-6">
-                                            @if($bowtie->available)
+                                            @if($bowtie->available && !is_null($bowtie->price))
                                                 <button type="button" class="btn btn-success d-block ml-auto">Ajouter au panier</button>
                                             @else
                                                 <button type="button" class="btn btn-secondary d-block ml-auto" disabled>Indisponible</button>
@@ -69,7 +69,7 @@ Notre collection
                     @foreach ($collection->bowties as $index => $bowtie)
                         @if($index >= 4)
                             <div class="col-3">
-                                <figure class="bowtie">
+                                <figure class="bowtie" data-toggle="modal" data-target="#modal{{ $bowtie->id }}">
                                     <img src="/storage/bowties/{{ $bowtie->photo }}" alt="" class="img-fluid">
                                     <figcaption>
                                         <h2>{{ $bowtie->name }}</h2>

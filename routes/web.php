@@ -32,13 +32,25 @@ Route::get('/home', 'HomeController@index');
 
 // Admin Routes
 Route::prefix('admin')->group(function() {
+    // Login
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+    // Index
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
+
+    // Products
     Route::resource('/products', 'ProductsController');
+
+    // Collections
     Route::resource('/collections', 'CollectionsController')->except('show');
     Route::post('/collections/sort', 'CollectionsController@sort');
+
+    // Bowties
     Route::resource('/bowties', 'BowtiesController')->except('index');
     Route::get('/bowties/sort/{id}', 'BowtiesController@sortable');
     Route::post('/bowties/sort', 'BowtiesController@sort');
+
+    // Materials
+    Route::resource('/create', 'MaterialsController')->except('show');
 });

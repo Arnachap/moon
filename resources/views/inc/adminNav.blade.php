@@ -8,6 +8,12 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="/admin/create">
+                    Crée ton noeud
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/collections">
                     Collections
                 </a>

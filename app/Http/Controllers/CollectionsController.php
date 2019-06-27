@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Collection;
 use App\Bowtie;
 
@@ -109,6 +110,7 @@ class CollectionsController extends Controller
         $bowties = Bowtie::where('collection_id', $collection->id)->get();
 
         foreach ($bowties as $bowtie) {
+            Storage::delete('public/bowties/' . $bowtie->photo);
             $bowtie->delete();
         }
 
