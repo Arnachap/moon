@@ -15094,6 +15094,10 @@ a:focus {
   outline: none !important;
 }
 
+#mainContent {
+  min-height: calc(100vh - 62px);
+}
+
 .button {
   padding: 10px 20px;
   border: 2px solid #fff;

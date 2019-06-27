@@ -14,7 +14,9 @@
 <body>
     @include('inc.mainNav')
 
-    @yield('content')
+    <main id="mainContent">
+        @yield('content')
+    </main>
     
     @include('inc.footer')
 
