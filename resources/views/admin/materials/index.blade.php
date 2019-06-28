@@ -45,14 +45,54 @@
 
     <div class="card mb-3">
         <div class="card-header" id="headingTissus" data-toggle="collapse" data-target="#collapseTissus" aria-expanded="true" aria-controls="collapseTissus">
-            <h4>Tissus</h4>
+            <h4 class="float-left">Tissus</h4>
+
+            <div class="float-right mt-1">
+                <button type="button" class="btn py-0 border-0" data-toggle="modal" data-target="#addTissu">
+                    <i class="fas fa-plus text-success pb-2" data-toggle="tooltip" data-placement="left" title="Ajouter un tissu"></i>
+                </button>
+            </div>
         </div>
     
         <div id="collapseTissus" class="collapse" aria-labelledby="headingTissus">
             <div class="card-body">
                 <ul class="list-group">
-
+                    @foreach($tissus as $tissu)
+                        <li class="list-group-item">
+                            {{ $tissu->name }}
+                        </li>
+                    @endforeach
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addTissu" tabindex="-1" role="dialog" aria-labelledby="addTissuLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTissuLabel">Ajouter un tissu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    {{ Form::open(['action' => 'MaterialsController@addTissu', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
+                        <div class="form-group">
+                            {{ Form::label('name', 'Nom du tissu') }}
+                            {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nom du tissu']) }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ Form::label('image', 'Image du tissu') }}
+                            <br>
+                            {{ Form::file('image') }}
+                        </div>
+
+                        {{ Form::submit('Ajouter le tissu', ['class' => 'btn btn-success d-block mx-auto']) }}
+                    {{ Form::close() }}
+                </div>
             </div>
         </div>
     </div>
