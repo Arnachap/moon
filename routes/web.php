@@ -52,5 +52,6 @@ Route::prefix('admin')->group(function() {
     Route::post('/bowties/sort', 'BowtiesController@sort');
 
     // Materials
-    Route::resource('/create', 'MaterialsController')->except('show');
+    Route::get('/materials', 'MaterialsController@index');
+    Route::put('/materials/wood/{id}', 'MaterialsController@toggleAvailable');
 });

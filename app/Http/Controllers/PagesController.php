@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Collection;
 use App\Bowtie;
+use App\Wood;
 
 class PagesController extends Controller
 {
@@ -25,7 +26,10 @@ class PagesController extends Controller
     }
 
     public function create() {
-        return view('pages.create');
+        $woods = Wood::all();
+
+        return view('pages.create')
+            ->with('woods', $woods);
     }
 
     public function tshirts() {

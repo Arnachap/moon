@@ -25,13 +25,17 @@ Crée ton Noeud Pap'
                         <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="classic" class="shape" alt="">
                         <img src="/img/create/noeuds-pap/electric/electric-bois1.png" id="electric" class="shape" alt="">
                         <img src="/img/create/noeuds-pap/heavy/heavy-bois1.png" id="heavy" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/heavy-light/heavy-light-bois1.png" id="heavy-light" class="shape" alt="">
                         <img src="/img/create/noeuds-pap/roadster/roadster-bois1.png" id="roadster" class="shape" alt="">
+                        <img src="/img/create/noeuds-pap/roadster-light/roadster-light-bois1.png" id="roadster-light" class="shape" alt="">
                     </div>
                     
                     <div class="woods upper-menu-category">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="bois1" class="wood" alt="">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois2.png" id="bois2" class="wood" alt="">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois3.png" id="bois3" class="wood" alt="">
+                        @foreach($woods as $wood)
+                            @if($wood->available)
+                                <img src="/img/create/noeuds-pap/classic/classic-bois{{ $wood->id }}.png" id="bois{{ $wood->id }}" class="wood" alt="">
+                            @endif
+                        @endforeach
                     </div>
                     
                     <div class="tissus upper-menu-category">

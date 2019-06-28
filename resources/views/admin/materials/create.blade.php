@@ -11,7 +11,7 @@
 
     <div class="row">
         <div class="col-8 mx-auto">
-            {{ Form::open(['action' => 'MaterialsController@store', 'method' => 'POST']) }}
+            {{ Form::open(['action' => 'MaterialsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                 <div class="form-group">
                     {{ Form::label('name', 'Nom du matériau') }}
                     {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nom du matériau']) }}
@@ -27,7 +27,11 @@
                     {{ Form::label('available', 'Disponible') }}
                 </div>
 
-                {{ Form::hidden('image', 123) }}
+                <div class="form-group">
+                    {{ Form::label('image', 'Image du matériau :') }}
+                    <br>
+                    {{ Form::file('image') }}
+                </div>
 
                 {{ Form::submit('Ajouter le matériau', ['class' => 'btn btn-primary d-block mx-auto']) }}
             {{ Form::close() }}
