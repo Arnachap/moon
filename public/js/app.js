@@ -40367,7 +40367,7 @@ $('.wood').click(function () {
 });
 $('.tissu').click(function () {
   bowtieTissu = $(this).attr('id');
-  var newTissuSrc = "img/create/tissus/image/".concat(bowtieTissu, ".png");
+  var newTissuSrc = "/storage/tissus/".concat(bowtieTissu);
   tissuImg.attr('src', newTissuSrc);
 }); // Price fixed on scroll
 

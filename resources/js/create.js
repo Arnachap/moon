@@ -1,6 +1,10 @@
 // Menu control
-$('.sub-menu-btn').click(function () {
-    let menuClassToShow = '.' + $(this).attr('id').replace('Btn', '');
+$('.sub-menu-btn').click(function() {
+    let menuClassToShow =
+        '.' +
+        $(this)
+            .attr('id')
+            .replace('Btn', '');
 
     // Change class of the button
     if ($(this).hasClass('opened')) {
@@ -26,39 +30,39 @@ let bowtieTissu = 'tissu1';
 const changeBowtieImg = () => {
     let newImgSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${bowtieWood}.png`;
     bowtieImg.attr('src', newImgSrc);
-}
+};
 
-$('.shape').click(function () {
+$('.shape').click(function() {
     bowtieShape = $(this).attr('id');
     changeBowtieImg();
 
-    $('.wood').each(function () {
+    $('.wood').each(function() {
         let woodId = $(this).attr('id');
-        let newWoodSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${woodId}.png`
+        let newWoodSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${woodId}.png`;
         $(this).attr('src', newWoodSrc);
     });
 });
 
-$('.wood').click(function () {
+$('.wood').click(function() {
     bowtieWood = $(this).attr('id');
     changeBowtieImg();
 
-    $('.shape').each(function () {
+    $('.shape').each(function() {
         let shapeId = $(this).attr('id');
-        let newShapeSrc = `/img/create/noeuds-pap/${shapeId}/${shapeId}-${bowtieWood}.png`
+        let newShapeSrc = `/img/create/noeuds-pap/${shapeId}/${shapeId}-${bowtieWood}.png`;
         $(this).attr('src', newShapeSrc);
     });
 });
 
-$('.tissu').click(function () {
+$('.tissu').click(function() {
     bowtieTissu = $(this).attr('id');
-    let newTissuSrc = `img/create/tissus/image/${bowtieTissu}.png`;
+    let newTissuSrc = `/storage/tissus/${bowtieTissu}`;
     tissuImg.attr('src', newTissuSrc);
 });
 
 // Price fixed on scroll
 if (window.location.pathname === '/create') {
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         const scrollPosition = $(window).scrollTop();
         const optionsTop = $('#options').position().top + 60;
         const priceWidth = $('#priceSection').css('width');

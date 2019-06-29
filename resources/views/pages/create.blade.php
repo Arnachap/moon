@@ -39,10 +39,9 @@ Crée ton Noeud Pap'
                     </div>
                     
                     <div class="tissus upper-menu-category">
-                        <img src="/img/create/tissus/menu/tissus1.png" id="tissus1" class="tissu" alt="">
-                        <img src="/img/create/tissus/menu/tissus2.png" id="tissus2" class="tissu" alt="">
-                        <img src="/img/create/tissus/menu/tissus3.png" id="tissus3" class="tissu" alt="">
-                        <img src="/img/create/tissus/menu/tissus4.png" id="tissus4" class="tissu" alt="">
+                        @foreach($tissus as $tissu)
+                            <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" class="tissu" alt="">
+                        @endforeach
                     </div>
                 </div>
             </div>

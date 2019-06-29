@@ -7,6 +7,7 @@ use App\Product;
 use App\Collection;
 use App\Bowtie;
 use App\Wood;
+use App\Tissu;
 
 class PagesController extends Controller
 {
@@ -27,9 +28,13 @@ class PagesController extends Controller
 
     public function create() {
         $woods = Wood::all();
+        $tissus = Tissu::all();
+        $first = Tissu::all()->first();
 
         return view('pages.create')
-            ->with('woods', $woods);
+            ->with('woods', $woods)
+            ->with('tissus', $tissus)
+            ->with('first', $first);
     }
 
     public function tshirts() {
