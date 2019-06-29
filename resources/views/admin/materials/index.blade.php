@@ -56,13 +56,21 @@
     
         <div id="collapseTissus" class="collapse" aria-labelledby="headingTissus">
             <div class="card-body">
-                <ul class="list-group">
+                <div class="row">
                     @foreach($tissus as $tissu)
-                        <li class="list-group-item">
-                            {{ $tissu->name }}
-                        </li>
+                        <div class="col-3">
+                            <h4 class="text-center">{{ $tissu->name }}</h4>
+
+                            <img src="/storage/tissus/small_{{ $tissu->filename }}" class="img-fluid px-5" alt="">
+
+                            {{ Form::open(['action' => ['MaterialsController@deleteTissu', $tissu->id], 'method' => 'POST']) }}
+                                {{ Form::hidden('_method', 'DELETE') }}
+
+                                {{ Form::submit('Supprimer', ['class' => 'btn btn-danger d-block mx-auto']) }}
+                            {{ Form::close() }}
+                        </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
         </div>
     </div>

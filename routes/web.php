@@ -55,4 +55,5 @@ Route::prefix('admin')->group(function() {
     Route::get('/materials', 'MaterialsController@index');
     Route::put('/materials/wood/{id}', 'MaterialsController@toggleAvailable');
     Route::post('/materials/tissu', 'MaterialsController@addTissu');
+    Route::delete('/materials/tissu/{id}', 'MaterialsController@deleteTissu');
 });
