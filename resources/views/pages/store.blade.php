@@ -23,7 +23,7 @@ T-shirts
                     <div class="product-info">
                         <div class="price">{{ $product->price }} €</div>
                         <div class="desc">{{ $product->name }}</div>
-                        <div class="add-to-cart">Ajouter au panier</div>
+                        <div class="add-to-cart" data-toggle="modal" data-target="#productModal{{ $product->id }}">Ajouter au panier</div>
                     </div>
                 </div>
             @endforeach
@@ -54,16 +54,34 @@ T-shirts
                                         <p>{{ $product->description }}</p>
                                     </div>
 
-                                    <form class="cart" method="post">
-                                        <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                    {{ Form::open(['action' => 'CartController@addProductToCart', 'method' => 'POST', 'class' => 'cart']) }}
+                                        {{ Form::hidden('id', $product->id) }}
 
-                                            <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
-
-                                            <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <div class="row w-100">
+                                            <div class="col-12">
+                                                <div class="form-group row">
+                                                    {{ Form::label('size', 'Taille :', ['class' => 'col-3 col-form-label']) }}
+                                                    <div class="col-9 mt-1">
+                                                        {{ Form::select('size', ['S' => 'S', 'M' => 'M', 'L' => 'L'], 'S') }}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <button type="submit" name="addtocart" value="5" class="cart-submit">Ajouter au panier</button>
-                                    </form>
+
+                                        <div class="form-group col-12">
+                                            <div class="quantity">
+                                                <span class="qty-minus" onclick="var effect = document.getElementById('quantity'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+    
+                                                {{ Form::number('quantity', 1, ['id' => 'quantity']) }}
+    
+                                                <span class="qty-plus" onclick="var effect = document.getElementById('quantity'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            {{ Form::submit('Ajouter au panier', ['class' => 'cart-submit']) }}
+                                        </div>
+                                    {{ Form::close() }}
                                 </div>
                             </div>
                         </div>

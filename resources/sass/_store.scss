@@ -122,19 +122,24 @@
             }
 
             .cart {
-                display: flex;
                 @include heading-font;
 
                 .quantity {
-                    align-items: center;
-                    display: flex;
-
                     input {
                         border: 1px solid $white;
-                        height: 35px;
                         text-align: center;
-                        width: 40px;
                         font-size: 14px;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        display: none;
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    input[type='number'] {
+                        -moz-appearance: textfield; /* Firefox */
                     }
 
                     .qty-plus,

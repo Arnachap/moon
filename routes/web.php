@@ -16,7 +16,6 @@ Route::get('/collection', 'PagesController@collection');
 Route::get('/create', 'PagesController@create');
 Route::get('/about', 'PagesController@about');
 Route::get('/login', 'PagesController@login');
-Route::get('/cart', 'PagesController@cart');
 Route::get('/contact', 'PagesController@contact');
 
 // Store Routes
@@ -25,6 +24,11 @@ Route::prefix('products')->group(function() {
     Route::get('/earrings', 'PagesController@earrings');
     Route::get('/caps', 'PagesController@caps');
 });
+
+// Cart Controller
+Route::get('/cart', 'CartController@index');
+Route::post('/addProductToCart', 'CartController@addProductToCart');
+Route::post('/updateProductQuantity', 'CartController@updateProductQuantity');
 
 // Auth Routes
 Auth::routes();

@@ -78,10 +78,6 @@ class PagesController extends Controller
         return view('pages.login');
     }
 
-    public function cart() {
-        return view('pages.cart');
-    }
-
     public function contact() {
         return view('pages.contact');
     }

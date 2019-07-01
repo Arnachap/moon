@@ -14,6 +14,8 @@
 <body>
     @include('inc.mainNav')
 
+    @include('inc.cartMessages')
+
     <main id="mainContent">
         @yield('content')
     </main>

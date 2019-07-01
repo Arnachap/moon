@@ -15139,6 +15139,46 @@ a:focus {
   font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.cart-messages {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  right: 20px;
+  height: 50px;
+  background-color: #4bb543;
+  border-radius: 3px;
+  -webkit-animation: fade-out 1s;
+          animation: fade-out 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    z-index: 20;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    z-index: 20;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 #main-nav {
   z-index: 10;
   position: fixed;
@@ -15790,21 +15830,25 @@ a:focus {
 }
 
 .modal .modal-content .modal-body .cart {
-  display: flex;
   font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.modal .modal-content .modal-body .cart .quantity {
-  align-items: center;
-  display: flex;
 }
 
 .modal .modal-content .modal-body .cart .quantity input {
   border: 1px solid #fff;
-  height: 35px;
   text-align: center;
-  width: 40px;
   font-size: 14px;
+}
+
+.modal .modal-content .modal-body .cart .quantity input::-webkit-outer-spin-button,
+.modal .modal-content .modal-body .cart .quantity input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal .modal-content .modal-body .cart .quantity input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 .modal .modal-content .modal-body .cart .quantity .qty-plus,
@@ -16029,7 +16073,13 @@ footer #arnaudchapeleur i {
   position: relative;
 }
 
+.table tr th {
+  text-align: center;
+  font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .table tr td {
+  text-align: center;
   padding-top: 50px;
   font-family: "LemonMilklight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -16041,6 +16091,32 @@ footer #arnaudchapeleur i {
 .table tr td img {
   border-radius: 3px;
   height: 100px;
+}
+
+.table tr td .quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.table tr td .quantity input::-webkit-outer-spin-button,
+.table tr td .quantity input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table tr td .quantity input[type=number] {
+  -moz-appearance: textfield;
+  width: 30px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.table tr td .quantity .btn {
+  display: block;
+  padding: 0 3px;
+  margin-top: 3px;
+  font-size: 12px;
 }
 
 #contact label,
