@@ -37,8 +37,17 @@
             <a href="/about" class="nav-link">L'entreprise</a>
         </li>
         
-        <li class="nav-item">
-            <a href="/contact" class="nav-link">Contact</a>
+        <li class="nav-item nav-dropdown">
+            <span class="nav-link dropdown-toggle">Contact</span>
+            <ul class="dropdown">
+                <li class="dropdown-item">
+                    <a href="/contact" class="nav-link">Nous contacter</a>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="/find-us" class="nav-link">Où nous trouver?</a>
+                </li>
+            </ul>
         </li>
     </ul>
 

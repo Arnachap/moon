@@ -8,7 +8,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/create">
+                <a class="nav-link" href="/admin/materials">
                     Crée ton noeud
                 </a>
             </li>
