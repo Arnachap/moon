@@ -13,6 +13,15 @@
         border: 2px solid $brown;
         @include easeOut;
     }
+
+    &.white {
+        border: 2px solid $black;
+
+        &:hover {
+            color: $white;
+            border: 2px solid $brown;
+        }
+    }
 }
 
 .page-title {
@@ -40,17 +49,24 @@
     @include script-font;
 }
 
-.cart-messages {
+.user-message {
     position: absolute;
     top: 70px;
     left: 20px;
     right: 20px;
     height: 50px;
-    background-color: $green;
     border-radius: 3px;
     animation: fade-out 1s;
     animation-fill-mode: forwards;
     animation-delay: 3s;
+
+    &.green {
+        background-color: $green;
+    }
+
+    &.red {
+        background-color: $red;
+    }
 }
 
 @keyframes fade-out {

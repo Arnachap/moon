@@ -25,10 +25,15 @@ Route::prefix('products')->group(function() {
     Route::get('/caps', 'PagesController@caps');
 });
 
-// Cart Controller
+// Cart Routes
 Route::get('/cart', 'CartController@index');
 Route::post('/addProductToCart', 'CartController@addProductToCart');
 Route::post('/updateProductQuantity', 'CartController@updateProductQuantity');
+
+// Odrers Routes
+Route::get('/shipping', 'ClientOrdersController@shipping');
+Route::post('/ship', 'ClientOrdersController@ship');
+Route::get('/payment', 'ClientOrdersController@payment');
 
 // Auth Routes
 Auth::routes();

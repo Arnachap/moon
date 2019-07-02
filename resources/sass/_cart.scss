@@ -1,51 +1,66 @@
-.table {
-    tr {
-        position: relative;
+#cart {
+    .table {
+        tr {
+            position: relative;
 
-        th {
-            text-align: center;
-            @include body-font;
+            th {
+                text-align: center;
+                @include body-font;
+            }
+
+            td {
+                text-align: center;
+                padding-top: 50px;
+                @include body-font;
+
+                &:first-child {
+                    padding-top: 12px !important;
+                }
+
+                img {
+                    border-radius: 3px;
+                    height: 100px;
+                }
+
+                .quantity {
+                    display: flex;
+                    justify-content: center;
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        display: none;
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    input[type='number'] {
+                        -moz-appearance: textfield;
+                        width: 30px;
+                        text-align: center;
+                        margin: 0 10px;
+                    }
+
+                    .btn {
+                        display: block;
+                        padding: 0 3px;
+                        margin-top: 3px;
+                        font-size: 12px;
+                    }
+                }
+            }
         }
+    }
 
-        td {
-            text-align: center;
-            padding-top: 50px;
-            @include body-font;
+    .button {
+        margin-top: 20px;
+        background-color: $white;
+        border: 2px solid $black;
+        color: $black;
 
-            &:first-child {
-                padding-top: 12px !important;
-            }
-
-            img {
-                border-radius: 3px;
-                height: 100px;
-            }
-
-            .quantity {
-                display: flex;
-                justify-content: center;
-
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button {
-                    display: none;
-                    -webkit-appearance: none;
-                    margin: 0;
-                }
-
-                input[type='number'] {
-                    -moz-appearance: textfield;
-                    width: 30px;
-                    text-align: center;
-                    margin: 0 10px;
-                }
-
-                .btn {
-                    display: block;
-                    padding: 0 3px;
-                    margin-top: 3px;
-                    font-size: 12px;
-                }
-            }
+        &:hover {
+            color: $white;
+            background-color: $brown;
+            border: 2px solid $white;
         }
     }
 }
