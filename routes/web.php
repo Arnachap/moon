@@ -67,4 +67,7 @@ Route::prefix('admin')->group(function() {
     Route::put('/materials/wood/{id}', 'MaterialsController@toggleAvailable');
     Route::post('/materials/tissu', 'MaterialsController@addTissu');
     Route::delete('/materials/tissu/{id}', 'MaterialsController@deleteTissu');
+
+    // Orders
+    Route::get('/orders', 'AdminOrdersController@index');
 });

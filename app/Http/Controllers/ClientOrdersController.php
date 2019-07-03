@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Cart;
 use Stripe;
 use App\Order;
+use App\OrderItem;
+use App\Address;
 
 class ClientOrdersController extends Controller
 {
@@ -27,21 +29,33 @@ class ClientOrdersController extends Controller
     public function ship(Request $request) {
         $request->validate([
             'name' => 'required',
-            'adress1' => 'required',
+            'address1' => 'required',
             'postcode' => 'required',
             'city' => 'required',
         ]);
 
+        $address = new Address;
+        $address->name = $request->name;
+        $address->address1 = $request->address1;
+        $address->address2 = $request->address2;
+        $address->postcode = $request->postcode;
+        $address->city = $request->city;
+        $address->save();
+
         $order = new Order;
-        $order->name = $request->name;
-        $order->adress_1 = $request->adress1;
-        $order->adress_2 = $request->adress2;
-        $order->postcode = $request->postcode;
-        $order->city = $request->city;
         $order->user_id = Auth::user()->id;
-        $order->products = Cart::content();
+        $order->address = $address->id;
         $order->status = 'not-payed';
         $order->save();
+
+        foreach(Cart::content() as $product) {
+            $orderItem = new OrderItem;
+            $orderItem->order_id = $order->id;
+            $orderItem->product_name = $product->name;
+            $orderItem->quantity = $product->qty;
+            $orderItem->options = $product->options;
+            $orderItem->save();
+        }
 
         return redirect('/payment/' . $order->id);
     }

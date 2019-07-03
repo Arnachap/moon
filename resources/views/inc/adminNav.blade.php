@@ -8,6 +8,12 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="/admin/orders">
+                    Commandes
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/materials">
                     Crée ton noeud
                 </a>

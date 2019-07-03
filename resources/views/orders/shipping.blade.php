@@ -20,13 +20,13 @@
                     </div>
                     
                     <div class="form-group">
-                        {{ Form::label('adress1', 'Adresse ligne 1 :') }}
-                        {{ Form::text('adress1', '', ['class' => 'form-control', 'placeholder' => 'Rue, voie, boîte postale']) }}
+                        {{ Form::label('address1', 'Adresse ligne 1 :') }}
+                        {{ Form::text('address1', '', ['class' => 'form-control', 'placeholder' => 'Rue, voie, boîte postale']) }}
                     </div>
 
                     <div class="form-group">
-                        {{ Form::label('adress2', 'Adresse ligne 2 :') }}
-                        {{ Form::text('adress2', '', ['class' => 'form-control', 'placeholder' => 'Bâtiment, étage, lieu-dit']) }}
+                        {{ Form::label('address2', 'Adresse ligne 2 :') }}
+                        {{ Form::text('address2', '', ['class' => 'form-control', 'placeholder' => 'Bâtiment, étage, lieu-dit']) }}
                     </div>
 
                     <div class="form-group">
