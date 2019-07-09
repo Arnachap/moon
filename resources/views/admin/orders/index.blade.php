@@ -9,14 +9,40 @@
         <h1 class="h2">Commandes</h1>
     </div>
 
-    <ul>
-        @foreach($orders as $order)
-            <li>{{ $order->id }}</li>
-            @foreach($addresses as $address)
-                @if($address->id == $order->address)
-                    <li>{{ $address->name }}</li>
-                @endif
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Utilisateur</th>
+            <th scope="col">Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($orders as $order)
+                <tr>
+                    <th scope="row">
+                        <a class="text-info" href="/admin/orders/{{ $order->id }}">
+                            {{ $order->id }}
+                        </a>
+                    </th>
+                    
+                    <td>
+                        <a class="text-info" href="/admin/orders/{{ $order->id }}">
+                            {{ $users->firstWhere('id', $order->user_id)->email }}
+                        </a>
+                    </td>
+
+                    <td>
+                        @if($order->status == 'payed')
+                            <div class="text-primary">Payé - En cours d'envoie</div>
+                        @elseif($order->status == 'sent')
+                            <div class="text-success">
+                                Envoyé
+                            </div>
+                        @endif
+                    </td>
+                </tr>
             @endforeach
-        @endforeach
-    </ul>
+        </tbody>
+    </table>
 @endsection

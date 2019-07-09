@@ -95,7 +95,7 @@ Panier
                 </tbody>
             </table>
 
-            <a href="/shipping" class="button float-right">Valier la commande</a>
+            <a href="/shipping" class="button float-right">Valider la commande</a>
         @else
             <div class="alert alert-danger text-center">Votre panier est vide</div>
         @endif

@@ -70,4 +70,6 @@ Route::prefix('admin')->group(function() {
 
     // Orders
     Route::get('/orders', 'AdminOrdersController@index');
+    Route::get('/orders/{id}', 'AdminOrdersController@show');
+    Route::post('/orders/status', 'AdminOrdersController@editStatus');
 });
