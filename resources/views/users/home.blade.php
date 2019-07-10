@@ -46,7 +46,7 @@
                                     </td>
 
                                     <td>
-                                        <a href="/" class="button white">
+                                        <a href="/" class="btn btn-success d-block mx-5">
                                             Voir la commande
                                         </a>
                                     </td>

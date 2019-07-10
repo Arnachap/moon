@@ -15123,6 +15123,22 @@ a:focus {
   border: 2px solid #966527;
 }
 
+.red-button {
+  margin: 20px auto;
+  width: 200px;
+  background-color: #cc0000;
+  border: medium none;
+  color: #fff;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  transition: all 0.3s ease-out;
+}
+
+.red-button:hover {
+  background-color: rgba(204, 0, 0, 0.8);
+}
+
 .page-title {
   text-align: center;
   padding: 80px 0 40px 0;
@@ -15792,22 +15808,6 @@ a:focus {
   display: block;
 }
 
-.product .product-info .add-to-cart {
-  margin: 20px auto;
-  width: 200px;
-  background-color: #cc0000;
-  border: medium none;
-  color: #fff;
-  cursor: pointer;
-  height: 35px;
-  line-height: 35px;
-  transition: all 0.3s ease-out;
-}
-
-.product .product-info .add-to-cart:hover {
-  background-color: rgba(204, 0, 0, 0.8);
-}
-
 .modal .modal-content {
   border-radius: 3px;
 }
@@ -15891,21 +15891,6 @@ a:focus {
 
 .modal .modal-content .modal-body .cart .quantity .qty-minus {
   border-right: 0 solid transparent;
-}
-
-.modal .modal-content .modal-body .cart .cart-submit {
-  background-color: #cc0000;
-  border: medium none;
-  color: #fff;
-  cursor: pointer;
-  height: 35px;
-  margin-left: 15px;
-  width: 200px;
-  transition: all 0.3s ease-out;
-}
-
-.modal .modal-content .modal-body .cart .cart-submit:hover {
-  background-color: rgba(204, 0, 0, 0.8);
 }
 
 #about {

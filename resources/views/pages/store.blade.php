@@ -23,7 +23,7 @@ T-shirts
                     <div class="product-info">
                         <div class="price">{{ $product->price }} €</div>
                         <div class="desc">{{ $product->name }}</div>
-                        <div class="add-to-cart" data-toggle="modal" data-target="#productModal{{ $product->id }}">Ajouter au panier</div>
+                        <div class="red-button" data-toggle="modal" data-target="#productModal{{ $product->id }}">Ajouter au panier</div>
                     </div>
                 </div>
             @endforeach
@@ -79,7 +79,7 @@ T-shirts
                                         </div>
 
                                         <div class="col-12">
-                                            {{ Form::submit('Ajouter au panier', ['class' => 'cart-submit']) }}
+                                            {{ Form::submit('Ajouter au panier', ['class' => 'red-button']) }}
                                         </div>
                                     {{ Form::close() }}
                                 </div>
