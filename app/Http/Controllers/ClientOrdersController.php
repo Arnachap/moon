@@ -81,6 +81,6 @@ class ClientOrdersController extends Controller
         
         Cart::destroy();
 
-        return redirect('/')->with('success', 'Commande validé !');
+        return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
     }
 }

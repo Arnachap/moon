@@ -39,7 +39,8 @@ Route::post('/pay', 'ClientOrdersController@pay');
 // Auth Routes
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+// Users Routes
+Route::get('/home', 'UsersController@index');
 
 // Admin Routes
 Route::prefix('admin')->group(function() {
