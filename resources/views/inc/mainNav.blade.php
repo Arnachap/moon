@@ -64,7 +64,7 @@
                     </span>
                     <ul class="dropdown">
                         <li class="dropdown-item">
-                            <a href="/orders" class="nav-link">Mes commandes</a>
+                            <a href="/home" class="nav-link">Mes commandes</a>
                         </li>
         
                         <li class="dropdown-item">

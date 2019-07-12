@@ -41,6 +41,7 @@ Auth::routes();
 
 // Users Routes
 Route::get('/home', 'UsersController@index');
+Route::get('/order/{id}', 'UsersController@showOrder');
 
 // Admin Routes
 Route::prefix('admin')->group(function() {

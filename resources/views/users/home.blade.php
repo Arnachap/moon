@@ -45,8 +45,8 @@
                                         @endif
                                     </td>
 
-                                    <td>
-                                        <a href="/" class="btn btn-success d-block mx-5">
+                                    <td class="text-center">
+                                        <a href="/order/{{ $order->id }}" class="red-button p-1">
                                             Voir la commande
                                         </a>
                                     </td>

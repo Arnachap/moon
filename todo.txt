@@ -1,37 +1,35 @@
-TODAY :
-    Orders -> Admin & User view
+Orders -> Admin & User view
 
-    // options json decode
+// options json decode
 
-    Photo slider
+Photo slider
 
-    Frais de port 3€
+Frais de port 3€
 
-    Slider accueil rajouter slides
+Slider accueil rajouter slides
 
+plusieurs photos articles
 
-TOMORROW :
-    plusieurs photos articles
+'Paiement sécurisé, délai lvraison
 
-    'Paiement sécurisé, délai lvraison
+Ajouter nom bois, tissu & forme
 
-    Ajouter nom bois, tissu & forme
+Maps
 
-    Maps
+Gravure message popup
 
-    Gravure message popup
+cré ton noeud pap message 'ceci est modélisation
 
-    cré ton noeud pap message 'ceci est modélisation
+mentions légales
 
-THURSDAY :
-    mentions légales
+boutton voir plus collection
 
-    boutton voir plus collection
+code promo
 
-    code promo
+modifier statut commande
 
-    modifier statut commande
+numéro suivi commande client -> laposte
 
-    numéro suivi commande client -> laposte
+Order noeud pap & collections
 
-    Order noeud pap & collections
+register page
