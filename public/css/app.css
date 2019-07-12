@@ -15048,8 +15048,8 @@ a.text-dark:focus {
 }
 
 @font-face {
-  font-family: Brilliantte;
-  src: url("/fonts/Brilliantte.woff2") format("woff2"), url("/fonts/Brilliantte.woff") format("woff");
+  font-family: DancingScript;
+  src: url("/fonts/DancingScript.woff2") format("woff2"), url("/fonts/DancingScript.woff") format("woff");
 }
 
 @font-face {
@@ -15147,7 +15147,7 @@ a:focus {
 .page-title h2 {
   font-size: 50px;
   color: #966527;
-  font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DancingScript", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .page-title p {
@@ -15161,7 +15161,7 @@ a:focus {
   text-transform: capitalize;
   font-size: 50px;
   padding: 20px 0;
-  font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DancingScript", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .user-message {
@@ -15347,7 +15347,7 @@ a:focus {
 #mainSlider .carousel-caption h2 {
   margin-bottom: 40px;
   font-size: 40px;
-  font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DancingScript", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #mainSlider .carousel-caption .slider-btn {
@@ -15831,7 +15831,7 @@ a:focus {
 .modal .modal-content .modal-body .modal-desc .title {
   font-size: 30px;
   color: #966527;
-  font-family: "Brilliantte", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DancingScript", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .modal .modal-content .modal-body .modal-desc .price {

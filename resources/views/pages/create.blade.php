@@ -7,7 +7,7 @@ Crée ton Noeud Pap'
 @section('content')
 
 <div class="page-title">
-    <h2>Cree ton Noeud Pap</h2>
+    <h2>Crée ton Noeud Pap</h2>
     <p>Élabore un noeud papillon en bois à ton image.</p>
 </div>
 

@@ -43,7 +43,7 @@ Le noeud papillon en bois sur-mesure
 </div>
 
 <div id="createBanner">
-    <h2 class="section-title">Cree ton Noeud</h2>
+    <h2 class="section-title">Crée ton Noeud</h2>
 
     <div class="container">
         <div class="row">
