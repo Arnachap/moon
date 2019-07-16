@@ -69,7 +69,7 @@ class ClientOrdersController extends Controller
     public function pay(Request $request) {
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
-                "amount" => Cart::total() * 100,
+                "amount" => (Cart::total() + 3) * 100,
                 "currency" => "eur",
                 "source" => $request->stripeToken,
                 "description" => "Commande n°" . $request->id

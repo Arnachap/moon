@@ -62,9 +62,9 @@
                             <td>
                                 {{ Cart::total() }}€
                                 <br>
-                                <br>7.50€
+                                <br>3€
                                 <br>
-                                <br>{{ Cart::total() + 7.50 }}€
+                                <br>{{ Cart::total() + 3 }}€
                             </td>
                         </tr>
                     </tbody>

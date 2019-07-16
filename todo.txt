@@ -4,6 +4,8 @@ Orders -> Admin & User view
 
 // Frais de port 3€
 
+Disponibilité taille
+
 'Paiement sécurisé', délai lvraison
 
 plusieurs photos articles
