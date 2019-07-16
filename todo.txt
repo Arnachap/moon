@@ -2,34 +2,42 @@ Orders -> Admin & User view
 
 // options json decode
 
-Photo slider
+// Frais de port 3€
 
-Frais de port 3€
-
-Slider accueil rajouter slides
+'Paiement sécurisé', délai lvraison
 
 plusieurs photos articles
 
-'Paiement sécurisé, délai lvraison
-
 Ajouter nom bois, tissu & forme
 
-Maps
+crée ton noeud pap message 'ceci est modélisation'
 
-Gravure message popup
+Order noeud pap & collections
 
-cré ton noeud pap message 'ceci est modélisation
+'size' => 'taille', 'wood' => 'bois' etc...
 
-mentions légales
-
-boutton voir plus collection
+image cart
 
 code promo
+
+payment fail
 
 modifier statut commande
 
 numéro suivi commande client -> laposte
 
-Order noeud pap & collections
+Photo slider
+
+Slider accueil rajouter slides
+
+Maps
+
+Gravure message popup
+
+boutton voir plus collection
+
+mentions légales
 
 register page
+
+Responsive

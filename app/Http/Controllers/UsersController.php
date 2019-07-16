@@ -46,10 +46,19 @@ class UsersController extends Controller
         $orderItems = OrderItem::where('order_id', $order->id)->get();
         $products = Product::all();
 
+        $totalPrice = 0;
+
+        foreach($orderItems as $item) {
+            $product = Product::where('name', $item->product_name)->first();
+            $subtotal = $product->price * $item->quantity;
+            $totalPrice = $totalPrice + $subtotal;
+        }
+
         return view('users.order')
             ->with('order', $order)
             ->with('address', $address)
             ->with('orderItems', $orderItems)
-            ->with('products', $products);
+            ->with('products', $products)
+            ->with('totalPrice', $totalPrice);
     }
 }
