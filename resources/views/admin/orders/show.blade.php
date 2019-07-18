@@ -48,11 +48,15 @@
         </thead>
         <tbody>
             @foreach($items as $item)
-                <tr>
-                    <th>{{ $item->product_name }}</th>
-                    <td>{{ $item->quantity }}</td>
-                    <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
-                </tr>
+                @foreach($products as $product)
+                    @if($item->product_id == $product->id)
+                        <tr>
+                            <th>{{ $product->name }}</th>
+                            <td>{{ $item->quantity }}</td>
+                            <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                        </tr>
+                    @endif
+                @endforeach
             @endforeach
         </tbody>
     </table>

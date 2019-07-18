@@ -49,7 +49,7 @@ class UsersController extends Controller
         $totalPrice = 0;
 
         foreach($orderItems as $item) {
-            $product = Product::where('name', $item->product_name)->first();
+            $product = Product::find($item->product_id);
             $subtotal = $product->price * $item->quantity;
             $totalPrice = $totalPrice + $subtotal;
         }

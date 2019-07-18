@@ -33,7 +33,7 @@
                     <tbody>
                         @foreach($orderItems as $item)
                             @foreach($products as $product)
-                                @if($product->name == $item->product_name)
+                                @if($product->id == $item->product_id)
                                     <tr>
                                         <td>
                                             <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">

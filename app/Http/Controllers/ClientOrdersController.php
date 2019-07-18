@@ -50,7 +50,7 @@ class ClientOrdersController extends Controller
         foreach(Cart::content() as $product) {
             $orderItem = new OrderItem;
             $orderItem->order_id = $order->id;
-            $orderItem->product_name = $product->name;
+            $orderItem->product_id = $product->id;
             $orderItem->quantity = $product->qty;
             $orderItem->options = $product->options;
             $orderItem->save();

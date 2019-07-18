@@ -6,6 +6,8 @@
 
 Orders database
 
+change 'with'
+
 Disponibilité taille
 
 'Paiement sécurisé', délai lvraison

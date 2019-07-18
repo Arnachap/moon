@@ -7,6 +7,7 @@ use App\Order;
 use App\OrderItem;
 use App\Address;
 use App\User;
+use App\Product;
 
 class AdminOrdersController extends Controller
 {
@@ -34,12 +35,14 @@ class AdminOrdersController extends Controller
         $user = User::find($order->user_id);
         $address = Address::find($order->address);
         $items = OrderItem::where('order_id', $order->id)->get();
+        $products = Product::all();
 
         return view('admin.orders.show')
             ->with('order', $order)
             ->with('user', $user)
             ->with('address', $address)
-            ->with('items', $items);
+            ->with('items', $items)
+            ->with('products', $products);
     }
 
     public function editStatus(Request $request) {
