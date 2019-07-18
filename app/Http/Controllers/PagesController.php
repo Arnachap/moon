@@ -31,10 +31,11 @@ class PagesController extends Controller
         $tissus = Tissu::all();
         $first = Tissu::all()->first();
 
-        return view('pages.create')
-            ->with('woods', $woods)
-            ->with('tissus', $tissus)
-            ->with('first', $first);
+        return view('pages.create')->with([
+            'woods' => $woods,
+            'tissus' => $tissus,
+            'first' => $first
+        ]);
     }
 
     public function tshirts() {
@@ -42,10 +43,11 @@ class PagesController extends Controller
         $intro = 'Des t-shirts uniques, à la marque au Chat.';
         $products = Product::where('category', 't-shirts')->get();
 
-        return view('pages.store')
-            ->with('products', $products)
-            ->with('category', $category)
-            ->with('intro', $intro);
+        return view('pages.store')->with([
+            'products' => $products,
+            'category' => $category,
+            'intro' => $intro
+        ]);
     }
 
     public function earrings() {
@@ -53,10 +55,11 @@ class PagesController extends Controller
         $intro = 'Un accessoire original, en bois recyclé !';
         $products = Product::where('category', 'earrings')->get();
 
-        return view('pages.store')
-            ->with('products', $products)
-            ->with('category', $category)
-            ->with('intro', $intro);
+        return view('pages.store')->with([
+            'products' => $products,
+            'category' => $category,
+            'intro' => $intro
+        ]);
     }
 
     public function caps() {
@@ -64,10 +67,11 @@ class PagesController extends Controller
         $intro = 'Moon fait de l\'ombre';
         $products = Product::where('category', 'caps')->get();
 
-        return view('pages.store')
-            ->with('products', $products)
-            ->with('category', $category)
-            ->with('intro', $intro);
+        return view('pages.store')->with([
+            'products' => $products,
+            'category' => $category,
+            'intro' => $intro
+        ]);
     }
 
     public function about() {

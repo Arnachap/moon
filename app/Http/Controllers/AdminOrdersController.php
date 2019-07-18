@@ -25,9 +25,10 @@ class AdminOrdersController extends Controller
         $orders = Order::where('status', '!=', 'not-payed')->get();
         $users = User::all();
         
-        return view('admin.orders.index')
-            ->with('orders', $orders)
-            ->with('users', $users);
+        return view('admin.orders.index')->with([
+            'orders' => $orders,
+            'users' => $users
+        ]);
     }
 
     public function show($id) {
@@ -37,12 +38,13 @@ class AdminOrdersController extends Controller
         $items = OrderItem::where('order_id', $order->id)->get();
         $products = Product::all();
 
-        return view('admin.orders.show')
-            ->with('order', $order)
-            ->with('user', $user)
-            ->with('address', $address)
-            ->with('items', $items)
-            ->with('products', $products);
+        return view('admin.orders.show')->with([
+            'order' => $order,
+            'user' => $user,
+            'address' => $address,
+            'items' => $items,
+            'products' => $products
+        ]);
     }
 
     public function editStatus(Request $request) {

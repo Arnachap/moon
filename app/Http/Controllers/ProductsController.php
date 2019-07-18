@@ -29,10 +29,11 @@ class ProductsController extends Controller
         $earrings = Product::where('category', 'earrings')->get();
         $caps = Product::where('category', 'caps')->get();
 
-        return view('admin.products.index')
-            ->with('tshirts', $tshirts)
-            ->with('earrings', $earrings)
-            ->with('caps', $caps);
+        return view('admin.products.index')->with([
+            'tshirts' => $tshirts,
+            'earrings' => $earrings,
+            'caps' => $caps
+        ]);
     }
 
     /**

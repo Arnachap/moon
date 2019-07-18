@@ -73,9 +73,10 @@ class BowtiesController extends Controller
         $bowtie = Bowtie::find($id);
         $collection = Collection::find($bowtie->collection_id);
 
-        return view('admin.bowties.show')
-            ->with('bowtie', $bowtie)
-            ->with('collection', $collection);
+        return view('admin.bowties.show')->with([
+            'bowtie' => $bowtie,
+            'collection' => $collection
+        ]);
     }
 
     /**
@@ -89,9 +90,10 @@ class BowtiesController extends Controller
         $bowtie = Bowtie::find($id);
         $collections = Collection::pluck('title', 'id')->all();
 
-        return view('admin.bowties.edit')
-            ->with('bowtie', $bowtie)
-            ->with('collections', $collections);
+        return view('admin.bowties.edit')->with([
+            'bowtie' => $bowtie,
+            'collections' => $collections
+        ]);
     }
 
     /**

@@ -31,9 +31,10 @@ class UsersController extends Controller
         $user = Auth::user();
         $orders = Order::where([['user_id', '=', $user->id], ['status', '!=', 'not-payed']])->get();
 
-        return view('users.home')
-            ->with('user', $user)
-            ->with('orders', $orders);
+        return view('users.home')->with([
+            'user' => $user,
+            'orders' => $orders
+        ]);
     }
 
     /**
@@ -54,11 +55,12 @@ class UsersController extends Controller
             $totalPrice = $totalPrice + $subtotal;
         }
 
-        return view('users.order')
-            ->with('order', $order)
-            ->with('address', $address)
-            ->with('orderItems', $orderItems)
-            ->with('products', $products)
-            ->with('totalPrice', $totalPrice);
+        return view('users.order')->with([
+            'order' => $order,
+            'address' => $address,
+            'orderItems' => $orderItems,
+            'products' => $products,
+            'totalPrice' => $totalPrice
+        ]);
     }
 }

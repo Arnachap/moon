@@ -24,9 +24,10 @@ class MaterialsController extends Controller
         $woods = Wood::all();
         $tissus = Tissu::all();
 
-        return view('admin.materials.index')
-            ->with('woods', $woods)
-            ->with('tissus', $tissus);
+        return view('admin.materials.index')->with([
+            'woods' => $woods,
+            'tissus' => $tissus
+        ]);
     }
 
     public function toggleAvailable($id) {
