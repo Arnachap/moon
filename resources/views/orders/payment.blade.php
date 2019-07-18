@@ -72,20 +72,34 @@
             @endif
         </div>
 
-        <div class="col-6 mx-auto" id="payment-section">
+        <div class="col-6 mx-auto pb-0" id="payment-section">
             <h4 class="text-center my-3">Payer par carte bancaire</h4>
 
             {{ Form::open(['action' => 'ClientOrdersController@pay', 'method' => 'POST', 'id' => 'payment-form', 'class' => 'my-4']) }}
-                <div id="card-element">
-                    <!-- A Stripe Element will be inserted here. -->
+                <div class="row">
+                    <div class="col-4">
+                        <img src="https://storage.googleapis.com/helpdocs-assets/xd21t13ilk/articles/gy433n1273/1533310177521/image.png" class="img-fluid">
+                    </div>
+
+                    <div class="col-8 mt-2">
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
+            
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert" class="text-danger"></div>
+                    </div>
+                    
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-success d-block mt-5 mx-auto">Payer {{ Cart::total() + 3 }}€</button>
+        
+                        <small class="text-muted">
+                            Paiement sécurisé par <a class="text-primary" href="https://stripe.com/fr">Stripe</a>
+                        </small>
+                    </div>
                 </div>
-    
-                <!-- Used to display form errors. -->
-                <div id="card-errors" role="alert" class="text-danger"></div>
 
                 {{ Form::hidden('id', $order->id) }}
-    
-                <button type="submit" class="btn btn-success d-block mx-auto mt-5">Payer {{ Cart::total() }}€</button>
             {{ Form::close() }}
         </div>
     </div>

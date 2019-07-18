@@ -31,8 +31,7 @@ Route::post('/addProductToCart', 'CartController@addProductToCart');
 Route::post('/updateProductQuantity', 'CartController@updateProductQuantity');
 
 // Odrers Routes
-Route::get('/shipping', 'ClientOrdersController@shipping');
-Route::post('/ship', 'ClientOrdersController@ship');
+Route::post('/place', 'ClientOrdersController@place');
 Route::get('/payment/{id}', 'ClientOrdersController@payment');
 Route::post('/pay', 'ClientOrdersController@pay');
 

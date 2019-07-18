@@ -95,9 +95,11 @@ Panier
                 </tbody>
             </table>
 
-            <a href="/shipping" class="button float-right">Valider la commande</a>
+            <button type="button" class="btn btn-lg btn-success float-right" data-toggle="modal" data-target="#paymentModal">Valider la commande</button>
         @else
             <div class="alert alert-danger text-center">Votre panier est vide</div>
         @endif
+
+        @include('orders.shipping')
     </div>
 @endsection

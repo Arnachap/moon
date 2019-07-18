@@ -22,11 +22,7 @@ class ClientOrdersController extends Controller
         $this->middleware('auth');
     }
 
-    public function shipping() {
-        return view('orders.shipping');
-    }
-
-    public function ship(Request $request) {
+    public function place(Request $request) {
         $request->validate([
             'name' => 'required',
             'address1' => 'required',
@@ -34,6 +30,7 @@ class ClientOrdersController extends Controller
             'city' => 'required',
         ]);
 
+        // Save Address
         $address = new Address;
         $address->name = $request->name;
         $address->address1 = $request->address1;
@@ -42,12 +39,14 @@ class ClientOrdersController extends Controller
         $address->city = $request->city;
         $address->save();
 
+        // Save Order
         $order = new Order;
         $order->user_id = Auth::user()->id;
         $order->address = $address->id;
         $order->status = 'not-payed';
         $order->save();
 
+        // Save ordered items
         foreach(Cart::content() as $product) {
             $orderItem = new OrderItem;
             $orderItem->order_id = $order->id;
@@ -80,7 +79,6 @@ class ClientOrdersController extends Controller
         $order->save();
         
         Cart::destroy();
-
         return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
     }
 }

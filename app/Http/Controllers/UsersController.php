@@ -29,7 +29,7 @@ class UsersController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $orders = Order::where('user_id', $user->id)->get();
+        $orders = Order::where([['user_id', '=', $user->id], ['status', '!=', 'not-payed']])->get();
 
         return view('users.home')
             ->with('user', $user)
