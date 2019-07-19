@@ -36,6 +36,42 @@
                     {{ Form::label('image', 'Photo de l\'article') }}
                     {{ Form::file('image', ['class' => 'form-control-file']) }}
                 </div>
+
+                <div class="form-row mt-2">
+                    <div class="col-12">
+                        <p>Quantité / taille :</p>
+                    </div>
+
+                    <div class="form-group col">
+                        {{ Form::label('xs', 'XS') }}
+                        {{ Form::number('xs', $product->xs, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('s', 'S') }}
+                        {{ Form::number('s', $product->s, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('m', 'M') }}
+                        {{ Form::number('m', $product->m, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('l', 'L') }}
+                        {{ Form::number('l', $product->l, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('xl', 'XL') }}
+                        {{ Form::number('xl', $product->xl, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('tu', 'Taille unique') }}
+                        {{ Form::number('tu', $product->tu, ['class' => 'form-control']) }}
+                    </div>
+                </div>
                 
                 {{ Form::hidden('available', true) }}
                 {{ Form::hidden('_method', 'PUT') }}

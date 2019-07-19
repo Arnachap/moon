@@ -6,13 +6,13 @@
 
 // Orders database
 
-change 'with'
+// change 'with'
 
 Disponibilité taille
 
 'Paiement sécurisé', délai lvraison
 
-plusieurs photos articles
+plusieurs photos articles => ProductPhotosController / DB
 
 Ajouter nom bois, tissu & forme
 
@@ -22,13 +22,13 @@ Order noeud pap & collections
 
 'size' => 'taille', 'wood' => 'bois' etc...
 
-image cart
+// image cart
 
 code promo
 
 payment fail
 
-modifier statut commande
+// modifier statut commande
 
 numéro suivi commande client -> laposte
 

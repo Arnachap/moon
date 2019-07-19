@@ -77,7 +77,14 @@ class ProductsController extends Controller
         $product->category = $request->category;
         $product->price = $request->price;
         $product->image = $filenameToStore;
-        $product->available = $request->available;
+        $product->available = true;
+        $product->xs = $request->xs;
+        $product->s = $request->s;
+        $product->m = $request->m;
+        $product->l = $request->l;
+        $product->xl = $request->xl;
+        $product->tu = $request->tu;
+
         $product->save();
 
         return  redirect('/admin/products')->with('success', 'Article créé !');
@@ -150,6 +157,12 @@ class ProductsController extends Controller
         $product->category = $request->category;
         $product->price = $request->price;
         $product->available = $request->available;
+        $product->xs = $request->xs;
+        $product->s = $request->s;
+        $product->m = $request->m;
+        $product->l = $request->l;
+        $product->xl = $request->xl;
+        $product->tu = $request->tu;
         $product->save();
 
         return  redirect('/admin/products')->with('success', 'Article modifié !');

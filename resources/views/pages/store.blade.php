@@ -62,7 +62,31 @@ T-shirts
                                                 <div class="form-group row">
                                                     {{ Form::label('size', 'Taille :', ['class' => 'col-3 col-form-label']) }}
                                                     <div class="col-9 mt-1">
-                                                        {{ Form::select('size', ['S' => 'S', 'M' => 'M', 'L' => 'L'], 'S') }}
+                                                        <select id="size">
+                                                            @if($product->xs > 0)
+                                                                <option value="xs">XS</option>
+                                                            @endif
+                                                            
+                                                            @if($product->s > 0)
+                                                                <option value="s">S</option>
+                                                            @endif
+                                                            
+                                                            @if($product->m > 0)
+                                                                <option value="m">M</option>
+                                                            @endif
+                                                            
+                                                            @if($product->l > 0)
+                                                                <option value="l">L</option>
+                                                            @endif
+                                                            
+                                                            @if($product->xl > 0)
+                                                                <option value="xl">XL</option>
+                                                            @endif
+                                                            
+                                                            @if($product->tu > 0)
+                                                                <option value="tu">TU</option>
+                                                            @endif
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>

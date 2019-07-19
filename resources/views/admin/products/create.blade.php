@@ -37,10 +37,43 @@
                     {{ Form::file('image', ['class' => 'form-control-file']) }}
                 </div>
 
+                <div class="form-row mt-2">
+                    <div class="col-12">
+                        <p>Quantité / taille :</p>
+                    </div>
 
-                {{ Form::hidden('available', true) }}
+                    <div class="form-group col">
+                        {{ Form::label('xs', 'XS') }}
+                        {{ Form::number('xs', null, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('s', 'S') }}
+                        {{ Form::number('s', null, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('m', 'M') }}
+                        {{ Form::number('m', null, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('l', 'L') }}
+                        {{ Form::number('l', null, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('xl', 'XL') }}
+                        {{ Form::number('xl', null, ['class' => 'form-control']) }}
+                    </div>
+                    
+                    <div class="form-group col">
+                        {{ Form::label('tu', 'Taille unique') }}
+                        {{ Form::number('tu', null, ['class' => 'form-control']) }}
+                    </div>
+                </div>
 
-                {{ Form::submit('Créer l\'article', ['class' => 'btn btn-primary d-block mx-auto']) }}
+                {{ Form::submit('Créer l\'article', ['class' => 'btn btn-primary d-block mx-auto mb-3']) }}
             {{ Form::close() }}
         </div>
     </div>
