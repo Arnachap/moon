@@ -1,49 +1,26 @@
 // Orders -> Admin & User view
-
 // options json decode
-
 // Frais de port 3€
-
 // Orders database
-
 // change 'with'
-
-Disponibilité taille
-
+// Disponibilité taille
+select quantity frontend
 'Paiement sécurisé', délai lvraison
-
 plusieurs photos articles => ProductPhotosController / DB
-
 Ajouter nom bois, tissu & forme
-
 crée ton noeud pap message 'ceci est modélisation'
-
 Order noeud pap & collections
-
 'size' => 'taille', 'wood' => 'bois' etc...
-
 // image cart
-
 code promo
-
 payment fail
-
 // modifier statut commande
-
 numéro suivi commande client -> laposte
-
 Photo slider
-
 Slider accueil rajouter slides
-
 Maps
-
 Gravure message popup
-
 boutton voir plus collection
-
 mentions légales
-
 register page
-
 Responsive

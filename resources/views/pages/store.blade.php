@@ -94,11 +94,11 @@ T-shirts
 
                                         <div class="form-group col-12">
                                             <div class="quantity">
-                                                <span class="qty-minus" onclick="var effect = document.getElementById('quantity'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                <span class="qty-minus" onclick="var effect = document.getElementById('quantity{{ $product->id }}'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
     
-                                                {{ Form::number('quantity', 1, ['id' => 'quantity']) }}
+                                                {{ Form::number('quantity', 1, ['id' => 'quantity' . $product->id]) }}
     
-                                                <span class="qty-plus" onclick="var effect = document.getElementById('quantity'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                <span class="qty-plus" onclick="var effect = document.getElementById('quantity{{ $product->id }}'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                             </div>
                                         </div>
 
