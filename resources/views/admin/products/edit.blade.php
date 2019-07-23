@@ -33,8 +33,8 @@
                 </div>
 
                 <div class="form-group">
-                    {{ Form::label('image', 'Photo de l\'article') }}
-                    {{ Form::file('image', ['class' => 'form-control-file']) }}
+                    {{ Form::label('photos[]', 'Ajouter photos de l\'article') }}
+                    {{ Form::file('photos[]', ['class' => 'form-control-file', 'multiple' => 'true']) }}
                 </div>
 
                 <div class="form-row mt-2">

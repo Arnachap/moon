@@ -14,7 +14,7 @@ T-shirts
         <div class="row">
             @foreach($products as $product)
                 <div class="col-md-4 product">
-                    <div class="product-img" style="background-image:url('/storage/products/{{ $product->image }}');">
+                    <div class="product-img" style="background-image:url('/storage/products/{{ $product->id . '/' . $product->photos->first()->path }}');">
                         <div class="product-quickview">
                             <a href="#" data-toggle="modal" data-target="#productModal{{ $product->id }}"><i class="fa fa-plus"></i></a>
                         </div>
@@ -42,7 +42,29 @@ T-shirts
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-5">
-                                    <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+                                    @if (count($product->photos) > 1)
+                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                @foreach($product->photos as $photo)
+                                                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                                        <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="">
+                                                    </div>
+                                                @endforeach
+                                            </div>
+
+                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="background-color: transparent;">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+
+                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="background-color: transparent;">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    @else
+                                        <img src="/storage/products/{{ $product->id . '/' . $product->photos->first()->path }}" class="img-fluid" alt="">
+                                    @endif
                                 </div>
 
                                 <div class="col-7">

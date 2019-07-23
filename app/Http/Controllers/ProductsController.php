@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ProductPhoto;
 use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
@@ -58,17 +59,8 @@ class ProductsController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'category' => 'required',
-            'image' => 'image|max:1999'
+            'category' => 'required'
         ]);
-
-        // Handle File Upload
-        $filenameWithExt = $request->file('image')->getClientOriginalName();
-        var_dump($filenameWithExt);
-        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-        $extension = $request->file('image')->getClientOriginalExtension();
-        $filenameToStore = $filename . '_' . time() . '.' . $extension;
-        $path = $request->file('image')->storeAs('public/products', $filenameToStore);
 
         // Create Product
         $product = new Product;
@@ -76,7 +68,6 @@ class ProductsController extends Controller
         $product->description = $request->description;
         $product->category = $request->category;
         $product->price = $request->price;
-        $product->image = $filenameToStore;
         $product->available = true;
         $product->xs = $request->xs;
         $product->s = $request->s;
@@ -84,8 +75,23 @@ class ProductsController extends Controller
         $product->l = $request->l;
         $product->xl = $request->xl;
         $product->tu = $request->tu;
-
         $product->save();
+
+        // Handle Files Upload
+        if($request->hasFile('photos')) {
+            foreach($request->photos as $photo) {
+                // Save photo
+                $filename = time() . '_' . $photo->getClientOriginalName();
+                $directory = 'public/products/' . $product->id;
+                $path = $photo->storeAs($directory, $filename);
+
+                // Save to DB
+                $photoToSave = new ProductPhoto;
+                $photoToSave->product_id = $product->id;
+                $photoToSave->path = $filename;
+                $photoToSave->save();
+            }
+        }
 
         return  redirect('/admin/products')->with('success', 'Article créé !');
     }
@@ -99,8 +105,12 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
+        $photos = ProductPhoto::where('product_id', $product->id)->get();
 
-        return view('admin.products.show')->with('product', $product);
+        return view('admin.products.show')->with([
+            'product' => $product,
+            'photos' => $photos    
+        ]);
     }
 
     /**
@@ -137,21 +147,6 @@ class ProductsController extends Controller
 
         // Edit Product
         $product = Product::find($id);
-
-        if($request->hasFile('image')) {
-            // Delete old image
-            Storage::delete('public/products/' . $product->image);
-
-            // Handle File Upload
-            $filenameWithExt = $request->file('image')->getClientOriginalName();
-            var_dump($filenameWithExt);
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('image')->getClientOriginalExtension();
-            $filenameToStore = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('image')->storeAs('public/products', $filenameToStore);
-            $product->image = $filenameToStore;
-        }
-
         $product->name = $request->name;
         $product->description = $request->description;
         $product->category = $request->category;
@@ -165,7 +160,23 @@ class ProductsController extends Controller
         $product->tu = $request->tu;
         $product->save();
 
-        return  redirect('/admin/products')->with('success', 'Article modifié !');
+        // Handle Files Upload
+        if($request->hasFile('photos')) {
+            foreach($request->photos as $photo) {
+                // Save photo
+                $filename = time() . '_' . $photo->getClientOriginalName();
+                $directory = 'public/products/' . $product->id;
+                $path = $photo->storeAs($directory, $filename);
+
+                // Save to DB
+                $photoToSave = new ProductPhoto;
+                $photoToSave->product_id = $product->id;
+                $photoToSave->path = $filename;
+                $photoToSave->save();
+            }
+        }
+
+        return  redirect('/admin/products/' . $id)->with('success', 'Article modifié !');
     }
 
     /**
@@ -177,11 +188,26 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+        $photos = ProductPhoto::where('product_id', $product->id)->get();
 
-        Storage::delete('public/products/' . $product->image);
+        foreach($photos as $photo) {
+            Storage::delete('public/products/' . $product->id . '/' . $photo->path);
+
+            $photo->delete();
+        }
 
         $product->delete();
 
         return redirect('/admin/products')->with('success', 'Article supprimé !');
+    }
+
+    public function deletePhoto($id) {
+        $photo = ProductPhoto::find($id);
+
+        Storage::delete('/public/products/' . $photo->product_id . '/' . $photo->path);
+
+        $photo->delete();
+
+        return redirect('/admin/products/' . $photo->product_id)->with('success', 'Photo supprimée !');
     }
 }

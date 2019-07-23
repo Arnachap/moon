@@ -17,9 +17,21 @@
         </div>
     </div>
 
-    <div class="col-6 mx-auto">
-        <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+    <div class="col-8 mx-auto">
+        <div class="row">
+            @foreach($photos as $photo)
+                <div class="col">
+                    <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="">
+                    {{ Form::open(['action' => ['ProductsController@deletePhoto', $photo->id], 'method' => 'POST']) }}
+                        {{ Form::hidden('_method', 'DELETE') }}
+                        {{ Form::submit('X', ['class' => 'btn btn-danger', 'style' => 'position: absolute; top: 10px; right: 20px;']) }}
+                    {{ Form::close() }}
+                </div>
+            @endforeach
+        </div>
+
         <p>{{ $product->description }}</p>
+
         <p>Prix : {{ $product->price }}</p>
     </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ProductPhoto;
 use App\Collection;
 use App\Bowtie;
 use App\Wood;
@@ -42,6 +43,11 @@ class PagesController extends Controller
         $category = 'T-shirts';
         $intro = 'Des t-shirts uniques, à la marque au Chat.';
         $products = Product::where('category', 't-shirts')->get();
+        
+        foreach ($products as $product) {
+            $photos = ProductPhoto::where('product_id', $product->id)->get();
+            $product->photos = $photos;
+        }
 
         return view('pages.store')->with([
             'products' => $products,

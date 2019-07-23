@@ -53,6 +53,7 @@ Route::prefix('admin')->group(function() {
 
     // Products
     Route::resource('/products', 'ProductsController');
+    Route::delete('/deletePhoto/{id}', 'ProductsController@deletePhoto');
 
     // Collections
     Route::resource('/collections', 'CollectionsController')->except('show');
