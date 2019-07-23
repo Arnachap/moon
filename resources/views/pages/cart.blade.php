@@ -45,17 +45,17 @@ Panier
                                 <div class="quantity">
                                     {{ Form::open(['action' => 'CartController@updateProductQuantity', 'method' => 'POST']) }}
                                         <span class="qty-minus" onclick="
-                                            var effect = document.getElementById('qty'); 
+                                            var effect = document.getElementById('qty{{ $item->rowId }}'); 
                                             var qty = effect.value;
                                             if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;
                                             return false;">
                                             <i class="fa fa-minus" aria-hidden="true"></i>
                                         </span>
 
-                                        {{ Form::number('quantity', $item->qty, ['id' => 'qty', 'class' => 'qty-text']) }}
+                                        {{ Form::number('quantity', $item->qty, ['id' => 'qty' . $item->rowId, 'class' => 'qty-text']) }}
                                         
                                         <span class="qty-plus" onclick="
-                                            var effect = document.getElementById('qty');
+                                            var effect = document.getElementById('qty{{ $item->rowId }}');
                                             var qty = effect.value;
                                             if( !isNaN( qty )) effect.value++;
                                             return false;">
@@ -80,7 +80,7 @@ Panier
                             Sous-total
                             <br>
                             <br>Frais de port
-                            <br>
+                            <br><small>(Délai de livraison: 2-4 jours)</small>
                             <br>Total
                         </td>
 
@@ -95,7 +95,7 @@ Panier
                 </tbody>
             </table>
 
-            <button type="button" class="btn btn-lg btn-success float-right" data-toggle="modal" data-target="#paymentModal">Valider la commande</button>
+            <button type="button" class="btn btn-lg btn-success float-right mb-5 mr-5" data-toggle="modal" data-target="#paymentModal">Valider la commande</button>
         @else
             <div class="alert alert-danger text-center">Votre panier est vide</div>
         @endif

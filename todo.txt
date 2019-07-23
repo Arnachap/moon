@@ -4,8 +4,8 @@
 // Orders database
 // change 'with'
 // Disponibilité taille
-select quantity frontend
-'Paiement sécurisé', délai lvraison
+// select quantity frontend
+// 'Paiement sécurisé', délai lvraison
 plusieurs photos articles => ProductPhotosController / DB
 Ajouter nom bois, tissu & forme
 crée ton noeud pap message 'ceci est modélisation'

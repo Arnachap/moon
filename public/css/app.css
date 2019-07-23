@@ -16020,6 +16020,7 @@ a:focus {
 }
 
 footer {
+  width: 98.9vw;
   background: #333;
   color: #fff;
   display: flex;

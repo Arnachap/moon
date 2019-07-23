@@ -62,7 +62,7 @@ T-shirts
                                                 <div class="form-group row">
                                                     {{ Form::label('size', 'Taille :', ['class' => 'col-3 col-form-label']) }}
                                                     <div class="col-9 mt-1">
-                                                        <select id="size">
+                                                        <select name="size" id="size">
                                                             @if($product->xs > 0)
                                                                 <option value="xs">XS</option>
                                                             @endif
