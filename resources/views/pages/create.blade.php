@@ -22,26 +22,69 @@ Crée ton Noeud Pap'
             <div class="col-12">
                 <div class="upper-menu">
                     <div class="shapes upper-menu-category">
-                        <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="classic" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/electric/electric-bois1.png" id="electric" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/heavy/heavy-bois1.png" id="heavy" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/heavy-light/heavy-light-bois1.png" id="heavy-light" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/roadster/roadster-bois1.png" id="roadster" class="shape" alt="">
-                        <img src="/img/create/noeuds-pap/roadster-light/roadster-light-bois1.png" id="roadster-light" class="shape" alt="">
+                        <div class="row mx-auto">
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/classic/classic-bois1.png" id="classic" class="shape d-block mx-auto" alt="">
+
+                                <small>Classic</small>
+                            </div>
+    
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/electric/electric-bois1.png" id="electric" class="shape d-block mx-auto" alt="">
+
+                                <small>Electric</small>
+                            </div>
+                            
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/heavy/heavy-bois1.png" id="heavy" class="shape d-block mx-auto" alt="">
+                                
+                                <small>Heavy</small>
+                            </div>
+                            
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/heavy-light/heavy-light-bois1.png" id="heavy-light" class="shape d-block mx-auto" alt="">
+
+                                <small>Heavy Light</small>
+                            </div>
+                            
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/roadster/roadster-bois1.png" id="roadster" class="shape d-block mx-auto" alt="">
+
+                                <small>Roadster</small>
+                            </div>
+    
+                            <div class="col">
+                                <img src="/img/create/noeuds-pap/roadster-light/roadster-light-bois1.png" id="roadster-light" class="shape d-block mx-auto" alt="">
+
+                                <small>Roadster Light</small>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="woods upper-menu-category">
-                        @foreach($woods as $wood)
-                            @if($wood->available)
-                                <img src="/img/create/noeuds-pap/classic/classic-bois{{ $wood->id }}.png" id="bois{{ $wood->id }}" class="wood" alt="">
-                            @endif
-                        @endforeach
+                        <div class="d-flex justify-content-center">
+                            @foreach($woods as $wood)
+                                @if($wood->available)
+                                    <div class="position-relative">
+                                        <img src="/img/create/noeuds-pap/classic/classic-bois{{ $wood->id }}.png" id="bois{{ $wood->id }}" class="wood d-block mx-auto" alt="">
+
+                                        <small>{{ $wood->name }}</small>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
                     
                     <div class="tissus upper-menu-category">
-                        @foreach($tissus as $tissu)
-                            <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" class="tissu" alt="">
-                        @endforeach
+                        <div class="d-flex justify-content-center">
+                            @foreach($tissus as $tissu)
+                                <div class="position-relative">
+                                    <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" class="tissu" alt="">
+
+                                    <small>{{ $tissu->name }}</small>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

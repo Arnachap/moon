@@ -2,7 +2,6 @@
     height: calc(100vh - 216px);
 
     #createImg {
-
         img {
             width: 80%;
             position: absolute;
@@ -20,7 +19,7 @@
 
         .upper-menu {
             background: $white;
-            height: 100px;
+            height: 150px;
             visibility: hidden;
 
             &.show {
@@ -32,12 +31,19 @@
                 justify-content: center;
 
                 &.show {
-                    display: flex;
+                    display: unset;
                 }
 
                 img {
-                    height: 100px;
+                    height: 150px;
                     cursor: pointer;
+                }
+
+                small {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }

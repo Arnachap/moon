@@ -15593,7 +15593,7 @@ a:focus {
 
 #create #createMenu .upper-menu {
   background: #fff;
-  height: 100px;
+  height: 150px;
   visibility: hidden;
 }
 
@@ -15607,12 +15607,20 @@ a:focus {
 }
 
 #create #createMenu .upper-menu .upper-menu-category.show {
-  display: flex;
+  display: unset;
 }
 
 #create #createMenu .upper-menu .upper-menu-category img {
-  height: 100px;
+  height: 150px;
   cursor: pointer;
+}
+
+#create #createMenu .upper-menu .upper-menu-category small {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #create #createMenu .sub-menu {

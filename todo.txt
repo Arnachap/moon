@@ -6,8 +6,9 @@
 // Disponibilité taille
 // select quantity frontend
 // 'Paiement sécurisé', délai lvraison
-plusieurs photos articles => ProductPhotosController / DB
-Ajouter nom bois, tissu & forme
+// plusieurs photos articles => 
+// ProductPhotosController / DB
+// Ajouter nom bois, tissu & forme
 crée ton noeud pap message 'ceci est modélisation'
 Order noeud pap & collections
 'size' => 'taille', 'wood' => 'bois' etc...
