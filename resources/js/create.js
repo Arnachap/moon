@@ -26,6 +26,9 @@ const tissuImg = $('#tissu');
 let bowtieShape = 'classic';
 let bowtieWood = 'bois1';
 let bowtieTissu = 'tissu1';
+const formShape = $('#formShape');
+const formWood = $('#formWood');
+const formTissu = $('#formTissu');
 
 const changeBowtieImg = () => {
     let newImgSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${bowtieWood}.png`;
@@ -35,6 +38,8 @@ const changeBowtieImg = () => {
 $('.shape').click(function() {
     bowtieShape = $(this).attr('id');
     changeBowtieImg();
+
+    formShape.val(bowtieShape);
 
     $('.wood').each(function() {
         let woodId = $(this).attr('id');
@@ -47,6 +52,8 @@ $('.wood').click(function() {
     bowtieWood = $(this).attr('id');
     changeBowtieImg();
 
+    formWood.val(bowtieWood);
+
     $('.shape').each(function() {
         let shapeId = $(this).attr('id');
         let newShapeSrc = `/img/create/noeuds-pap/${shapeId}/${shapeId}-${bowtieWood}.png`;
@@ -58,6 +65,8 @@ $('.tissu').click(function() {
     bowtieTissu = $(this).attr('id');
     let newTissuSrc = `/storage/tissus/${bowtieTissu}`;
     tissuImg.attr('src', newTissuSrc);
+
+    formTissu.val($(this).data('tissu'));
 });
 
 // Price fixed on scroll

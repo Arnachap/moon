@@ -40341,6 +40341,9 @@ var tissuImg = $('#tissu');
 var bowtieShape = 'classic';
 var bowtieWood = 'bois1';
 var bowtieTissu = 'tissu1';
+var formShape = $('#formShape');
+var formWood = $('#formWood');
+var formTissu = $('#formTissu');
 
 var changeBowtieImg = function changeBowtieImg() {
   var newImgSrc = "/img/create/noeuds-pap/".concat(bowtieShape, "/").concat(bowtieShape, "-").concat(bowtieWood, ".png");
@@ -40350,6 +40353,7 @@ var changeBowtieImg = function changeBowtieImg() {
 $('.shape').click(function () {
   bowtieShape = $(this).attr('id');
   changeBowtieImg();
+  formShape.val(bowtieShape);
   $('.wood').each(function () {
     var woodId = $(this).attr('id');
     var newWoodSrc = "/img/create/noeuds-pap/".concat(bowtieShape, "/").concat(bowtieShape, "-").concat(woodId, ".png");
@@ -40359,6 +40363,7 @@ $('.shape').click(function () {
 $('.wood').click(function () {
   bowtieWood = $(this).attr('id');
   changeBowtieImg();
+  formWood.val(bowtieWood);
   $('.shape').each(function () {
     var shapeId = $(this).attr('id');
     var newShapeSrc = "/img/create/noeuds-pap/".concat(shapeId, "/").concat(shapeId, "-").concat(bowtieWood, ".png");
@@ -40369,6 +40374,7 @@ $('.tissu').click(function () {
   bowtieTissu = $(this).attr('id');
   var newTissuSrc = "/storage/tissus/".concat(bowtieTissu);
   tissuImg.attr('src', newTissuSrc);
+  formTissu.val($(this).data('tissu'));
 }); // Price fixed on scroll
 
 if (window.location.pathname === '/create') {
