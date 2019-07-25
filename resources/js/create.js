@@ -24,7 +24,7 @@ $('.sub-menu-btn').click(function() {
 const bowtieImg = $('#bowtie');
 const tissuImg = $('#tissu');
 let bowtieShape = 'classic';
-let bowtieWood = 'bois1';
+let bowtieWood = '1';
 let bowtieTissu = 'tissu1';
 const formShape = $('#formShape');
 const formWood = $('#formWood');

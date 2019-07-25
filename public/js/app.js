@@ -40339,7 +40339,7 @@ $('.sub-menu-btn').click(function () {
 var bowtieImg = $('#bowtie');
 var tissuImg = $('#tissu');
 var bowtieShape = 'classic';
-var bowtieWood = 'bois1';
+var bowtieWood = '1';
 var bowtieTissu = 'tissu1';
 var formShape = $('#formShape');
 var formWood = $('#formWood');

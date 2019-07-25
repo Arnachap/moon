@@ -34,7 +34,7 @@ class CartController extends Controller
 
     public function addBowtieToCart(Request $request) {
         Cart::add(
-            803713,
+            9 . rand(10, 1000),
             'Noeud Pap\' sur mesure',
             1,
             40,
@@ -42,7 +42,7 @@ class CartController extends Controller
             ['shape' => $request->shape, 'wood' => $request->wood, 'tissu' => $request->tissu]
         );
 
-        return Cart::content();
+        return redirect('/cart')->with('success', 'Noeud pap\' ajouté au panier !');
     }
 
     public function updateProductQuantity(Request $request) {

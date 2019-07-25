@@ -18,7 +18,7 @@ Panier
 
                         <th>Nom de produit</th>
 
-                        <th>Taille</th>
+                        <th>Options</th>
 
                         <th>Prix unitaire</th>
 
@@ -37,7 +37,15 @@ Panier
 
                             <td class="m-auto">{{ $item->name }}</td>
 
-                            <td>{{ $item->options->size }}</td>
+                            @if($item->id >= 910)
+                                <td class="pt-2">
+                                    <p>Forme : {{ $item->options->shape }}</p>
+                                    <p>Bois : {{ $item->options->wood = 1 ? 'Bois de palette' : 'Bois de meuble' }}</p>
+                                    <p>Tissu : {{ $item->options->tissu }}</p>
+                                </td>
+                            @else
+                                <td>{{ $item->options->size }}</td>
+                            @endif
 
                             <td>{{ $item->price }}€</td>
 
