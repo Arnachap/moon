@@ -161,7 +161,7 @@ Crée ton Noeud Pap'
                     {{ Form::open(['action' => 'CartController@addBowtieToCart', 'method' => 'POST']) }}
                         {{ Form::hidden('shape', 'classic',['id' => 'formShape']) }}
                         
-                        {{ Form::hidden('wood', '',['id' => 'formWood']) }}
+                        {{ Form::hidden('wood', 1,['id' => 'formWood']) }}
                         
                         {{ Form::hidden('tissu', '',['id' => 'formTissu']) }}
 

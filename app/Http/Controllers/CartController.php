@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cart;
+use App\Tissu;
 use App\Product;
 
 class CartController extends Controller
@@ -14,7 +15,9 @@ class CartController extends Controller
     }
 
     public function index() {
-        return view('pages.cart');
+        $tissus = Tissu::all();
+
+        return view('pages.cart')->with('tissus', $tissus);
     }
 
     public function addProductToCart(Request $request) {
