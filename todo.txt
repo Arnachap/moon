@@ -10,7 +10,7 @@
 // ProductPhotosController / DB
 // Ajouter nom bois, tissu & forme
 crée ton noeud pap message 'ceci est modélisation'
-Order noeud pap & collections$
+// Order noeud pap & collections
 Payment & Order Product images
 // Order if Product if Bowtie
 // 'size' => 'taille', 'wood' => 'bois' etc...
@@ -23,7 +23,7 @@ Photo slider
 Slider accueil rajouter slides
 Maps
 Gravure message popup
-boutton voir plus collection
+// boutton voir plus collection
 mentions légales
 register page
 Responsive

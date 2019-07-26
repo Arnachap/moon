@@ -40,8 +40,14 @@ Panier
                                             <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translateX(-100%);" alt="">
                                         @endif
                                     @endforeach
+                                @elseif($item->options->collection)
+                                    @foreach($bowties as $bowtie)
+                                        @if($item->id == $bowtie->id)
+                                            <img src="/storage/bowties/{{ $bowtie->photo }}" class="img-fluid" alt="">
+                                        @endif
+                                    @endforeach
                                 @else
-                                    <img src="/img/store/tshirt1.jpg" class="img-fluid" alt="">
+                                    <img src="/storage/products/{{ $item->product_id }}/{{ $item->photo }}" class="img-fluid" alt="">
                                 @endif
                             </td>
 
@@ -54,7 +60,13 @@ Panier
                                     <p>Tissu : {{ $item->options->tissu }}</p>
                                 </td>
                             @else
-                                <td>{{ $item->options->size }}</td>
+                                <td>
+                                    @if($item->options->size)
+                                        Taille : {{ $item->options->size }}
+                                    @elseif($item->options->collection)
+                                        Collection : {{ $item->options->collection }}
+                                    @endif
+                                </td>
                             @endif
 
                             <td>{{ $item->price }}€</td>

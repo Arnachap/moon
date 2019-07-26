@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Cart;
 use App\Tissu;
 use App\Product;
+use App\ProductPhoto;
+use App\Bowtie;
+use App\Collection;
 
 class CartController extends Controller
 {
@@ -16,8 +19,21 @@ class CartController extends Controller
 
     public function index() {
         $tissus = Tissu::all();
+        $bowties = Bowtie::all();
         
-        return view('pages.cart')->with('tissus', $tissus);
+        foreach(Cart::content() as $item) {
+            if($item->options->size) {
+                $product = Product::where('name', $item->name)->get()->first();
+                $photo = ProductPhoto::where('product_id', $product->id)->get()->first();
+                $item->photo = $photo->path;
+                $item->product_id = $product->id;
+            }
+        }
+        
+        return view('pages.cart')->with([
+            'tissus' => $tissus,
+            'bowties' => $bowties
+        ]);
     }
 
     public function addProductToCart(Request $request) {
@@ -44,6 +60,25 @@ class CartController extends Controller
             0,
             ['shape' => $request->shape, 'wood' => $request->wood, 'tissu' => $request->tissu]
         );
+
+        return redirect('/cart')->with('success', 'Noeud pap\' ajouté au panier !');
+    }
+
+    public function addCollectionItemToCart($id) {
+        $bowtie = Bowtie::find($id);
+        $collection = Collection::find($bowtie->collection_id);
+        
+        Cart::add(
+            $bowtie->id,
+            $bowtie->name,
+            1,
+            $bowtie->price,
+            0,
+            ['collection' => $collection->title]
+        );
+        
+        $bowtie->available = false;
+        $bowtie->save();
 
         return redirect('/cart')->with('success', 'Noeud pap\' ajouté au panier !');
     }

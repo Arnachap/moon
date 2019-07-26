@@ -51,7 +51,9 @@ Notre collection
 
                                         <div class="col-6">
                                             @if($bowtie->available && !is_null($bowtie->price))
-                                                <button type="button" class="btn btn-success d-block ml-auto">Ajouter au panier</button>
+                                                {{ Form::open(['action' => ['CartController@addCollectionItemToCart', $bowtie->id], 'method' => 'POST']) }}
+                                                    {{ Form::submit('Ajouter au panier', ['class' => 'btn btn-success d-block ml-auto']) }}
+                                                {{ Form::close() }}
                                             @else
                                                 <button type="button" class="btn btn-secondary d-block ml-auto" disabled>Vendu</button>
                                             @endif

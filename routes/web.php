@@ -29,6 +29,7 @@ Route::prefix('products')->group(function() {
 Route::get('/cart', 'CartController@index');
 Route::post('/addProductToCart', 'CartController@addProductToCart');
 Route::post('/addBowtieToCart', 'CartController@addBowtieToCart');
+Route::post('/addCollectionItemToCart/{id}', 'CartController@addCollectionItemToCart');
 Route::post('/updateProductQuantity', 'CartController@updateProductQuantity');
 
 // Odrers Routes
