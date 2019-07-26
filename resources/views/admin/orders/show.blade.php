@@ -48,15 +48,23 @@
         </thead>
         <tbody>
             @foreach($items as $item)
-                @foreach($products as $product)
-                    @if($item->product_id == $product->id)
-                        <tr>
-                            <th>{{ $product->name }}</th>
-                            <td>{{ $item->quantity }}</td>
-                            <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
-                        </tr>
-                    @endif
-                @endforeach
+                @if($item->product_id >= 910)
+                    <tr>
+                        <th>Noeud pap' sur mesure</th>
+                        <td>{{ $item->quantity }}</td>
+                        <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                    </tr>
+                @else
+                    @foreach($products as $product)
+                        @if($item->product_id == $product->id)
+                            <tr>
+                                <th>{{ $product->name }}</th>
+                                <td>{{ $item->quantity }}</td>
+                                <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                            </tr>
+                        @endif
+                    @endforeach
+                @endif
             @endforeach
         </tbody>
     </table>

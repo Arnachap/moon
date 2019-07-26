@@ -10,7 +10,7 @@
             <h2>Vos commandes</h2>
         </div>
 
-        @if (!empty($orders))
+        @if (count($orders) >= 1)
             <div class="row">
                 <div class="col-10 mx-auto">
                     <table class="table table-hover">

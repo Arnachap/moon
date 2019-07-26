@@ -50,9 +50,13 @@ class UsersController extends Controller
         $totalPrice = 0;
 
         foreach($orderItems as $item) {
-            $product = Product::find($item->product_id);
-            $subtotal = $product->price * $item->quantity;
-            $totalPrice = $totalPrice + $subtotal;
+            if($item->product_id >= 910) {
+                $totalPrice = $totalPrice + 40;
+            } else {
+                $product = Product::find($item->product_id);
+                $subtotal = $product->price * $item->quantity;
+                $totalPrice = $totalPrice + $subtotal;
+            }
         }
 
         return view('users.order')->with([

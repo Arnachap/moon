@@ -32,25 +32,41 @@
 
                     <tbody>
                         @foreach($orderItems as $item)
-                            @foreach($products as $product)
-                                @if($product->id == $item->product_id)
-                                    <tr>
-                                        <td>
-                                            <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
-                                        </td>
+                            @if($item->product_id >= 910)
+                                <tr>
+                                    <td></td>
 
-                                        <td>{{ $product->name }}</td>
+                                    <td>Noeuds pap' sur mesure</td>
 
-                                        <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                                    <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
 
-                                        <td>{{ $product->price }}€</td>
+                                    <td>40€</td>
 
-                                        <td>{{ $item->quantity }}</td>
+                                    <td>{{ $item->quantity }}</td>
 
-                                        <td>{{ $product->price * $item->quantity }}€</td>
-                                    </tr>
-                                @endif
-                            @endforeach
+                                    <td>{{ $item->quantity * 40 }}€</td>
+                                </tr>
+                            @else
+                                @foreach($products as $product)
+                                    @if($product->id == $item->product_id)
+                                        <tr>
+                                            <td>
+                                                <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+                                            </td>
+
+                                            <td>{{ $product->name }}</td>
+
+                                            <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+
+                                            <td>{{ $product->price }}€</td>
+
+                                            <td>{{ $item->quantity }}</td>
+
+                                            <td>{{ $product->price * $item->quantity }}€</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            @endif
                         @endforeach
 
                         <tr>
