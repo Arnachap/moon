@@ -53,7 +53,7 @@ Notre collection
                                             @if($bowtie->available && !is_null($bowtie->price))
                                                 <button type="button" class="btn btn-success d-block ml-auto">Ajouter au panier</button>
                                             @else
-                                                <button type="button" class="btn btn-secondary d-block ml-auto" disabled>Indisponible</button>
+                                                <button type="button" class="btn btn-secondary d-block ml-auto" disabled>Vendu</button>
                                             @endif
                                         </div>
                                     </div>
@@ -81,13 +81,15 @@ Notre collection
                 </div>
             </div>  
 
-            <div class="row">
-                <div class="col-2 mx-auto">
-                    <button class="btn btn-dark w-100" type="button" data-toggle="collapse" data-target="#collapse{{ $collection->id }}" aria-expanded="false" aria-controls="collapse{{ $collection->id }}">
-                        Voir plus
-                    </button>
-                </div> 
-            </div>  
+            @if(count($collection->bowties) > 4)
+                <div class="row">
+                    <div class="col-2 mx-auto">
+                        <button class="btn btn-dark w-100" type="button" data-toggle="collapse" data-target="#collapse{{ $collection->id }}" aria-expanded="false" aria-controls="collapse{{ $collection->id }}">
+                            Voir plus
+                        </button>
+                    </div> 
+                </div>
+            @endif
         </div>
     @endforeach
 @endsection

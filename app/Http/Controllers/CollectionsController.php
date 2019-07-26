@@ -30,7 +30,7 @@ class CollectionsController extends Controller
         $bowties = Bowtie::orderBy('position', 'asc')->get();
 
         return view('admin.collections.index')->with([
-            'collections', $collections,
+            'collections' => $collections,
             'bowties' => $bowties
         ]);
     }
