@@ -38,7 +38,11 @@
 
                                     <td>Noeuds pap' sur mesure</td>
 
-                                    <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                                    <td class="pt-4">
+                                        Forme : {{ $item->options['shape'] }}
+                                        <br>Bois : {{ $item->options['wood'] }}
+                                        <br>Tissu : {{ $item->options['tissu'] }}
+                                    </td>
 
                                     <td>40€</td>
 
@@ -56,7 +60,7 @@
 
                                             <td>{{ $product->name }}</td>
 
-                                            <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                                            <td>Taille : {{ $item->options['size'] }}</td>
 
                                             <td>{{ $product->price }}€</td>
 

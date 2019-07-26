@@ -12,8 +12,8 @@
 crée ton noeud pap message 'ceci est modélisation'
 Order noeud pap & collections$
 Payment & Order Product images
-Order if Product if Bowtie
-'size' => 'taille', 'wood' => 'bois' etc...
+// Order if Product if Bowtie
+// 'size' => 'taille', 'wood' => 'bois' etc...
 // image cart
 code promo
 payment fail

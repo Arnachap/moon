@@ -16,7 +16,7 @@ class CartController extends Controller
 
     public function index() {
         $tissus = Tissu::all();
-
+        
         return view('pages.cart')->with('tissus', $tissus);
     }
 

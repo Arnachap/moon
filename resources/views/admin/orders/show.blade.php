@@ -52,7 +52,11 @@
                     <tr>
                         <th>Noeud pap' sur mesure</th>
                         <td>{{ $item->quantity }}</td>
-                        <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                        <td>
+                            Forme : {{ $item->options['shape'] }}
+                            <br>Bois : {{ $item->options['wood'] }}
+                            <br>Tissu : {{ $item->options['tissu'] }}
+                        </td>
                     </tr>
                 @else
                     @foreach($products as $product)
@@ -60,7 +64,7 @@
                             <tr>
                                 <th>{{ $product->name }}</th>
                                 <td>{{ $item->quantity }}</td>
-                                <td>{{ str_replace(array('{', '}', '"')," ", $item->options) }}</td>
+                                <td>Taille : {{ $item->options['size'] }}</td>
                             </tr>
                         @endif
                     @endforeach
