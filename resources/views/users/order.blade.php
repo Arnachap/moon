@@ -34,7 +34,15 @@
                         @foreach($orderItems as $item)
                             @if($item->product_id >= 910)
                                 <tr>
-                                    <td></td>
+                                    <td>
+                                        <img src="/img/create/noeuds-pap/{{ $item->options['shape'] }}/{{ $item->options['shape'] }}-{{ $item->options['wood'] }}.png" class="img-fluid" alt="">
+
+                                        @foreach($tissus as $tissu)
+                                            @if($tissu->name == $item->options['tissu'])
+                                                <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translateX(-100%);" alt="">
+                                            @endif
+                                        @endforeach
+                                    </td>
 
                                     <td>Noeuds pap' sur mesure</td>
 
@@ -50,12 +58,30 @@
 
                                     <td>{{ $item->quantity * 40 }}€</td>
                                 </tr>
+                            @elseif(isset($item->options['collection']))
+                                <tr>
+                                    <td>
+                                        <img src="/storage/bowties/{{ $item->bowtie->photo }}" class="img-fluid" alt="">
+                                    </td>
+
+                                    <td>{{ $item->bowtie->name }}</td>
+
+                                    <td>
+                                        Collection : {{ $item->options['collection'] }}
+                                    </td>
+
+                                    <td>{{ $item->bowtie->price }}€</td>
+
+                                    <td>{{ $item->quantity }}</td>
+
+                                    <td>{{ $item->quantity * $item->bowtie->price }}€</td>
+                                </tr>
                             @else
                                 @foreach($products as $product)
                                     @if($product->id == $item->product_id)
                                         <tr>
                                             <td>
-                                                <img src="/storage/products/{{ $product->image }}" class="img-fluid" alt="">
+                                                <img src="/storage/products/{{ $product->id }}/{{ $item->photo->path }}" class="img-fluid" alt="">
                                             </td>
 
                                             <td>{{ $product->name }}</td>
