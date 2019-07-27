@@ -9,6 +9,8 @@ use Stripe;
 use App\Order;
 use App\OrderItem;
 use App\Address;
+use App\Tissu;
+use App\Bowtie;
 
 class ClientOrdersController extends Controller
 {
@@ -61,8 +63,14 @@ class ClientOrdersController extends Controller
 
     public function payment($id) {
         $order = Order::find($id);
+        $tissus = Tissu::all();
+        $bowties = Bowtie::all();
 
-        return view('orders.payment')->with('order', $order);
+        return view('orders.payment')->with([
+            'order' => $order,
+            'tissus' => $tissus,
+            'bowties' => $bowties
+        ]);
     }
 
     public function pay(Request $request) {
