@@ -31,6 +31,7 @@ Route::post('/addProductToCart', 'CartController@addProductToCart');
 Route::post('/addBowtieToCart', 'CartController@addBowtieToCart');
 Route::post('/addCollectionItemToCart/{id}', 'CartController@addCollectionItemToCart');
 Route::post('/updateProductQuantity', 'CartController@updateProductQuantity');
+Route::post('/promo', 'CartController@promoCode');
 
 // Odrers Routes
 Route::post('/place', 'ClientOrdersController@place');

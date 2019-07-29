@@ -9,6 +9,7 @@ use App\Product;
 use App\ProductPhoto;
 use App\Bowtie;
 use App\Collection;
+use App\PromoCode;
 
 class CartController extends Controller
 {
@@ -87,5 +88,23 @@ class CartController extends Controller
         Cart::update($request->id, $request->quantity);
 
         return redirect('/cart')->with('success', 'Panier mis à jour !');
+    }
+
+    public function promoCode(Request $request) {
+        $codes = PromoCode::all();
+
+        foreach($codes as $code) {
+            if($code->code == $request->code && strtotime($code->expiration) > strtotime('now')) {
+                Cart::setGlobalDiscount($code->percentage);
+
+                $usedCode = PromoCode::find($code->id);
+            }
+        }
+
+        if(isset($usedCode)) {
+            return redirect('/cart')->with('success', 'Code promo appliqué !');
+        } else {
+            return redirect('/cart')->with('error', 'Code promo invalide.');
+        }
     }
 }

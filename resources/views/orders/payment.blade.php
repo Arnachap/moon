@@ -74,7 +74,7 @@
 
                                 <td>{{ $item->qty }}</td>
 
-                                <td>{{ $item->total }}€</td>
+                                <td>{{ $item->price * $item->qty }}€</td>
                             </tr>
                         @endforeach
 
@@ -84,14 +84,22 @@
                             <td>
                                 Sous-total
                                 <br>
+                                @if(Cart::discount() > 0)
+                                    Code Promo
+                                    <br>
+                                @endif
                                 <br>Frais de port
                                 <br><small>(Délai de livraison: 2-4 jours)</small>
                                 <br>Total
                             </td>
 
                             <td>
-                                {{ Cart::total() }}€
+                                {{ Cart::initial() }}€
                                 <br>
+                                @if(Cart::discount() > 0)
+                                    -{{ Cart::discount() }}€
+                                    <br>
+                                @endif
                                 <br>3€
                                 <br>
                                 <br>{{ Cart::total() + 3 }}€

@@ -15,7 +15,8 @@ crée ton noeud pap message 'ceci est modélisation'
 // Order if Product if Bowtie
 // 'size' => 'taille', 'wood' => 'bois' etc...
 // image cart
-code promo
+// code promo
+Code promo commande passé
 payment fail
 // modifier statut commande
 numéro suivi commande client -> laposte

@@ -33,11 +33,11 @@ Panier
                         <tr>
                             <td>
                                 @if($item->id >= 910)
-                                    <img src="/img/create/noeuds-pap/{{ $item->options->shape }}/{{ $item->options->shape }}-{{ $item->options->wood }}.png" class="img-fluid" alt="">
+                                    <img src="/img/create/noeuds-pap/{{ $item->options->shape }}/{{ $item->options->shape }}-{{ $item->options->wood }}.png" class="img-fluid position-relative" alt="">
 
                                     @foreach($tissus as $tissu)
                                         @if($tissu->name == $item->options->tissu)
-                                            <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translateX(-100%);" alt="">
+                                            <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translate(-50%, -100%);" alt="">
                                         @endif
                                     @endforeach
                                 @elseif($item->options->collection)
@@ -99,24 +99,42 @@ Panier
                                 </div>
                             </td>
 
-                            <td>{{ $item->total }}€</td>
+                            <td>{{ $item->price * $item->qty }}€</td>
                         </tr>
                     @endforeach
 
                     <tr>
-                        <td colspan="4"></td>
+                        <td colspan="3"></td>
+
+                        <td>
+                            {{ Form::open(['action' => 'CartController@promoCode', 'method' => 'POST']) }}
+                                {{ Form::label('code', 'Code Promo :') }}
+                                <br>
+                                {{ Form::text('code', '') }}
+
+                                {{ Form::submit('Appliquer', ['class' => 'btn btn-sm btn-success mt-1']) }}
+                            {{ Form::close() }}
+                        </td>
 
                         <td>
                             Sous-total
                             <br>
+                            @if(Cart::discount() > 0)
+                                Code Promo
+                                <br>
+                            @endif
                             <br>Frais de port
                             <br><small>(Délai de livraison: 2-4 jours)</small>
                             <br>Total
                         </td>
 
                         <td>
-                            {{ Cart::total() }}€
+                            {{ Cart::initial() }}€
                             <br>
+                            @if(Cart::discount() > 0)
+                                -{{ Cart::discount() }}€
+                                <br>
+                            @endif
                             <br>3€
                             <br>
                             <br>{{ Cart::total() + 3 }}€
