@@ -76,4 +76,10 @@ Route::prefix('admin')->group(function() {
     Route::get('/orders', 'AdminOrdersController@index');
     Route::get('/orders/{id}', 'AdminOrdersController@show');
     Route::post('/orders/status', 'AdminOrdersController@editStatus');
+
+    // Promo Codes
+    Route::get('/promo', 'PromoCodesController@index');
+    Route::get('/promo/create', 'PromoCodesController@create');
+    Route::post('/promo/store', 'PromoCodesController@store');
+    Route::delete('/promo/{id}/delete', 'PromoCodesController@destroy');
 });

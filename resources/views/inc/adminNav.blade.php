@@ -32,6 +32,12 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="/admin/promo">
+                    Codes Promo
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="/">
                     Retour au site
                 </a>

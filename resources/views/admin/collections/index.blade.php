@@ -66,7 +66,7 @@
         {{ Form::submit('Sauvegarder l\'ordre des collections', ['class' => 'btn btn-success d-block mx-auto']) }}
     {{ Form::close() }}
 
-    @foreach ($collections as $colelction)
+    @foreach ($collections as $collection)
         <div class="modal fade" id="modal{{ $collection->id }}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
