@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cart;
 use Stripe;
+use Stripe_Error;
 use App\Order;
 use App\OrderItem;
 use App\Address;
@@ -74,22 +75,48 @@ class ClientOrdersController extends Controller
     }
 
     public function pay(Request $request) {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        Stripe\Charge::create ([
-                "amount" => (Cart::total() + 3) * 100,
-                "currency" => "eur",
-                "source" => $request->stripeToken,
-                "description" => "Commande n°" . $request->id
-        ]);
-        
-        $order = Order::find($request->id);
-        $order->status = 'payed';
-        if(Cart::discount() > 0) {
-            $order->promo = Cart::discount();
-        }
-        $order->save();
-        
-        Cart::destroy();
-        return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
+        try {
+            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+            Stripe\Charge::create ([
+                    "amount" => (Cart::total() + 3) * 100,
+                    "currency" => "eur",
+                    "source" => $request->stripeToken,
+                    "description" => "Commande n°" . $request->id
+            ]);
+
+            return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
+        }  catch(\Stripe\Error\Card $e) {
+            return back()->with('error', 'Erreur lors du paiement. Vérifiez que vous avez suffisament de fonds. Si le problème persiste, merci de nous contacter.');
+          } catch (\Stripe\Error\RateLimit $e) {
+            // Too many requests made to the API too quickly
+          } catch (\Stripe\Error\InvalidRequest $e) {
+            // Invalid parameters were supplied to Stripe's API
+          } catch (\Stripe\Error\Authentication $e) {
+            // Authentication with Stripe's API failed
+            // (maybe you changed API keys recently)
+          } catch (\Stripe\Error\ApiConnection $e) {
+            // Network communication with Stripe failed
+          } catch (\Stripe\Error\Base $e) {
+            // Display a very generic error to the user, and maybe send
+            // yourself an email
+          } catch (Exception $e) {
+            // Something else happened, completely unrelated to Stripe
+          }
+        // } finally {
+        //     if(!isset($e)) {
+        //         $order = Order::find($request->id);
+        //         $order->status = 'payed';
+        //         if(Cart::discount() > 0) {
+        //             $order->promo = Cart::discount();
+        //         }
+        //         $order->save();
+                
+        //         Cart::destroy();
+    
+        //         return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
+        //     } else {
+        //         return redirect('/cart')->with('error', 'Erreur lors du paiement. Vérifiez que vous avez suffisament de fonds. Si le problème persiste, merci de nous contacter.');
+        //     }
+        // }
     }
 }
