@@ -84,6 +84,9 @@ class ClientOrdersController extends Controller
         
         $order = Order::find($request->id);
         $order->status = 'payed';
+        if(Cart::discount() > 0) {
+            $order->promo = Cart::discount();
+        }
         $order->save();
         
         Cart::destroy();

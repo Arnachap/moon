@@ -105,6 +105,10 @@
                             <td>
                                 Sous-total
                                 <br>
+                                @if($order->promo > 0)
+                                    Code Promo
+                                    <br>
+                                @endif
                                 <br>Frais de port
                                 <br>
                                 <br>Total
@@ -113,9 +117,13 @@
                             <td>
                                 {{ $totalPrice }}€
                                 <br>
+                                @if($order->promo > 0)
+                                    -{{ $order->promo }}
+                                    <br>
+                                @endif
                                 <br>3€
                                 <br>
-                                <br>{{ $totalPrice + 3 }}€
+                                <br>{{ $totalPrice + 3 - $order->promo }}€
                             </td>
                         </tr>
                     </tbody>

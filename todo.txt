@@ -16,7 +16,7 @@ crée ton noeud pap message 'ceci est modélisation'
 // 'size' => 'taille', 'wood' => 'bois' etc...
 // image cart
 // code promo
-Code promo commande passé
+// Code promo commande passé
 payment fail
 // modifier statut commande
 numéro suivi commande client -> laposte
