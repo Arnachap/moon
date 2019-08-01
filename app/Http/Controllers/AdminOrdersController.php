@@ -50,6 +50,11 @@ class AdminOrdersController extends Controller
     public function editStatus(Request $request) {
         $order = Order::find($request->id);
         $order->status = $request->status;
+
+        if(!empty($request->tracking_number)) {
+            $order->tracking_number = $request->tracking_number;
+        }
+
         $order->save();
 
         return redirect('/admin/orders')->with('success', 'Statut de la commande modifié');

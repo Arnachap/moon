@@ -148,9 +148,11 @@
                         <p class="card-text">{{ $address->postcode . ' ' . $address->city }}</p>
                     </div>
 
-                    <div class="card-footer bg-white">
-                        Code de suivi : 13243525
-                    </div>
+                    @if(isset($order->tracking_number))
+                        <div class="card-footer bg-white">
+                            Numéro de suivi : <a href="https://www.laposte.fr/outils/suivre-vos-envois?code={{ $order->tracking_number }}" class="text-success" target="_blank">{{ $order->tracking_number }}</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

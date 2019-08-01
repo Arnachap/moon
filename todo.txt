@@ -17,7 +17,7 @@ crée ton noeud pap message 'ceci est modélisation'
 // image cart
 // code promo
 // Code promo commande passé
-payment fail
+// payment fail
 // modifier statut commande
 numéro suivi commande client -> laposte
 Photo slider

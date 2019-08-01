@@ -88,6 +88,9 @@
                     <div class="modal-body pt-3">
                         {{ Form::label('status', 'Statut :') }}
                         {{ Form::select('status', ['payed' => 'Payé - En cours d\'envoi', 'sent' => 'Envoyé'], $order->status, ['class' => 'form-control']) }}
+
+                        {{ Form::label('tracking_number', 'Numéro de suivi :') }}
+                        {{ Form::text('tracking_number', null, ['class' => 'form-control']) }}
                     </div>
 
                     <div class="modal-footer">
