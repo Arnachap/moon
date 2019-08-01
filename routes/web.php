@@ -83,4 +83,8 @@ Route::prefix('admin')->group(function() {
     Route::get('/promo/create', 'PromoCodesController@create');
     Route::post('/promo/store', 'PromoCodesController@store');
     Route::delete('/promo/{id}/delete', 'PromoCodesController@destroy');
+
+    // Slider
+    Route::resource('/slider', 'SliderController');
+    Route::post('/slider/sort', 'SliderController@sort');
 });

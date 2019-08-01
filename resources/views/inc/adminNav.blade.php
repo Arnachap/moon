@@ -38,6 +38,12 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="/admin/slider">
+                    Slider page d'accueil
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="/">
                     Retour au site
                 </a>

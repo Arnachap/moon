@@ -40425,6 +40425,16 @@ if (bowtieSort) {
   });
 }
 
+var slidesSort = document.getElementById('slidesSort');
+
+if (slidesSort) {
+  var slidesSortable = sortablejs__WEBPACK_IMPORTED_MODULE_0__["default"].create(slidesSort, {
+    animation: 300,
+    handle: '.slideHandle',
+    easing: 'ease-out'
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/sass/app.scss":

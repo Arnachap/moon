@@ -19,3 +19,13 @@ if (bowtieSort) {
         easing: 'ease-out'
     });
 }
+
+const slidesSort = document.getElementById('slidesSort');
+
+if (slidesSort) {
+    const slidesSortable = Sortable.create(slidesSort, {
+        animation: 300,
+        handle: '.slideHandle',
+        easing: 'ease-out'
+    });
+}
