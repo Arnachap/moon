@@ -17,6 +17,7 @@ Route::get('/create', 'PagesController@create');
 Route::get('/about', 'PagesController@about');
 Route::get('/login', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/find-us', 'PagesController@findus');
 
 // Store Routes
 Route::prefix('products')->group(function() {
