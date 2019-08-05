@@ -1,5 +1,4 @@
 #mainSlider {
-
     .carousel-indicators li {
         width: 10px;
         height: 10px;
@@ -12,18 +11,6 @@
         background-position: center;
         height: 100vh;
         filter: brightness(90%);
-
-        &:nth-child(1) {
-            background-image: url('/img/banner.jpg');
-        }
-
-        &:nth-child(2) {
-            background-image: url('/img/shirt.jpg');
-        }
-
-        &:nth-child(3) {
-            background-image: url('/img/woody.jpg');
-        }
     }
 
     .carousel-caption {
@@ -80,7 +67,7 @@
     img {
         max-width: 100%;
     }
-    
+
     a {
         position: absolute;
         top: 50%;
@@ -120,7 +107,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: rgba($black, .7);
+                background-color: rgba($black, 0.7);
                 border-left: 3px solid $white;
                 border-right: 3px solid $white;
                 content: '';
@@ -190,8 +177,8 @@
                 }
 
                 figcaption {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
                 }
             }
         }

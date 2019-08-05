@@ -9,11 +9,14 @@ use App\Collection;
 use App\Bowtie;
 use App\Wood;
 use App\Tissu;
+use App\slide;
 
 class PagesController extends Controller
 {
     public function index() {
-        return view('pages.index');
+        $slides = Slide::orderBy('position', 'asc')->get();
+
+        return view('pages.index')->with('slides', $slides);
     }
 
     public function collection() {

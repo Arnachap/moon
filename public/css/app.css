@@ -15328,18 +15328,6 @@ a:focus {
           filter: brightness(90%);
 }
 
-#mainSlider .carousel-item:nth-child(1) {
-  background-image: url("/img/banner.jpg");
-}
-
-#mainSlider .carousel-item:nth-child(2) {
-  background-image: url("/img/shirt.jpg");
-}
-
-#mainSlider .carousel-item:nth-child(3) {
-  background-image: url("/img/woody.jpg");
-}
-
 #mainSlider .carousel-caption {
   bottom: 60px;
 }

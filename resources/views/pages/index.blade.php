@@ -8,37 +8,21 @@ Le noeud papillon en bois sur-mesure
 
 <div id="mainSlider" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#mainSlider" data-slide-to="1"></li>
-        <li data-target="#mainSlider" data-slide-to="2"></li>
+        @foreach($slides as $index => $slide)
+            <li data-target="#mainSlider" data-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+        @endforeach
     </ol>
+
     <div class="carousel-inner">
-        <div class="carousel-item active">
+        @foreach($slides as $slide)
+            <div class="carousel-item {{ $loop->first ? 'active' : '' }}" style="background-image: url(/storage/slider/{{ $slide->image }});">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>{{ $slide->title }}</h2>
 
-        <div class="carousel-caption d-none d-md-block">
-            <h2>Le Noeud Papillon sur-mesure</h2>
-
-            <a class="button slider-btn" href="/create">Crée mon Noeud Pap'</a>
-        </div>
-        </div>
-
-        <div class="carousel-item">
-
-        <div class="carousel-caption d-none d-md-block">
-            <h2>Moon, c'est aussi des accessoires !</h2>
-
-            <a class="button slider-btn" href="/create">Nos accessoires</a>
-        </div>
-        </div>
-
-        <div class="carousel-item">
-
-        <div class="carousel-caption d-none d-md-block">
-            <h2>Moon, c'est avant tout un concept...</h2>
-
-            <a class="button slider-btn" href="/about">En savoir plus</a>
-        </div>
-        </div>
+                    <a class="button slider-btn" href="{{ $slide->link }}">{{ $slide->link_name }}</a>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 
