@@ -41,7 +41,7 @@ T-shirts
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-12 col-md-5">
                                     @if (count($product->photos) > 1)
                                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner">
@@ -67,7 +67,7 @@ T-shirts
                                     @endif
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-12 col-md-7">
                                     <div class="modal-desc">
                                         <h4 class="title">{{ $product->name }}</h4>
 
@@ -82,8 +82,8 @@ T-shirts
                                         <div class="row w-100">
                                             <div class="col-12">
                                                 <div class="form-group row">
-                                                    {{ Form::label('size', 'Taille :', ['class' => 'col-3 col-form-label']) }}
-                                                    <div class="col-9 mt-1">
+                                                    {{ Form::label('size', 'Taille :', ['class' => 'col-6 col-md-4 col-form-label']) }}
+                                                    <div class="col-6 col-md-8 mt-1">
                                                         <select name="size" id="size">
                                                             @if($product->xs > 0)
                                                                 <option value="xs">XS</option>

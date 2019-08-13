@@ -19,12 +19,18 @@ crée ton noeud pap message 'ceci est modélisation'
 // Code promo commande passé
 // payment fail
 // modifier statut commande
-numéro suivi commande client -> laposte
-Photo slider
-Slider accueil rajouter slides
-Maps
+// numéro suivi commande client -> laposte
+// Photo slider
+// Slider accueil rajouter slides
+// Maps
 Gravure message popup
 // boutton voir plus collection
+Option homme / femme / enfant
 mentions légales
 register page
 Responsive
+
+modifier nom bois
+Manque 2 forme quarter
+test beaucoup tissus
+Noeud pap enfant 30€s

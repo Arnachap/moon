@@ -68,19 +68,3 @@ $('.tissu').click(function() {
 
     formTissu.val($(this).data('tissu'));
 });
-
-// Price fixed on scroll
-if (window.location.pathname === '/create') {
-    $(window).scroll(function() {
-        const scrollPosition = $(window).scrollTop();
-        const optionsTop = $('#options').position().top + 60;
-        const priceWidth = $('#priceSection').css('width');
-
-        if (scrollPosition > optionsTop) {
-            $('#priceSection').css('position', 'fixed');
-            $('#priceSection').css('width', priceWidth);
-        } else {
-            $('#priceSection').css('position', 'relative');
-        }
-    });
-}

@@ -15385,6 +15385,7 @@ a:focus {
 
 #bowBanner a {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -15583,6 +15584,7 @@ a:focus {
   background: #fff;
   height: 150px;
   visibility: hidden;
+  overflow: hidden;
 }
 
 #create #createMenu .upper-menu.show {
@@ -15641,7 +15643,6 @@ a:focus {
 
 #options {
   padding: 50px 0 50px 0;
-  height: 200vh;
 }
 
 #options h3 {
@@ -15655,8 +15656,6 @@ a:focus {
   width: 100%;
   border-radius: 5px;
   color: #fff;
-  position: relative;
-  top: 60px;
   text-align: center;
 }
 
@@ -16032,10 +16031,6 @@ footer #social i {
   font-size: 20px;
 }
 
-footer #arnaudchapeleur i {
-  color: red;
-}
-
 #login .container {
   padding-top: 64px;
 }
@@ -16198,5 +16193,102 @@ footer #arnaudchapeleur i {
 
 #admin table td {
   padding: 12px !important;
+}
+
+@media screen and (max-width: 500px) {
+  #main-nav {
+    background-color: #fff;
+  }
+
+  #main-nav .navbar-brand {
+    background-image: url("/img/logo/moon.png");
+  }
+
+  #main-nav .navbar-nav {
+    display: block;
+  }
+
+  #main-nav .navbar-nav .dropdown {
+    position: initial !important;
+    top: 40px !important;
+  }
+
+  #main-nav .navbar-nav.right {
+    display: flex;
+    margin: 0 20%;
+  }
+
+  #mainSlider {
+    padding-top: 56px;
+  }
+
+  #mainSlider .carousel-item {
+    max-height: 50vh;
+  }
+
+  #createBanner {
+    padding: 0;
+  }
+
+  #bowBanner a {
+    font-size: 16px;
+  }
+
+  #links {
+    padding-top: 20px;
+  }
+
+  #links #accesories {
+    display: block !important;
+  }
+
+  #links #accesories .main-links {
+    margin: 30px auto !important;
+    display: block !important;
+  }
+
+  #create {
+    height: 70vh;
+  }
+
+  #create #createImg img {
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+  }
+
+  #create #createMenu .upper-menu {
+    height: 100%;
+  }
+
+  #create #createMenu .upper-menu .upper-menu-category img {
+    height: 100px;
+  }
+
+  #create #createMenu .sub-menu h3 {
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  .collection {
+    padding: 0;
+  }
+
+  .collection .bowtie {
+    max-width: 90%;
+  }
+
+  .modal-desc {
+    text-align: center;
+  }
+
+  .modal-desc p {
+    text-align: center !important;
+  }
+
+  .cart {
+    text-align: center;
+  }
 }
 

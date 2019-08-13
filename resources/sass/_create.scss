@@ -21,6 +21,7 @@
             background: $white;
             height: 150px;
             visibility: hidden;
+            overflow: hidden;
 
             &.show {
                 visibility: visible;
@@ -76,7 +77,6 @@
 
 #options {
     padding: 50px 0 50px 0;
-    height: 200vh;
 
     h3 {
         text-align: center;
@@ -89,8 +89,6 @@
         width: 100%;
         border-radius: 5px;
         color: $white;
-        position: relative;
-        top: 60px;
         text-align: center;
 
         .price-title {

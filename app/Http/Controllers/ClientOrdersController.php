@@ -84,6 +84,12 @@ class ClientOrdersController extends Controller
                     "description" => "Commande n°" . $request->id
             ]);
 
+            Cart::destroy();
+
+            $order = Order::find($request->id);
+            $order->status = 'payed';
+            $order->save();
+
             return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
         }  catch(\Stripe\Error\Card $e) {
             return back()->with('error', 'Erreur lors du paiement. Vérifiez que vous avez suffisament de fonds. Si le problème persiste, merci de nous contacter.');

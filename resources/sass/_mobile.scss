@@ -1,0 +1,119 @@
+// Desktops & Laptops
+@include mediaLg {
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+}
+
+// Smartphones
+@include mediaSm {
+    // Main nav
+    #main-nav {
+        background-color: #fff;
+
+        .navbar-brand {
+            background-image: url('/img/logo/moon.png');
+        }
+
+        .navbar-nav {
+            display: block;
+
+            .dropdown {
+                position: initial !important;
+                top: 40px !important;
+            }
+
+            &.right {
+                display: flex;
+                margin: 0 20%;
+            }
+        }
+    }
+
+    // Home page
+    #mainSlider {
+        padding-top: 56px;
+
+        .carousel-item {
+            max-height: 50vh;
+        }
+    }
+
+    #createBanner {
+        padding: 0;
+    }
+
+    #bowBanner {
+        a {
+            font-size: 16px;
+        }
+    }
+
+    #links {
+        padding-top: 20px;
+
+        #accesories {
+            display: block !important;
+
+            .main-links {
+                margin: 30px auto !important;
+                display: block !important;
+            }
+        }
+    }
+
+    // Create
+    #create {
+        height: 70vh;
+
+        #createImg {
+            img {
+                width: 100%;
+                top: 50%;
+                transform: translate(-50%, -60%);
+            }
+        }
+
+        #createMenu {
+            .upper-menu {
+                height: 100%;
+
+                .upper-menu-category {
+                    img {
+                        height: 100px;
+                    }
+                }
+            }
+
+            .sub-menu {
+                h3 {
+                    margin: 0;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    // Collections
+    .collection {
+        padding: 0;
+
+        .bowtie {
+            max-width: 90%;
+        }
+    }
+
+    // Store
+    .modal-desc {
+        text-align: center;
+
+        p {
+            text-align: center !important;
+        }
+    }
+
+    .cart {
+        text-align: center;
+    }
+}
