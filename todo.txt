@@ -29,12 +29,13 @@ Option homme / femme / enfant
 mentions légales
 register page
 Responsive
+Voir nombre objets panier
 
 Noeud pap enfant 30€
 
 A FAIRE	EN	PRIORITE :
-- Voir	pour	les	Tissus	pour	mettre	menu	déroulant	si	+	de	10	tissus
-- Ajouter	forme	Quarter	x2
+// Voir	pour	les	Tissus	pour	mettre	menu	déroulant	si	+	de	10	tissus
+// Ajouter	forme	Quarter	x2
 - Ajouter	les	distributeurs	manquants :
 o Pépites	Boutique,	12	quai	du	Musée	88000	EPINAL
 o Dot	Store,	1 rue	du	Miroir 67000	STRASBOURG

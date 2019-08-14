@@ -23,37 +23,49 @@ Crée ton Noeud Pap'
                 <div class="upper-menu">
                     <div class="shapes upper-menu-category">
                         <div class="row">
-                            <div class="col-6 col-sm-2">
+                            <div class="col-6 col-sm-3">
                                 <img src="/img/create/noeuds-pap/classic/classic-1.png" id="classic" class="shape d-block mx-auto" alt="">
 
                                 <small>Classic</small>
                             </div>
-    
-                            <div class="col-6 col-sm-2">
-                                <img src="/img/create/noeuds-pap/electric/electric-1.png" id="electric" class="shape d-block mx-auto" alt="">
-
-                                <small>Electric</small>
-                            </div>
                             
-                            <div class="col-6 col-sm-2">
+                            <div class="col-6 col-sm-3">
                                 <img src="/img/create/noeuds-pap/heavy/heavy-1.png" id="heavy" class="shape d-block mx-auto" alt="">
                                 
                                 <small>Heavy</small>
                             </div>
                             
-                            <div class="col-6 col-sm-2">
+                            <div class="col-6 col-sm-3">
+                                <img src="/img/create/noeuds-pap/heavy-quarter/heavy-quarter-1.png" id="heavy-quarter" class="shape d-block mx-auto" alt="">
+
+                                <small>Heavy Quarter</small>
+                            </div>
+                            
+                            <div class="col-6 col-sm-3">
                                 <img src="/img/create/noeuds-pap/heavy-light/heavy-light-1.png" id="heavy-light" class="shape d-block mx-auto" alt="">
 
                                 <small>Heavy Light</small>
                             </div>
+    
+                            <div class="col-6 col-sm-3">
+                                <img src="/img/create/noeuds-pap/electric/electric-1.png" id="electric" class="shape d-block mx-auto" alt="">
+
+                                <small>Electric</small>
+                            </div>
                             
-                            <div class="col-6 col-sm-2">
+                            <div class="col-6 col-sm-3">
                                 <img src="/img/create/noeuds-pap/roadster/roadster-1.png" id="roadster" class="shape d-block mx-auto" alt="">
 
                                 <small>Roadster</small>
                             </div>
+                            
+                            <div class="col-6 col-sm-3">
+                                <img src="/img/create/noeuds-pap/roadster-quarter/roadster-quarter-1.png" id="roadster-quarter" class="shape d-block mx-auto" alt="">
+
+                                <small>Roadster Quarter</small>
+                            </div>
     
-                            <div class="col-6 col-sm-2 position-relative">
+                            <div class="col-6 col-sm-3">
                                 <img src="/img/create/noeuds-pap/roadster-light/roadster-light-1.png" id="roadster-light" class="shape d-block mx-auto" alt="">
 
                                 <small>Roadster Light</small>
