@@ -30,9 +30,6 @@ mentions légales
 register page
 Responsive
 
-modifier nom bois
-Manque 2 forme quarter
-test beaucoup tissus
 Noeud pap enfant 30€
 
 A FAIRE	EN	PRIORITE :
@@ -44,6 +41,7 @@ o Dot	Store,	1 rue	du	Miroir 67000	STRASBOURG
 o La	Fabrique	Textile,	12	rue	Lafayette	54200	TOUL
 - Ajouter	dans	la	partie	admin	– crée	ton	nœud pap	– la	possibilité	de	modifier	le	nom	
 du	bois
+
 A	FAIRE :
 - Délai	de	livraison	panier : 3	à	5	jours
 - Modifier	mise	en	page	Collections	(version	ordinateur)

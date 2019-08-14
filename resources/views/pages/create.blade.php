@@ -53,7 +53,7 @@ Crée ton Noeud Pap'
                                 <small>Roadster</small>
                             </div>
     
-                            <div class="col-6 col-sm-2">
+                            <div class="col-6 col-sm-2 position-relative">
                                 <img src="/img/create/noeuds-pap/roadster-light/roadster-light-1.png" id="roadster-light" class="shape d-block mx-auto" alt="">
 
                                 <small>Roadster Light</small>
@@ -76,10 +76,10 @@ Crée ton Noeud Pap'
                     </div>
                     
                     <div class="tissus upper-menu-category">
-                        <div class="d-flex justify-content-center">
+                        <div class="row overflow-auto">
                             @foreach($tissus as $tissu)
-                                <div class="position-relative">
-                                    <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" data-tissu="{{ $tissu->name }}" class="tissu" alt="">
+                                <div class="col">
+                                    <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" data-tissu="{{ $tissu->name }}" class="tissu d-block mx-auto" alt="">
 
                                     <small>{{ $tissu->name }}</small>
                                 </div>

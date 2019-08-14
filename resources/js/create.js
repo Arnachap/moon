@@ -46,6 +46,8 @@ $('.shape').click(function() {
         let newWoodSrc = `/img/create/noeuds-pap/${bowtieShape}/${bowtieShape}-${woodId}.png`;
         $(this).attr('src', newWoodSrc);
     });
+
+    $('.upper-menu').removeClass('show');
 });
 
 $('.wood').click(function() {
@@ -59,6 +61,8 @@ $('.wood').click(function() {
         let newShapeSrc = `/img/create/noeuds-pap/${shapeId}/${shapeId}-${bowtieWood}.png`;
         $(this).attr('src', newShapeSrc);
     });
+
+    $('.upper-menu').removeClass('show');
 });
 
 $('.tissu').click(function() {
@@ -67,4 +71,6 @@ $('.tissu').click(function() {
     tissuImg.attr('src', newTissuSrc);
 
     formTissu.val($(this).data('tissu'));
+
+    $('.upper-menu').removeClass('show');
 });

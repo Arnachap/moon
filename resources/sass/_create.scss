@@ -19,7 +19,7 @@
 
         .upper-menu {
             background: $white;
-            height: 150px;
+            height: auto;
             visibility: hidden;
             overflow: hidden;
 
@@ -31,12 +31,16 @@
                 display: none;
                 justify-content: center;
 
+                .row {
+                    max-height: 50vh;
+                }
+
                 &.show {
                     display: unset;
                 }
 
                 img {
-                    height: 150px;
+                    max-width: 200px;
                     cursor: pointer;
                 }
 
@@ -77,6 +81,8 @@
 
 #options {
     padding: 50px 0 50px 0;
+    max-width: 90vw;
+    overflow: hidden;
 
     h3 {
         text-align: center;

@@ -40359,6 +40359,7 @@ $('.shape').click(function () {
     var newWoodSrc = "/img/create/noeuds-pap/".concat(bowtieShape, "/").concat(bowtieShape, "-").concat(woodId, ".png");
     $(this).attr('src', newWoodSrc);
   });
+  $('.upper-menu').removeClass('show');
 });
 $('.wood').click(function () {
   bowtieWood = $(this).attr('id');
@@ -40369,12 +40370,14 @@ $('.wood').click(function () {
     var newShapeSrc = "/img/create/noeuds-pap/".concat(shapeId, "/").concat(shapeId, "-").concat(bowtieWood, ".png");
     $(this).attr('src', newShapeSrc);
   });
+  $('.upper-menu').removeClass('show');
 });
 $('.tissu').click(function () {
   bowtieTissu = $(this).attr('id');
   var newTissuSrc = "/storage/tissus/".concat(bowtieTissu);
   tissuImg.attr('src', newTissuSrc);
   formTissu.val($(this).data('tissu'));
+  $('.upper-menu').removeClass('show');
 });
 
 /***/ }),
