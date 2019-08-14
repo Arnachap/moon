@@ -70,7 +70,7 @@ Notre collection
                 <div class="row m-0 p-3">
                     @foreach ($collection->bowties as $index => $bowtie)
                         @if($index >= 4)
-                            <div class="col-12 col-md-3 p-0">
+                            <div class="col-12 col-md-3">
                                 <figure class="bowtie" data-toggle="modal" data-target="#modal{{ $bowtie->id }}">
                                     <img src="/storage/bowties/{{ $bowtie->photo }}" alt="" class="img-fluid">
                                     <figcaption>

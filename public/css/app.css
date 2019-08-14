@@ -15511,12 +15511,14 @@ a:focus {
 
 .collection {
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .collection .bowtie {
   position: relative;
   overflow: hidden;
   margin: 10px;
+  padding: 10px;
   width: 100%;
   color: #fff;
   text-align: center;
@@ -16276,6 +16278,7 @@ footer #social i {
   }
 
   .collection .bowtie {
+    padding: 0px;
     max-width: 90%;
   }
 

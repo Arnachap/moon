@@ -33,4 +33,28 @@ Responsive
 modifier nom bois
 Manque 2 forme quarter
 test beaucoup tissus
-Noeud pap enfant 30€s
+Noeud pap enfant 30€
+
+A FAIRE	EN	PRIORITE :
+- Voir	pour	les	Tissus	pour	mettre	menu	déroulant	si	+	de	10	tissus
+- Ajouter	forme	Quarter	x2
+- Ajouter	les	distributeurs	manquants :
+o Pépites	Boutique,	12	quai	du	Musée	88000	EPINAL
+o Dot	Store,	1 rue	du	Miroir 67000	STRASBOURG
+o La	Fabrique	Textile,	12	rue	Lafayette	54200	TOUL
+- Ajouter	dans	la	partie	admin	– crée	ton	nœud pap	– la	possibilité	de	modifier	le	nom	
+du	bois
+A	FAIRE :
+- Délai	de	livraison	panier : 3	à	5	jours
+- Modifier	mise	en	page	Collections	(version	ordinateur)
+- Mettre	30€	pour	les	nœuds pap’ enfants
+- Mettre	« tour	de	cou : ras	le	cou » lorsqu’on	sélectionne	les	nœuds pap’ femme
+- Ajouter	mention	légale	protection	des	données
+- Envoi	mail	au	client :
+o quand	il	réalise	la	commande	
+o quand	la	commande	passe	en	envoyé
+- Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
+- Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera	
+quelque	peu	différent
+- Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	
+maquette	gravure.
