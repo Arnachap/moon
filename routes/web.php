@@ -70,6 +70,7 @@ Route::prefix('admin')->group(function() {
 
     // Materials
     Route::get('/materials', 'MaterialsController@index');
+    Route::put('/materials/editName/{id}', 'MaterialsController@editName');
     Route::put('/materials/wood/{id}', 'MaterialsController@toggleAvailable');
     Route::post('/materials/tissu', 'MaterialsController@addTissu');
     Route::delete('/materials/tissu/{id}', 'MaterialsController@deleteTissu');

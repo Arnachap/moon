@@ -38,6 +38,18 @@ class MaterialsController extends Controller
         return redirect('/admin/materials')->with('success', 'Disponibilité du bois modifiée');
     }
 
+    public function editName(Request $request, $id) {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $wood = Wood::find($id);
+        $wood->name = $request->name;
+        $wood->save();
+
+        return redirect('/admin/materials')->with('success', 'Nom du bois modifiée');
+    }
+
     public function addTissu(Request $request) {
         $request->validate([
             'name' => 'required',

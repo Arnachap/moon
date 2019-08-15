@@ -21,9 +21,14 @@
                         <div class="row">
                             @foreach($woods as $wood)
                                 <div class="col">
-                                    <h4 class="text-center">{{ $wood->name }}</h4>
+                                    <h4 class="text-center">
+                                        {{ $wood->name }} 
+                                        <a href="#" class="text-info" data-toggle="modal" data-target="#editName{{ $wood->id }}">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                    </h4>
 
-                                    <img src="/img/create/noeuds-pap/classic/classic-bois{{ $wood->id }}.png" class="img-fluid px-5" alt="">
+                                    <img src="/img/create/noeuds-pap/classic/classic-{{ $wood->id }}.png" class="img-fluid px-5" alt="">
 
                                     {{ Form::open(['action' => ['MaterialsController@toggleAvailable', $wood->id], 'method' => 'POST']) }}
                                         {{ Form::hidden('_method', 'PUT') }}
@@ -104,4 +109,33 @@
             </div>
         </div>
     </div>
+
+
+    @foreach($woods as $wood)
+        <div class="modal fade" id="editName{{ $wood->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modifier nom du bois</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        {{ Form::open(['action' => ['MaterialsController@editName', $wood->id], 'method' => 'POST']) }}
+                            <div class="form-group">
+                                {{ Form::text('name', $wood->name, ['class' => 'form-control my-3']) }}
+                            </div>
+
+                            {{ Form::hidden('_method', 'PUT') }}
+
+                            {{ Form::submit('Modifier le nom du bois', ['class' => 'btn btn-success d-block mx-auto']) }}
+                        {{ Form::close() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection
