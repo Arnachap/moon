@@ -84,6 +84,26 @@
         </tbody>
     </table>
 
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <div class="card text-center my-5">
+                <div class="card-header bg-success">
+                    <h5 class="card-title text-white m-0">Prix total</h5>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">
+                        {{ $order->total_price }}€ 
+                        <br>(Hors livraison)</p>
+                    
+                    @if(isset($order->promo))
+                        <p class="card-text">Dont -{{ $order->promo }}€ de promotion</p>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="statusModal" tabindex="-1" role="dialog" aria-labelledby="statusModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

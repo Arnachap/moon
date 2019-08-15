@@ -50,13 +50,14 @@
                                         Forme : {{ $item->options['shape'] }}
                                         <br>Bois : {{ $item->options['wood'] }}
                                         <br>Tissu : {{ $item->options['tissu'] }}
+                                        <br>Taille : {{ $item->options['size'] }}
                                     </td>
 
-                                    <td>40€</td>
+                                    <td>{{ $item->options['size'] == 'enfant' ? '30' : '40' }}€</td>
 
                                     <td>{{ $item->quantity }}</td>
 
-                                    <td>{{ $item->quantity * 40 }}€</td>
+                                    <td>{{ $item->options['size'] == 'enfant' ? $item->quantity * 30 : $item->quantity * 40 }}€</td>
                                 </tr>
                             @elseif(isset($item->options['collection']))
                                 <tr>
@@ -115,7 +116,7 @@
                             </td>
     
                             <td>
-                                {{ $totalPrice }}€
+                                {{ $order->total_price }}€
                                 <br>
                                 @if($order->promo > 0)
                                     -{{ $order->promo }}
@@ -123,7 +124,7 @@
                                 @endif
                                 <br>3€
                                 <br>
-                                <br>{{ $totalPrice + 3 - $order->promo }}€
+                                <br>{{ $order->total_price + 3 }}€
                             </td>
                         </tr>
                     </tbody>

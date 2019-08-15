@@ -38,7 +38,7 @@
 
                                         @foreach($tissus as $tissu)
                                             @if($tissu->name == $item->options->tissu)
-                                                <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translateX(-100%);" alt="">
+                                                <img src="/storage/tissus/{{ $tissu->filename }}" class="img-fluid position-absolute" style="transform: translate(-50%, -100%);" alt="">
                                             @endif
                                         @endforeach
                                     @elseif($item->options->collection)

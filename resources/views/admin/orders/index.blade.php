@@ -12,9 +12,10 @@
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">#</th>
-            <th scope="col">Utilisateur</th>
-            <th scope="col">Statut</th>
+                <th scope="col">#</th>
+                <th scope="col">Utilisateur</th>
+                <th scope="col">Statut</th>
+                <th scope="col">Prix total</th>
             </tr>
         </thead>
         <tbody>
@@ -40,6 +41,10 @@
                                 Envoyé
                             </div>
                         @endif
+                    </td>
+
+                    <td>
+                        {{ $order->total_price + 3 }} €
                     </td>
                 </tr>
             @endforeach

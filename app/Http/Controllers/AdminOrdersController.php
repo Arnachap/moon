@@ -23,7 +23,7 @@ class AdminOrdersController extends Controller
     }
 
     public function index() {
-        $orders = Order::where('status', '!=', 'not-payed')->get();
+        $orders = Order::where('status', '!=', 'not-payed')->orderBy('id', 'desc')->get();
         $users = User::all();
         
         return view('admin.orders.index')->with([

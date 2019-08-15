@@ -46,6 +46,7 @@ class ClientOrdersController extends Controller
         $order = new Order;
         $order->user_id = Auth::user()->id;
         $order->address = $address->id;
+        $order->total_price = (Cart::total());
         $order->status = 'not-payed';
         $order->save();
 
