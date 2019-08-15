@@ -59,6 +59,16 @@
                             <br>Taille : {{ $item->options['size'] }}
                         </td>
                     </tr>
+                @elseif(isset($item->options['collection']))
+                    @foreach ($bowties as $bowtie)
+                        @if($item->product_id == $bowtie->id)
+                            <tr>
+                                <th>{{ $bowtie->name }}</th>
+                                <td>{{ $item->quantity }}</td>
+                                <td>Collection : {{ $item->options['collection'] }}</td>
+                            </tr>
+                        @endif
+                    @endforeach
                 @else
                     @foreach($products as $product)
                         @if($item->product_id == $product->id)

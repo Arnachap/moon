@@ -8,6 +8,7 @@ use App\OrderItem;
 use App\Address;
 use App\User;
 use App\Product;
+use App\Bowtie;
 
 class AdminOrdersController extends Controller
 {
@@ -37,13 +38,15 @@ class AdminOrdersController extends Controller
         $address = Address::find($order->address);
         $items = OrderItem::where('order_id', $order->id)->get();
         $products = Product::all();
+        $bowties = Bowtie::all();
 
         return view('admin.orders.show')->with([
             'order' => $order,
             'user' => $user,
             'address' => $address,
             'items' => $items,
-            'products' => $products
+            'products' => $products,
+            'bowties' => $bowties
         ]);
     }
 
