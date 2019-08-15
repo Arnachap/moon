@@ -58,6 +58,7 @@ Panier
                                     <p>Forme : {{ $item->options->shape }}</p>
                                     <p>Bois : {{ $item->options->wood == 1 ? 'Bois de palette' : 'Bois de meuble' }}</p>
                                     <p>Tissu : {{ $item->options->tissu }}</p>
+                                    <p>Taille : {{ $item->options->size }}</p>
                                 </td>
                             @else
                                 <td>
@@ -77,7 +78,7 @@ Panier
                                         <span class="qty-minus" onclick="
                                             var effect = document.getElementById('qty{{ $item->rowId }}'); 
                                             var qty = effect.value;
-                                            if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;
+                                            if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) effect.value--;
                                             return false;">
                                             <i class="fa fa-minus" aria-hidden="true"></i>
                                         </span>
@@ -124,7 +125,7 @@ Panier
                                 <br>
                             @endif
                             <br>Frais de port
-                            <br><small>(Délai de livraison: 2-4 jours)</small>
+                            <br><small>(Délai de livraison: 3-5 jours)</small>
                             <br>Total
                         </td>
 

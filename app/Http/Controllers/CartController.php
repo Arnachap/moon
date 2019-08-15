@@ -23,7 +23,7 @@ class CartController extends Controller
         $bowties = Bowtie::all();
         
         foreach(Cart::content() as $item) {
-            if($item->options->size) {
+            if($item->options->size && $item->id < 910) {
                 $product = Product::where('name', $item->name)->get()->first();
                 $photo = ProductPhoto::where('product_id', $product->id)->get()->first();
                 $item->photo = $photo->path;
@@ -53,13 +53,24 @@ class CartController extends Controller
     }
 
     public function addBowtieToCart(Request $request) {
+        if ($request->size == 'enfant') {
+            $price = 30;
+        } else {
+            $price = 40;
+        }
+
         Cart::add(
             9 . rand(10, 1000),
             'Noeud Pap\' sur mesure',
             1,
-            40,
+            $price,
             0,
-            ['shape' => $request->shape, 'wood' => $request->wood, 'tissu' => $request->tissu]
+            [
+                'shape' => $request->shape,
+                'wood' => $request->wood,
+                'tissu' => $request->tissu,
+                'size' => $request->size
+            ]
         );
 
         return redirect('/cart')->with('success', 'Noeud pap\' ajouté au panier !');

@@ -40378,6 +40378,17 @@ $('.tissu').click(function () {
   tissuImg.attr('src', newTissuSrc);
   formTissu.val($(this).data('tissu'));
   $('.upper-menu').removeClass('show');
+}); // Size selection
+
+$('.radio-btn').click(function () {
+  var size = $(this).attr('id');
+  $('#formSize').val(size);
+
+  if (size == 'enfant') {
+    $('.price').text('30 €');
+  } else {
+    $('.price').text('40 €');
+  }
 });
 
 /***/ }),

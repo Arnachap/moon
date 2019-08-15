@@ -129,33 +129,35 @@ Crée ton Noeud Pap'
 
                     <div class="col-12 col-md-4 mb-3">
                         <div class="size-select">
-                            <input id="male" class="radio-btn" type="radio" name="size" value="male" checked>
+                            <input id="homme" class="radio-btn" type="radio" name="size" value="homme" checked>
 
                             <div class="radio-tile">
                                 <i class="fa fa-male"></i>
-                                <label for="male">Homme</label>
+                                <label for="homme">Homme</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-4 mb-3">
                         <div class="size-select">
-                            <input id="female" class="radio-btn" type="radio" name="size" value="female">
+                            <input id="femme" class="radio-btn" type="radio" name="size" value="femme">
                             
                             <div class="radio-tile">
                                 <i class="fa fa-female"></i>
-                                <label for="female">Femme</label>
+                                <label for="femme">Femme</label>
+                                <small class="text-center">Tour de cou :<br>ras le cou</small>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-4 mb-3">
                         <div class="size-select">
-                            <input id="child" class="radio-btn" type="radio" name="size" value="child">
+                            <input id="enfant" class="radio-btn" type="radio" name="size" value="enfant">
 
                             <div class="radio-tile">
                                 <i class="fa fa-child"></i>
-                                <label for="child">Enfant</label>
+                                <label for="enfant">Enfant</label>
+                                <small class="text-center">Noeud Pap' plus petit</small>
                             </div>
                         </div>
                     </div>
@@ -173,10 +175,11 @@ Crée ton Noeud Pap'
                     {{ Form::open(['action' => 'CartController@addBowtieToCart', 'method' => 'POST']) }}
                         {{ Form::hidden('shape', 'classic',['id' => 'formShape']) }}
                         
-                        {{ Form::hidden('wood', 1,['id' => 'formWood']) }}
+                        {{ Form::hidden('wood', 1, ['id' => 'formWood']) }}
                         
-                        {{ Form::hidden('tissu', '',['id' => 'formTissu']) }}
+                        {{ Form::hidden('tissu', '', ['id' => 'formTissu']) }}
 
+                        {{ Form::hidden('size', 'male', ['id' => 'formSize']) }}
 
                         {{ Form::submit('Ajouter au panier', ['class' => 'add-basket']) }}
                     {{ Form::close() }}

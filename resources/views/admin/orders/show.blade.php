@@ -56,6 +56,7 @@
                             Forme : {{ $item->options['shape'] }}
                             <br>Bois : {{ $item->options['wood'] }}
                             <br>Tissu : {{ $item->options['tissu'] }}
+                            <br>Taille : {{ $item->options['size'] }}
                         </td>
                     </tr>
                 @else

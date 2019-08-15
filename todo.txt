@@ -44,10 +44,10 @@ A FAIRE	EN	PRIORITE :
 du	bois
 
 A	FAIRE :
-- Délai	de	livraison	panier : 3	à	5	jours
+// Délai	de	livraison	panier : 3	à	5	jours
 // Modifier	mise	en	page	Collections	(version	ordinateur)
 - Mettre	30€	pour	les	nœuds pap’ enfants
-- Mettre	« tour	de	cou : ras	le	cou » lorsqu’on	sélectionne	les	nœuds pap’ femme
+// Mettre	« tour	de	cou : ras	le	cou » lorsqu’on	sélectionne	les	nœuds pap’ femme
 - Ajouter	mention	légale	protection	des	données
 - Envoi	mail	au	client :
     o quand	il	réalise	la	commande	

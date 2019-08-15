@@ -59,6 +59,7 @@
                                         <p>Forme : {{ $item->options->shape }}</p>
                                         <p>Bois : {{ $item->options->wood == 1 ? 'Bois de palette' : 'Bois de meuble' }}</p>
                                         <p>Tissu : {{ $item->options->tissu }}</p>
+                                        <p>Taille : {{ $item->options->size }}</p>
                                     </td>
                                 @else
                                     <td>

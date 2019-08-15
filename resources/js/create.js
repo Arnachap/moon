@@ -74,3 +74,15 @@ $('.tissu').click(function() {
 
     $('.upper-menu').removeClass('show');
 });
+
+// Size selection
+$('.radio-btn').click(function() {
+    let size = $(this).attr('id');
+    $('#formSize').val(size);
+
+    if (size == 'enfant') {
+        $('.price').text('30 €');
+    } else {
+        $('.price').text('40 €');
+    }
+});
