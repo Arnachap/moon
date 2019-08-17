@@ -57,3 +57,7 @@ A	FAIRE :
 quelque	peu	différent
 - Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	
 maquette	gravure.
+
+Mail
+mail commande
+Stripe

@@ -9,7 +9,7 @@ use App\Collection;
 use App\Bowtie;
 use App\Wood;
 use App\Tissu;
-use App\slide;
+use App\Slide;
 
 class PagesController extends Controller
 {
