@@ -28,7 +28,7 @@ Gravure message popup
 // Option homme / femme / enfant
 mentions légales
 register page
-Responsive
+// Responsive
 Voir nombre objets panier
 
 Noeud pap enfant 30€
@@ -52,7 +52,7 @@ A	FAIRE :
 - Envoi	mail	au	client :
     o quand	il	réalise	la	commande	
     o quand	la	commande	passe	en	envoyé
-- Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
+// Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
 - Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera	
 quelque	peu	différent
 - Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	

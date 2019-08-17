@@ -15997,6 +15997,7 @@ a:focus {
   background-image: url("/img/about/skate.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #moonExpo {
@@ -16298,6 +16299,10 @@ footer #social i {
 
   .cart {
     text-align: center;
+  }
+
+  #about .intro {
+    width: 100%;
   }
 }
 

@@ -20,19 +20,19 @@ L'entreprise
     <h2 class="section-title">Notre Concept</h2>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-sm-6">
             <img src="/img/about/concept.jpg" class="img-fluid" alt="">
         </div>
 
-        <div class="col-6">
+        <div class="col-sm-6">
             <ul>
                 <li>
-                    <i class="fa fa-hand-peace-o"></i>
+                    <i class="far fa-hand-peace"></i>
                     <h3>Fabrication à la main</h3>
                 </li>
 
                 <li>
-                    <i class="fa fa-map-marker"></i>
+                    <i class="fas fa-map-marker-alt"></i>
                     <h3>Fabriqué en Lorraine</h3>
                 </li>
 
@@ -50,7 +50,7 @@ L'entreprise
         <h2 class="section-title">Moon recycle</h2>
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
                 <h3>Tu veux participer au projet Moon?<br>Recyclons ensemble !</h3>
 
                 <p>Nous collectons bois et tissus pour leur donner une seconde vie. Le surplus de matériaux est ensuite reversé à des associations qui les revaloriseront à leur tour.</p>
@@ -64,7 +64,7 @@ L'entreprise
                 </p>
             </div>
 
-            <div class="col-6">
+            <div class="col-sm-6">
                 <img src="/img/about/recycle.png" class="img-fluid" alt="">
             </div>
         </div>
@@ -78,11 +78,11 @@ L'entreprise
 
     <div class="container">
         <div class="row">
-            <div class="col-5">
+            <div class="col-sm-5">
                 <img src="/img/about/van.png" class="img-fluid m-auto" alt="">
             </div>
 
-            <div class="col-7">
+            <div class="col-sm-7">
                 <h3>De l'art au travers de Nœuds Papillon</h3>
 
                 <p>Moon Expo : un projet qui complète l’univers Moon et qui propose une nouvelle façon de sublimer les nœuds papillon. Ainsi chaque mois, au minimum un artiste pourra proposer son art sur un Moon Pap’. L’artiste a carte blanche et il est seul maître du destin de ce bout de bois.</p>

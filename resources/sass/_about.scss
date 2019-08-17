@@ -52,15 +52,13 @@
                 font-size: 50px;
                 color: $brown;
             }
-        
+
             h3 {
                 padding: 20px 0;
                 color: $black;
                 @include body-font;
             }
         }
-
-        
     }
 }
 
@@ -99,6 +97,7 @@
     background-image: url('/img/about/skate.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #moonExpo {

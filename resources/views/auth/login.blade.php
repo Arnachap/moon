@@ -8,7 +8,7 @@ Connexion
     <div id="login">
         <div class="container">
             <div class="row">
-                <div class="col-4 mx-auto">
+                <div class="col-sm-4 mx-auto">
                     <img src="/img/logo/cat.png" class="img-fluid d-block mx-auto" alt="">
 
                     <h2 class="text-center">Connexion</h2>
@@ -16,7 +16,7 @@ Connexion
             </div>
 
             <div class="row">
-                <div class="col-4 mx-auto">
+                <div class="col-sm-4 mx-auto">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -46,7 +46,7 @@ Connexion
 
                         <br>
                         
-                        <a class="text-muted my-5" href="{{ route('register') }}">
+                        <a class="text-info my-5" href="{{ route('register') }}">
                             {{ __('Pas encore de compte? Créer un compte') }}
                         </a>
                     </form>
