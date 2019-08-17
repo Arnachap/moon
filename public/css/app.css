@@ -15156,6 +15156,10 @@ a:focus {
   font-family: "LemonMilk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.page-title small {
+  font-size: 12px;
+}
+
 .section-title {
   color: #966527;
   text-align: center;

@@ -8,7 +8,8 @@ Crée ton Noeud Pap'
 
 <div class="page-title">
     <h2>Crée ton Noeud Pap</h2>
-    <p>Élabore un noeud papillon en bois à ton image.</p>
+    <p class="m-0">Élabore un noeud papillon en bois à ton image.</p>
+    <small class="text-muted">(Ceci est une modélisation, l’original sera quelque peu différent)</small>
 </div>
 
 <div id="create">

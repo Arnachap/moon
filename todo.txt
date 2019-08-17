@@ -9,7 +9,7 @@
 // plusieurs photos articles => 
 // ProductPhotosController / DB
 // Ajouter nom bois, tissu & forme
-crée ton noeud pap message 'ceci est modélisation'
+// crée ton noeud pap message 'ceci est modélisation'
 // Order noeud pap & collections
 // Payment  Product images
 // Order if Product if Bowtie
@@ -27,7 +27,7 @@ Gravure message popup
 // boutton voir plus collection
 // Option homme / femme / enfant
 mentions légales
-register page
+// register page
 // Responsive
 Voir nombre objets panier
 
@@ -53,7 +53,7 @@ A	FAIRE :
     o quand	il	réalise	la	commande	
     o quand	la	commande	passe	en	envoyé
 // Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
-- Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera	
+// Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera	
 quelque	peu	différent
 - Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	
 maquette	gravure.

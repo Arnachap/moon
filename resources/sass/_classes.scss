@@ -54,6 +54,10 @@
         color: $grey;
         @include heading-font;
     }
+
+    small {
+        font-size: 12px;
+    }
 }
 
 .section-title {
