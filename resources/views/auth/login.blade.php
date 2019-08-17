@@ -47,7 +47,7 @@ Connexion
                         <br>
                         
                         <a class="text-info my-5" href="{{ route('register') }}">
-                            {{ __('Pas encore de compte? Créer un compte') }}
+                            {{ __('Pas encore de compte? Créez un compte !') }}
                         </a>
                     </form>
                 </div>

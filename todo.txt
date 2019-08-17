@@ -31,7 +31,7 @@ register page
 // Responsive
 Voir nombre objets panier
 
-Noeud pap enfant 30€
+// Noeud pap enfant 30€
 
 A FAIRE	EN	PRIORITE :
 // Voir	pour	les	Tissus	pour	mettre	menu	déroulant	si	+	de	10	tissus
