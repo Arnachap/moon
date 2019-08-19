@@ -23,13 +23,10 @@
 // Photo slider
 // Slider accueil rajouter slides
 // Maps
-Gravure message popup
 // boutton voir plus collection
 // Option homme / femme / enfant
-mentions légales
 // register page
 // Responsive
-Voir nombre objets panier
 
 // Noeud pap enfant 30€
 
@@ -48,16 +45,15 @@ A	FAIRE :
 // Modifier	mise	en	page	Collections	(version	ordinateur)
 // Mettre	30€	pour	les	nœuds pap’ enfants
 // Mettre	« tour	de	cou : ras	le	cou » lorsqu’on	sélectionne	les	nœuds pap’ femme
+// Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
+// Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera
+
+
 - Ajouter	mention	légale	protection	des	données
 - Envoi	mail	au	client :
     o quand	il	réalise	la	commande	
-    o quand	la	commande	passe	en	envoyé
-// Sur	partie	admin	– module	commande,	ajouter	le	prix	et	le	code	promo
-// Dans	crée	ton	nœud pap’ : ajouter	texte : ceci	est	une	reproduction,	l’original	sera	
+    o quand	la	commande	passe	en	envoyé	
 quelque	peu	différent
 - Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	
 maquette	gravure.
-
-Mail
-mail commande
-Stripe
+- Voir nombre objets panier
