@@ -51,7 +51,7 @@ A	FAIRE :
 
 - Ajouter	mention	légale	protection	des	données
 - Envoi	mail	au	client :
-    o quand	il	réalise	la	commande	
+    // quand	il	réalise	la	commande	
     o quand	la	commande	passe	en	envoyé	
 quelque	peu	différent
 - Si	module	Gravure	(sélectionné)	+5€,	un	mail	vous	sera	envoyé	pour	validation	de	la	

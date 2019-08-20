@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderMail;
 use Cart;
 use Stripe;
 use Stripe_Error;
@@ -91,23 +93,37 @@ class ClientOrdersController extends Controller
             $order->status = 'payed';
             $order->save();
 
+            // Mail with user data
+            $data = [
+              'username' => Auth::user()->name,
+              'order_id' => $order->id
+            ];
+
+            Mail::to(Auth::user()->email)->send(new OrderMail($data));
+
             return redirect('/home')->with('success', 'Commande validé ! Vous allez recevoir un email récapitulatif.');
         }  catch(\Stripe\Error\Card $e) {
             return back()->with('error', 'Erreur lors du paiement. Vérifiez que vous avez suffisament de fonds. Si le problème persiste, merci de nous contacter.');
         } catch (\Stripe\Error\RateLimit $e) {
           // Too many requests made to the API too quickly
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         } catch (\Stripe\Error\InvalidRequest $e) {
           // Invalid parameters were supplied to Stripe's API
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         } catch (\Stripe\Error\Authentication $e) {
           // Authentication with Stripe's API failed
           // (maybe you changed API keys recently)
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         } catch (\Stripe\Error\ApiConnection $e) {
           // Network communication with Stripe failed
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         } catch (\Stripe\Error\Base $e) {
           // Display a very generic error to the user, and maybe send
           // yourself an email
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         } catch (Exception $e) {
           // Something else happened, completely unrelated to Stripe
+            return back()->with('error', 'Erreur lors du paiement. Merci de nous contacter si le problème persiste.');
         }
     }
 }
