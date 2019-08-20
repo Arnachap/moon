@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderSentMail;
 use App\Order;
 use App\OrderItem;
 use App\Address;
@@ -59,6 +61,16 @@ class AdminOrdersController extends Controller
         }
 
         $order->save();
+
+        // Mail with user data
+        $user = User::find($order->user_id);
+        $data = [
+            'username' => $user->name,
+            'order_id' => $order->id,
+            'tracking_number' => $request->tracking_number
+        ];
+
+        Mail::to($user->email)->send(new OrderSentMail($data));
 
         return redirect('/admin/orders')->with('success', 'Statut de la commande modifié');
     }
