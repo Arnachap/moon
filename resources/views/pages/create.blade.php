@@ -14,8 +14,8 @@ Crée ton Noeud Pap'
 
 <div id="create">
     <div id="createImg">
-        <img id="bowtie" src="/img/create/noeuds-pap/classic/classic-1.png" alt="">
-        <img id="tissu" src="/img/create/tissus/image/tissus1.png" alt="">
+        <img id="bowtie" src="/img/create/noeuds-pap/classic/classic-1.png" alt="noeud papillon en bois recyclé">
+        <img id="tissu" src="/img/create/tissus/image/tissus1.png" alt="tissu noeud papillon en bois recyclé">
     </div>
 
     <div id="createMenu" class="container-fluid">
@@ -25,49 +25,49 @@ Crée ton Noeud Pap'
                     <div class="shapes upper-menu-category">
                         <div class="row">
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/classic/classic-1.png" id="classic" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/classic/classic-1.png" id="classic" class="shape d-block mx-auto" alt="classic noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Classic</small>
                             </div>
                             
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/heavy/heavy-1.png" id="heavy" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/heavy/heavy-1.png" id="heavy" class="shape d-block mx-auto" alt="heavy noeud papillon en bois recyclé">
                                 
                                 <small class="w-100 text-center">Heavy</small>
                             </div>
                             
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/heavy-quarter/heavy-quarter-1.png" id="heavy-quarter" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/heavy-quarter/heavy-quarter-1.png" id="heavy-quarter" class="shape d-block mx-auto" alt="heavy-quarter noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Heavy Quarter</small>
                             </div>
                             
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/heavy-light/heavy-light-1.png" id="heavy-light" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/heavy-light/heavy-light-1.png" id="heavy-light" class="shape d-block mx-auto" alt="heavy-light noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Heavy Light</small>
                             </div>
     
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/electric/electric-1.png" id="electric" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/electric/electric-1.png" id="electric" class="shape d-block mx-auto" alt="electric noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Electric</small>
                             </div>
                             
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/roadster/roadster-1.png" id="roadster" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/roadster/roadster-1.png" id="roadster" class="shape d-block mx-auto" alt="roadster noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Roadster</small>
                             </div>
                             
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/roadster-quarter/roadster-quarter-1.png" id="roadster-quarter" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/roadster-quarter/roadster-quarter-1.png" id="roadster-quarter" class="shape d-block mx-auto" alt="roadster-quarter noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Roadster Quarter</small>
                             </div>
     
                             <div class="col-6 col-sm-3">
-                                <img src="/img/create/noeuds-pap/roadster-light/roadster-light-1.png" id="roadster-light" class="shape d-block mx-auto" alt="">
+                                <img src="/img/create/noeuds-pap/roadster-light/roadster-light-1.png" id="roadster-light" class="shape d-block mx-auto" alt="roadster-light noeud papillon en bois recyclé">
 
                                 <small class="w-100 text-center">Roadster Light</small>
                             </div>
@@ -79,7 +79,7 @@ Crée ton Noeud Pap'
                             @foreach($woods as $wood)
                                 @if($wood->available)
                                     <div class="col">
-                                        <img src="/img/create/noeuds-pap/classic/classic-{{ $wood->id }}.png" id="{{ $wood->id }}" class="wood d-block mx-auto" alt="">
+                                        <img src="/img/create/noeuds-pap/classic/classic-{{ $wood->id }}.png" id="{{ $wood->id }}" class="wood d-block mx-auto" alt="{{ $wood->name }} noeud papillon en bois recyclé">
 
                                         <small>{{ $wood->name }}</small>
                                     </div>
@@ -92,7 +92,7 @@ Crée ton Noeud Pap'
                         <div class="row overflow-auto">
                             @foreach($tissus as $tissu)
                                 <div class="col">
-                                    <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" data-tissu="{{ $tissu->name }}" class="tissu d-block mx-auto" alt="">
+                                    <img src="/storage/tissus/small_{{ $tissu->filename }}" id="{{ $tissu->filename }}" data-tissu="{{ $tissu->name }}" class="tissu d-block mx-auto" alt="tissu {{ $tissu->name }}">
 
                                     <small>{{ $tissu->name }}</small>
                                 </div>

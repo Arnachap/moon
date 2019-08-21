@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8 mx-auto text-center">
-                <img src="/storage/slider/{{ $slide->image }}" class="img-fluid" alt="">
+                <img src="/storage/slider/{{ $slide->image }}" class="img-fluid" alt="Moon noeud pap', le noeud papillon en bois recyclé">
 
                 <h3 class="my-3 section-title">{{ $slide->title }}</h3>
 

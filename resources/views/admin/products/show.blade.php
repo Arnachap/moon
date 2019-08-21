@@ -21,7 +21,7 @@
         <div class="row">
             @foreach($photos as $photo)
                 <div class="col">
-                    <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="">
+                    <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="accessoire Moon noeud papillon en bois recyclé">
                     {{ Form::open(['action' => ['ProductsController@deletePhoto', $photo->id], 'method' => 'POST']) }}
                         {{ Form::hidden('_method', 'DELETE') }}
                         {{ Form::submit('X', ['class' => 'btn btn-danger', 'style' => 'position: absolute; top: 10px; right: 20px;']) }}

@@ -9,7 +9,7 @@ Créer un compte
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 mx-auto">
-                    <img src="/img/logo/cat.png" class="img-fluid d-block mx-auto" alt="">
+                    <img src="/img/logo/cat.png" class="img-fluid d-block mx-auto" alt="logo Moon">
 
                     <h2 class="text-center">Créer un compte</h2>
                 </div>

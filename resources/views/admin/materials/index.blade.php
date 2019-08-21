@@ -28,7 +28,7 @@
                                         </a>
                                     </h4>
 
-                                    <img src="/img/create/noeuds-pap/classic/classic-{{ $wood->id }}.png" class="img-fluid px-5" alt="">
+                                    <img src="/img/create/noeuds-pap/classic/classic-{{ $wood->id }}.png" class="img-fluid px-5" alt="noeud papillon en bois recyclé">
 
                                     {{ Form::open(['action' => ['MaterialsController@toggleAvailable', $wood->id], 'method' => 'POST']) }}
                                         {{ Form::hidden('_method', 'PUT') }}
@@ -66,7 +66,7 @@
                         <div class="col-3">
                             <h4 class="text-center">{{ $tissu->name }}</h4>
 
-                            <img src="/storage/tissus/small_{{ $tissu->filename }}" class="img-fluid px-5" alt="">
+                            <img src="/storage/tissus/small_{{ $tissu->filename }}" class="img-fluid px-5" alt="tissu noeud papillon en bois recyclé">
 
                             {{ Form::open(['action' => ['MaterialsController@deleteTissu', $tissu->id], 'method' => 'POST']) }}
                                 {{ Form::hidden('_method', 'DELETE') }}

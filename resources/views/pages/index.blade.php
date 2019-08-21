@@ -32,28 +32,28 @@ Le noeud papillon en bois sur-mesure
     <div class="container">
         <div class="row">
             <div class="col-md-8 m-auto">
-                <img src="/img/index/create.png" class="img-fluid mx-auto create-img" alt="">
+                <img src="/img/index/create.png" class="img-fluid mx-auto create-img" alt="Créer noeud papillon sur mesure en bois recyclé">
             </div>
         </div>
         
         <div class="row pt-5">
             <div class="col-6 col-md-3">
-                <img src="/img/index/1.png" class="img-fluid mx-auto paw" alt="">
+                <img src="/img/index/1.png" class="img-fluid mx-auto paw" alt="noeud papillon sur mesure en bois recyclé">
                 <p>Choisis<br>ta forme</p>
             </div>
 
             <div class="col-6 col-md-3">
-                <img src="/img/index/2.png" class="img-fluid mx-auto d-block paw" alt="">
+                <img src="/img/index/2.png" class="img-fluid mx-auto d-block paw" alt="noeud papillon sur mesure en bois recyclé">
                 <p>Choisis<br>ta matière</p>
             </div>
 
             <div class="col-6 col-md-3">
-                <img src="/img/index/3.png" class="img-fluid mx-auto d-block paw" alt="">
+                <img src="/img/index/3.png" class="img-fluid mx-auto d-block paw" alt="noeud papillon sur mesure en bois recyclé">
                 <p>Choisis<br>ton tissu</p>
             </div>
 
             <div class="col-6 col-md-3">
-                <img src="/img/index/4.png" class="img-fluid mx-auto d-block paw" alt="">
+                <img src="/img/index/4.png" class="img-fluid mx-auto d-block paw" alt="noeud papillon sur mesure en bois recyclé">
                 <p>Porte ton<br>Noued Pap' Moon</p>
             </div>
             

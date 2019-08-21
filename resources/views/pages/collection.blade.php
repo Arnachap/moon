@@ -19,7 +19,7 @@ Notre collection
                     @if($index < 4)
                         <div class="col-12 col-md-3 p-2">
                             <figure class="bowtie" data-toggle="modal" data-target="#modal{{ $bowtie->id }}">
-                                <img src="/storage/bowties/{{ $bowtie->photo }}" class="img-fluid" alt="">
+                                <img src="/storage/bowties/{{ $bowtie->photo }}" class="img-fluid" alt="noeud papillon en bois recyclé {{ $bowtie->name }}">
                                 <figcaption>
                                     <h2>{{ $bowtie->name }}</h2>
                                 </figcaption>
@@ -34,7 +34,7 @@ Notre collection
                                 <div class="modal-body">
                                     <h5 class="section-title">{{ $bowtie->name }}</h5>
                                 
-                                    <img src="/storage/bowties/{{ $bowtie->photo }}" class="img-fluid" alt="">
+                                    <img src="/storage/bowties/{{ $bowtie->photo }}" class="img-fluid" alt="noeud papillon en bois recyclé {{ $bowtie->name }}">
 
                                     <br>
 
@@ -72,7 +72,7 @@ Notre collection
                         @if($index >= 4)
                             <div class="col-12 col-md-3">
                                 <figure class="bowtie" data-toggle="modal" data-target="#modal{{ $bowtie->id }}">
-                                    <img src="/storage/bowties/{{ $bowtie->photo }}" alt="" class="img-fluid">
+                                    <img src="/storage/bowties/{{ $bowtie->photo }}" alt="noeud papillon en bois recyclé {{ $bowtie->name }}" class="img-fluid">
                                     <figcaption>
                                         <h2>{{ $bowtie->name }}</h2>
                                     </figcaption>

@@ -18,7 +18,7 @@
     </div>
 
     <div class="col-6 mx-auto">
-        <img src="/storage/bowties/{{ $bowtie->photo }}" alt="" class="img-fluid">
+        <img src="/storage/bowties/{{ $bowtie->photo }}" alt="Noeud papillon en bois {{ $bowtie->name }} collection {{ $collection->title }}" class="img-fluid">
         <p>{{ $bowtie->description }}</p>
         <p>Collection : {{ $collection->title }}</p>
         <p>Prix : {{ $bowtie->price }}</p>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://moon-noeudpap.fr/</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/create</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/collection</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/products/t-shirts</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/products/earrings</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/products/caps</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/about</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/contact</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/find-us</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/login</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/cart</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moon-noeudpap.fr/register</loc>
+  <lastmod>2019-08-21T14:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

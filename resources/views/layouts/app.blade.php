@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Moon Noeud Pap' - Le noeud papillon sur mesure en bois recyclé !">
 
     <title>{{ config('app.name', 'Moon') }} - @yield('title')</title>
     <link rel="icon" type="image/png" href="/img/logo/cat.png" />

@@ -9,7 +9,7 @@ L'entreprise
 <div class="container-fluid" id="about">
     <div class="row">
         <div class="intro">
-            <img src="/img/logo/logo-full-blanc.png" alt="">
+            <img src="/img/logo/logo-full-blanc.png" alt="Logo Moon noeud papillon en bois recyclé">
             <h2>Qu'est-ce que Moon?</h2>
             <p>Moon, c’est la création de nœuds papillon, sous toutes leurs formes et matières, notamment en bois (meubles, palettes...) et tissus recyclés.</p>
         </div>
@@ -21,7 +21,7 @@ L'entreprise
 
     <div class="row">
         <div class="col-sm-6">
-            <img src="/img/about/concept.jpg" class="img-fluid" alt="">
+            <img src="/img/about/concept.jpg" class="img-fluid" alt="Moon noeud papillon en bois recyclé">
         </div>
 
         <div class="col-sm-6">
@@ -65,7 +65,7 @@ L'entreprise
             </div>
 
             <div class="col-sm-6">
-                <img src="/img/about/recycle.png" class="img-fluid" alt="">
+                <img src="/img/about/recycle.png" class="img-fluid" alt="noeud papillon en bois recyclé">
             </div>
         </div>
     </div>
@@ -74,12 +74,12 @@ L'entreprise
 <div id="banner"></div>
 
 <div id="moonExpo">
-    <img src="/img/about/expo.png" class="d-block mx-auto title" alt="">
+    <img src="/img/about/expo.png" class="d-block mx-auto title" alt="noeud expo papillon en bois recyclé artiste">
 
     <div class="container">
         <div class="row">
             <div class="col-sm-5">
-                <img src="/img/about/van.png" class="img-fluid m-auto" alt="">
+                <img src="/img/about/van.png" class="img-fluid m-auto" alt="noeud papillon en bois recyclé">
             </div>
 
             <div class="col-sm-7">

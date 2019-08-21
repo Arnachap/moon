@@ -9,7 +9,7 @@ Administration
         <div class="container">
             <div class="row">
                 <div class="col-4 mx-auto">
-                    <img src="/img/logo/cat.png" class="img-fluid d-block mx-auto" alt="">
+                    <img src="/img/logo/cat.png" class="img-fluid d-block mx-auto" alt="Logo Moon">
 
                     <h2 class="text-center">Administration</h2>
                 </div>

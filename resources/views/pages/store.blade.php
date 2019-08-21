@@ -47,7 +47,7 @@ T-shirts
                                             <div class="carousel-inner">
                                                 @foreach($product->photos as $photo)
                                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                                        <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="">
+                                                        <img src="/storage/products/{{ $product->id . '/' . $photo->path }}" class="img-fluid" alt="accessoire moon {{ $product->name }}">
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -63,7 +63,7 @@ T-shirts
                                             </a>
                                         </div>
                                     @else
-                                        <img src="/storage/products/{{ $product->id . '/' . $product->photos->first()->path }}" class="img-fluid" alt="">
+                                        <img src="/storage/products/{{ $product->id . '/' . $product->photos->first()->path }}" class="img-fluid" alt="{{ $product->name }} accessoire Moon">
                                     @endif
                                 </div>
 
