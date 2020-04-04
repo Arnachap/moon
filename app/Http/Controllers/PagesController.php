@@ -63,6 +63,11 @@ class PagesController extends Controller
         $category = 'Boucles d\'oreilles';
         $intro = 'Un accessoire original, en bois recyclé !';
         $products = Product::where('category', 'earrings')->get();
+        
+        foreach ($products as $product) {
+            $photos = ProductPhoto::where('product_id', $product->id)->get();
+            $product->photos = $photos;
+        }
 
         return view('pages.store')->with([
             'products' => $products,
@@ -75,6 +80,11 @@ class PagesController extends Controller
         $category = 'Casquettes';
         $intro = 'Moon fait de l\'ombre';
         $products = Product::where('category', 'caps')->get();
+        
+        foreach ($products as $product) {
+            $photos = ProductPhoto::where('product_id', $product->id)->get();
+            $product->photos = $photos;
+        }
 
         return view('pages.store')->with([
             'products' => $products,

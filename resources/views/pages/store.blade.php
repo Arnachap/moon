@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-T-shirts
+{{$category}}
 @endsection
 
 @section('content')
